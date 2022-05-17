@@ -4,11 +4,13 @@ import {Link} from "react-router-dom";
 const Calculation = () => {
     let [number1, setNumber1] = useState(0);
     let [number2, setNumber2] = useState(0);
+    const handleChange = () => {
 
+    }
     return ( 
         <>
            <label for="num_1"> number 1:
-               <input id = "num_1" type="text" placeholder="input num1" value={number1}/>
+               <input id = "num_1" type="text" placeholder="input num1" value={number1} onChange={handleChange}/>
            </label>
            <label for="num_2"> number 2:
                <input id = "num_2" type="text" placeholder="input num2" value={number2}/>
