@@ -1,0 +1,18 @@
+javascript has dynamic types for varible
+value     1. object     2. primitive  (Number, bigInt, String, Boolean, undefined, null, symbol)
+
+number is for integer and decimal
+bigInt is for number that number cannot hold
+string is for text
+boolean is for true or false
+undefined is for "empty value" that undefined
+null is for "empty value" that defined
+symbol is for value that cannot be changed
+
+
+5 falsy value: 0 "" undefined null NaN
+
+
+operation
+
++ - * /  **   +=  x++ x--
