@@ -1,5 +1,5 @@
-javascript has dynamic types for varible
-value     1. object     2. primitive  (Number, bigInt, String, Boolean, undefined, null, symbol)
+1. javascript has dynamic types for varible
+value     1. object(object, function, array)     2. primitive  (Number, bigInt, String, Boolean, undefined, null, symbol)
 
 number is for integer and decimal
 bigInt is for number that number cannot hold
@@ -10,9 +10,17 @@ null is for "empty value" that defined
 symbol is for value that cannot be changed
 
 
-5 falsy value: 0 "" undefined null NaN
+2.  5 falsy value: 0 "" undefined null NaN
 
 
-operation
+3.  operation
 
 + - * /  **   +=  x++ x--
+
+
+4.  difference between "==" and "==="
+
+5. nodejs has no "prompt"
+
+6. boolean logic :   and   or    not 
+logical operators:   &&    ||    !
