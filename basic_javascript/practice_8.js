@@ -6,3 +6,5 @@ console.log(arr[0]);
 console.log(obj.firstName);
 console.log(obj["firstName"]);
 
+console.log(Object.keys(obj));
+

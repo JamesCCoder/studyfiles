@@ -24,3 +24,7 @@ symbol is for value that cannot be changed
 
 6. boolean logic :   and   or    not 
 logical operators:   &&    ||    !
+
+7. common math, array, object method
+
+8. .prettierrc
