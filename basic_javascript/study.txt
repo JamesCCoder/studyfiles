@@ -28,3 +28,17 @@ logical operators:   &&    ||    !
 7. common math, array, object method
 
 8. .prettierrc
+
+
+9. document.    createElement("h1")           setAttribute("class","h1")
+                createTextNode("test")        appendChild()
+                                      
+                getElementById("h1")          innerHtml = "123"
+                QuerySelector(".h1")          textContent = "123"
+                                              value       = "123"
+
+                                              style.backGround = "red"
+                                              classList.add("h1")
+                                                       .remove("h1")
+
+                                              addEventListener("click", check);
