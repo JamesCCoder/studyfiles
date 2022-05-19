@@ -1,3 +1,24 @@
 /*
   how to add css file to html? 1. inline 2.internal 3.external
+
+  three selectors
+
+  global variable
 */
+
+*{
+  padding: 0;
+  margin:0;
+}
+
+.h1{
+  color:red;
+}
+
+#h1{
+  color:green;
+}
+
+h2{
+  color: blue;
+}
