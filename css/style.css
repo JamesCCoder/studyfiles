@@ -12,10 +12,12 @@
 
 * {
   margin: 0; /*even body has some default value */
+  padding: 0;
 }
 
 body {
   height: 200px;
+  
 }
 
 .header {
@@ -23,10 +25,39 @@ body {
   background-color: green;
 }
 
+
+.overall{
+  display: inline-block;
+  width:100%;
+  padding-top:20px;
+ 
+}
+
 .li {
   display: inline-block;
-  background-color: blueviolet;
+  
 }
+
+.li a{
+  text-decoration: none;
+  
+}
+
+.li a:link{
+   color:blue;
+}
+
+.li a:visited{
+   color:cornflowerblue;
+}
+
+.li a:hover{
+   color:red;
+}
+.li a:active{
+   color:green;
+}
+
 
 .h1 {
   color: red;
@@ -53,6 +84,10 @@ h2 {
 .test {
   width: 50%;
   background-color: lightblue;
+}
+
+.test::first-letter{
+  color:red;
 }
 
 .box_2 {

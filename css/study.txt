@@ -52,8 +52,20 @@ In HTML there are some semantic elements that can be used to define different pa
 
 5. global "padding = 0" can make dots that in front of the lists disappear. 
 
-6. how to make list items in a line?                         li{ display: inline-block }  
+6. how to make list items in a line?                         li { display: inline-block }  
 
 7. what would inline-block show?                       
 blocks that would arrange in a line
-blocks accept padding and margin 
+blocks accept padding,margin,width,height 
+
+8. display: none     vs       visibility: hidden
+9. block element     vs       inline element
+10. how to eliminate the underscore of link ?                        a { text-decoration : none }
+11. how to make inline(inline-box) vertical center?                              vertical-align : middle
+11.1 make center in another way?                                display:flex  align-items:center justify-content:center
+
+12. pseudo classes
+    a: link visited hover active
+
+12.1 pseudo class define the style of a special state of an element
+     pseudo element define the style of a specific part of an element      p::first-letter
