@@ -69,3 +69,30 @@ blocks accept padding,margin,width,height
 
 12.1 pseudo class define the style of a special state of an element
      pseudo element define the style of a specific part of an element      p::first-letter
+
+13. how to setup a buttom-line for a link when hovering over it?           border-buttom: 2px solid red
+
+14. the naming rule for border?                                             border: 2px solid green
+
+15. how to setup a img in background?                                       background/background-mage:url()       
+
+16. how many classes could one tag have?                                     as many as it could
+
+17. how many categraries of selector? which one is the best?                 three: class, id, tag  class is always the best
+
+*. remember
+
+display: none         block            inline             inline-block               flex
+
+(visibility:hidden)   box-model                                  
+
+                      height,width,
+                      margin,padding,
+
+                      content-box
+                      inline-box
+
+
+18. what is !important?
+
+19. what is :not() for?

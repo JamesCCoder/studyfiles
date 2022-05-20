@@ -43,19 +43,25 @@ body {
   
 }
 
-.li a:link{
-   color:blue;
-}
 
-.li a:visited{
-   color:cornflowerblue;
-}
+
+
 
 .li a:hover{
    color:red;
+   border-bottom: 5px solid red;
 }
 .li a:active{
    color:green;
+}
+
+.a1{
+  color:white;
+  background-color: red;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight:bold;
+  padding: 5px;
 }
 
 
