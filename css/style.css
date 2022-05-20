@@ -1,24 +1,59 @@
 /*
-  how to add css file to html? 1. inline 2.internal 3.external
+  how to add css file to html? 1. inline 2.internal 3.external  specifity: inline>internal>external
 
   three selectors
 
   global variable
+
+  border must contains: width style color to show up
+
+  what is margin collapse? 
 */
 
-*{
-  padding: 0;
-  margin:0;
+* {
+  margin: 0; /*even body has some default value */
 }
 
-.h1{
-  color:red;
+body {
+  height: 200px;
 }
 
-#h1{
-  color:green;
+.header {
+  width: 100%;
+  background-color: green;
 }
 
-h2{
+.h1 {
+  color: red;
+}
+
+#h1 {
+  color: green;
+}
+
+h2 {
   color: blue;
+}
+
+.box_1 {
+  height: 20px;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid black;
+  box-sizing: content-box;
+}
+
+.test {
+  width: 50%;
+  background-color: lightblue;
+}
+
+.box_2 {
+  height: 20px;
+  width: 20px;
+  margin: 40px;
+  padding: 20px;
+  border: 2px solid black;
 }
