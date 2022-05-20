@@ -51,3 +51,9 @@ In HTML there are some semantic elements that can be used to define different pa
 <time>
 
 5. global "padding = 0" can make dots that in front of the lists disappear. 
+
+6. how to make list items in a line?                         li{ display: inline-block }  
+
+7. what would inline-block show?                       
+blocks that would arrange in a line
+blocks accept padding and margin 
