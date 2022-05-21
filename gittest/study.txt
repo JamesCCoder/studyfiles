@@ -1,0 +1,24 @@
+1. difference between git and github?
+   git is version control system, github is cloud service based on git.
+   You can use git all the time without github.
+
+2. git GUI
+   gitKraken
+
+3.what is git bash?
+  thie simulation of git when running in mac system when we use window.
+
+4. common order
+
+    ls   ls -a                                              列出所有文件（显示隐藏文件）
+    open start                                              打开文件（文件夹）
+    pwd                                                     复制绝对链接
+    cd                                                      调整路径
+    touch                                                   新建文件
+    mkdir                                                   新建文件夹
+    clear                                                   清空对话框
+    rm                                                      删除文件
+    rm -rf                                                  删除文件夹
+    
+
+5.                     
