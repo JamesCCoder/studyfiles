@@ -130,6 +130,8 @@
     1. alternative way for  git merge
     2. cleanup tool                                    git rebase -i    (pick reword fixup drop)
 
+    git rebase --continue
+
 15. git tag
 
     1. light weight tags        just name/point that points a particular commit
@@ -160,6 +162,8 @@
     git tag -f <tagname>                                      force to overwrite a tag
 
     git tag -d <tagname>                                      delete tag
+
+    git push --tags                                           push tag
 
 16.
 
