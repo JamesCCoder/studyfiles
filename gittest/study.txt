@@ -163,7 +163,11 @@
 
     git tag -d <tagname>                                      delete tag
 
-    git push --tags                                           push tag
+    git push origin <tagname>                                 push one tag
 
-16.
+    git push --tags                                           push all tags
+
+16. reflog
+
+    
 

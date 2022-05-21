@@ -72,7 +72,7 @@ blocks accept padding,margin,width,height
 
 13. how to setup a buttom-line for a link when hovering over it?           border-buttom: 2px solid red
 
-14. the naming rule for border?                                             border: 2px solid green
+14. the setup rule for border?                                             border: 2px solid green
 
 15. how to setup a img in background?                                       background/background-mage:url()       
 
