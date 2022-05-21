@@ -151,4 +151,14 @@
 
     git tag <tagname>                                         create lightweight tag
 
-    
+    git tag -a <tagname>                                      create annotated tag
+
+    git show <tagname>                                        show message for a annotated tag
+
+    git tag <tagname> <commit hash>                           create tag for previous commit
+
+    git tag -f <tagname>                                      force to overwrite a tag
+
+    git tag -d <tagname>                                      delete tag
+
+16.
