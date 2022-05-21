@@ -50,7 +50,6 @@ In HTML there are some semantic elements that can be used to define different pa
 <summary>
 <time>
 
-5. global "padding = 0" can make dots that in front of the lists disappear. 
 
 6. how to make list items in a line?                         li { display: inline-block }  
 
@@ -61,6 +60,7 @@ blocks accept padding,margin,width,height
 8. display: none     vs       visibility: hidden
 9. block element     vs       inline element
 10. how to eliminate the underscore of link ?                        a { text-decoration : none }
+10.1 how to eliminate the dots befor list ?                          ul {list-style-type : none}
 11. how to make inline(inline-box) vertical center?                              vertical-align : middle
 11.1 make center in another way?                                display:flex  align-items:center justify-content:center
 
@@ -96,3 +96,13 @@ display: none         block            inline             inline-block          
 18. what is !important?
 
 19. what is :not() for?
+
+20. how to make button look flat?                             button { border:none } 
+
+21. where to use vertical-align : middle ?                     inline-block  
+
+22. 如何让 inline-block 中的元素即使页面变小也不换行？            width: calc(33% - 30px);
+
+23. 常见button效果                                              cursor：pointer
+
+24. how to eliminate the line when pressing a button?             outline:none
