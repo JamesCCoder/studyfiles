@@ -19,6 +19,55 @@
     clear                                                   清空对话框
     rm                                                      删除文件
     rm -rf                                                  删除文件夹
-    
 
-5.                     
+5. git setup
+
+   1. how to setup VIM to vscode ?     https://git-scm.com/book/en/v2/Appendix-C:-Git-Commands-Setup-and-Config 
+   2. what is gitignore file ?         setup some files that would be inmored by git when tracking 
+
+
+
+
+5. git start
+
+   1. git  --version
+   2. git config --global user.name "James Wu"
+      git config --global user.email "justinwpro@gmail.com"
+
+6. how to start to use git (start a git repo) ?
+
+   git -status (always check before using git, we can start a git nested into another one)
+   git -init
+
+7. basic git
+
+   working directory    staging area     repository
+
+                  git add .           git commit -m "update"
+   
+   git commit -amend
+   git commit -a -m "update"
+  
+   git log
+   git log --oneline
+
+   git reset                                                             取消最近一次的add
+
+8. new branch
+  
+   git branch                                 显示所有的branch
+    
+   git branch newOne                          创建新的branch
+   git switch newOne                          转到新的branch
+
+   or    git switch -c newOne
+
+   git branch -d newOne                       删除branch newOne
+   git branch -m main                         将当前branch重新命名为main
+
+   git branch -r                              显示远程branch
+
+9. git diff
+
+   git diff                                   比较 working directory 的部分                 
+
