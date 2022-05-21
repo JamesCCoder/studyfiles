@@ -75,9 +75,12 @@
 
    
 
-11. stash
+11. stash (stash 可以多次使用，产生多个缓存)
 
     git stash                                 取消上次commit之后的一切变化并保留在stash cache中
     git stash pop                             将stash中内容放回原位置并释放缓存
     git stash apply                           将stash中内容放回原位置，不释放缓存。
     
+    git stash list                            列举所有的stash
+    git stash drop                            清除某个/全部stash
+    git stash clear                           清楚全部stash
