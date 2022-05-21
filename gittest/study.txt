@@ -128,5 +128,6 @@
 
     git rebase 有两种作用：
     1. alternative way for  git merge
-    2. cleanup tool
+    2. cleanup tool                                    git rebase -i    (pick reword fixup drop)
 
+15. git tag
