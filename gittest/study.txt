@@ -71,8 +71,15 @@
 
    git diff                                   比较 working directory 的部分                 
 
+
 10. merge branch
 
+    git merge newOne                          将newOne merge到当前branch
+
+                                              三种不同结果：
+                                              1. fast forward (changes in one branch cover other changes in another branch)
+                                              2. need commit but no conflict (create new file)
+                                              3. has conflict (edit the conflict part, keep what we need and commit it)
    
 
 11. stash (stash 可以多次使用，产生多个缓存)
@@ -80,7 +87,46 @@
     git stash                                 取消上次commit之后的一切变化并保留在stash cache中
     git stash pop                             将stash中内容放回原位置并释放缓存
     git stash apply                           将stash中内容放回原位置，不释放缓存。
-    
+
+                                              pop 和 apply 可能会产生三种后果，
+                                              处理方法和merge相同
+                                                  
     git stash list                            列举所有的stash
     git stash drop                            清除某个/最近一个stash
     git stash clear                           清楚全部stash
+
+
+12. create remote repository
+
+    1. create local folder, files and commit
+    2. create remote repo on github
+    3. git remote add origin https://github.com/JamesCCoder/test.git
+    4. git push -u origin main
+
+    1. create remote repo on gitbuh
+    2. create some files and folder remotely
+    3. git clone https://github.com/JamesCCoder/test.git
+
+    建立SSH
+    之后不再使用 git clone
+
+13.   working directory         staging area            local repo                 remote repo
+
+                        git add                  git commit             git push
+
+                                                                        git fetch
+                                                  git merge
+                               git pull   
+
+    git fetch  回来后对原代码无任何影响，直到git merge之后才会变化          
+
+    git pull = git fetch + git merge
+
+    git pull 的三种结果： 参考上文
+
+14. rebase
+
+    git rebase 有两种作用：
+    1. alternative way for  git merge
+    2. cleanup tool
+
