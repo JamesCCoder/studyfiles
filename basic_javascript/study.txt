@@ -17,6 +17,11 @@ symbol is for value that cannot be changed
 
 + - * /  **   +=  x++ x--
 
+spread/rest operation
+
+let a = [1,2,3];
+let b = [...a, 4];
+
 
 4.  difference between "==" and "==="
 

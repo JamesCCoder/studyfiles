@@ -1,1 +1,6 @@
 1. react is a javascript library 
+
+2. Core of React: virtural DOM 
+   ----> reusable component
+         single page application (server only sends one html file)
+

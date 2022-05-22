@@ -1,0 +1,7 @@
+.overall {
+  display: inline-block;
+  background-color: gray;
+  width: 100%;
+  vertical-align: middle;
+  margin: 5px;
+}
