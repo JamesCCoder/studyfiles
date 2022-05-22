@@ -116,3 +116,9 @@ display: none         block            inline             inline-block          
                                                                border-radius: 50%;
                                                                margin:auto;
                                           
+**remember:
+  to centerlize something:
+  picture:                                                     background-image    background-position
+  text:                                                        text-align:center
+  block/incline-block:                                         margin:auto    vertical-align:middle
+  flex:                                                        align-items: center  jusfity-content: center
