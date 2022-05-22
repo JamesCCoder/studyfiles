@@ -1,0 +1,57 @@
+.main {
+  padding: 0;
+  margin: 0;
+}
+
+.section {
+  border: 2px solid black;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.h1 {
+  font-size: 17px;
+  margin: 20px;
+}
+
+.h1_prenium {
+  font-size: 17px;
+  margin: 20px;
+  color: white;
+}
+
+.h2 {
+  font-size: 15px;
+  margin: 20px;
+  color: slategray;
+}
+
+.h2_prenium {
+  font-size: 15px;
+  margin: 20px;
+  color: darkgray;
+}
+
+.p {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  color: green;
+}
+
+.plus {
+  background-color: darkseagreen;
+}
+
+.free {
+  background-color: lightgreen;
+}
+
+.prenium {
+  background-color: darkgreen;
+}

@@ -120,5 +120,5 @@ display: none         block            inline             inline-block          
   to centerlize something:
   picture:                                                     background-image    background-position
   text:                                                        text-align:center
-  block/incline-block:                                         margin:auto    vertical-align:middle
+  block/incline-block:                                         margin:5px auto(上下有空间)    vertical-align:middle
   flex:                                                        align-items: center  jusfity-content: center
