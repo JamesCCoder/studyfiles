@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.background {
+  background-color: tomato;
+}
+.caption {
+  text-align: center;
+  padding: 17px;
+  font-weight: bolder;
+  color: white;
+  font-size: 14px;
+}
+
+.square {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.lists {
+  list-style-type: none;
+}
+
+.list {
+  color: white;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.pic {
+  background-color: aliceblue;
+  width: 70px;
+  height: 70px;
+  border: 2px solid bisque;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.text {
+  padding-top: 25px;
+}

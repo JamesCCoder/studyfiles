@@ -106,3 +106,13 @@ display: none         block            inline             inline-block          
 23. 常见button效果                                              cursor：pointer
 
 24. how to eliminate the line when pressing a button?             outline:none
+
+**25. 如何让垂直排列的元素变为横向排列？(组合)                      display: inline-block  width:33%
+                                                                test-align:center (maybe)
+
+**26. how to draw a circle ?                                   background-color: white;
+                                                               height:30px;  width:30px;
+                                                               border: 2px solid black;
+                                                               border-radius: 50%;
+                                                               margin:auto;
+                                          
