@@ -195,4 +195,9 @@ display: none         block            inline             inline-block          
 
     background-image
     background-repeat
-    background-size
+    background-size               100px      300px 100px      50%       contain    cover
+                                 (自适应)     （整体调节）   （按比例调节）（确保图片显示）（确保全覆盖）
+
+    background-position          similiar like （top left right buttom）
+
+    
