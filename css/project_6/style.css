@@ -2,6 +2,19 @@
   padding: 0;
   margin: 0;
 }
+
+.background {
+  background-image: url("../img/memories.png");
+  background-repeat: no-repeat;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+body {
+  height: 2000px;
+}
 .outer {
   background-color: orange;
   border: 5px solid black;
@@ -32,6 +45,12 @@
 }
 
 .one {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .two {

@@ -140,15 +140,40 @@ display: none         block            inline             inline-block          
 
 31. position :  static (default)   absolute  relative  fixed   sticky 
 
-    static:  normal file flow      no :    top   buttom   left  right 
+    static:  (normal file flow)        no :    top   buttom   left  right 
 
-    relative: normal file flow                     yes             other element miss
+    relative: (normal file flow)       yes             other element miss   元素原属性不变（height，width, margin）
 
-    abosulte: out of normal file flow              yes             other element miss  
+    abosulte: out of normal file flow  yes             other element miss   元素原属性变化（height，width,maring）
               (related to the closed not static parent element until window)
 
-    fixed: out of normal              yes                          other element miss
-              (related to window)
+    fixed: out of normal               yes             other element miss  元素原属性变化（height，width,margin）
+              (related to just window)
+
+!!!注意: 仅设置 position：absolute、fixed  之后没有设置top buttom left right，       (project_6)
+         element 的位置不具有参考意义
 
 32. 为什么设置字体大小后，其容器也会发生相应的大小变化？                                (project_6)
     因为没有设置 padding
+
+
+33. 悬浮 navigation bar                                                            (project_6)
+    position: fixed  top:0  left: 0      
+    box-sizing: border-box
+    margin:0                                (position:fixed 之后margin需要重新设置)
+
+34. 增加背景图片？
+    <body>
+       <div class="background"></div>
+    .....
+    </body>
+
+    .background{
+        background-image: url("../img/memories.png");
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        top:0;
+        left:0;
+    }
