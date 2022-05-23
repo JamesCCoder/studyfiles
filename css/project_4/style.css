@@ -9,8 +9,15 @@
   margin: 20px auto;
 }
 
+.section:hover,
+.section:active {
+  border-color: red;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
 .a {
   text-decoration: none;
+  display: block;
 }
 
 .h1 {
@@ -50,8 +57,13 @@
 
 .free {
   background-color: lightgreen;
+  float: right;
 }
 
 .prenium {
   background-color: darkgreen;
+}
+
+.float {
+  clear: both;
 }

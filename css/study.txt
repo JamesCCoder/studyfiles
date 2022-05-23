@@ -122,3 +122,12 @@ display: none         block            inline             inline-block          
   text:                                                        text-align:center
   block/incline-block:                                         margin:5px auto(上下有空间)    vertical-align:middle
   flex:                                                        align-items: center  jusfity-content: center
+
+27. 如果 a 中有很多元素 考虑 ：  display: block   (其他inline元素也同样如此)
+   27.1 什么情况下a中有很多元素？                            我们希望整块面板都可以做超链接(project_4)
+
+28. normal shadow？                                         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); (project_4)
+
+29. float 的本质是什么？                              将 element 悬浮在空中， 脱离原来的 elment flow (project_4)
+
+30. 如何在使用 float 后修改原来的 element flow ？                  <div></div>         clear:both      (project_4)
