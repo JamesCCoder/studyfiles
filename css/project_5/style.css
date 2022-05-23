@@ -1,0 +1,9 @@
+.image{
+    background-image: url("../img/memories.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    width:100%;
+    height:1000px;
+    left:1px;
+    top:1px;
+}

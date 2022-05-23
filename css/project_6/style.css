@@ -16,6 +16,8 @@ body {
   height: 2000px;
 }
 .outer {
+  position: static;
+  z-index: -2;
   background-color: orange;
   border: 5px solid black;
   height: 240px;

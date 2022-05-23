@@ -140,7 +140,7 @@ display: none         block            inline             inline-block          
 
 31. position :  static (default)   absolute  relative  fixed   sticky 
 
-    static:  (normal file flow)        no :    top   buttom   left  right 
+    static:  (normal file flow)        no :    top   buttom   left  right  z-index
 
     relative: (normal file flow)       yes             other element miss   元素原属性不变（height，width, margin）
 
@@ -177,3 +177,22 @@ display: none         block            inline             inline-block          
         top:0;
         left:0;
     }
+
+35. **remember  (project_4)
+    position:fixed                             制作  navigation bar，     background-image   
+    position:absolute(配合relative)           制作  badge
+
+36. overflow:hidden  作用
+                                             parent 使用   overflow：hidden
+                                             child  使用   position：relative 使用top left等之后，超出parent的部分不显示
+
+37. 如何不用position：fixed/absolute 制作背景图片？  （project_5）
+
+    1. 当使用  position：fixed/absolute 时，配合width（推荐 width：100%）即可显示图片（最好能有top，left等）
+    2. 当使用  position：static/relative时，配合width，需要特别设置height 才能显示图片  
+
+38，理解 background 各个属性的作用       （project_5）
+
+    background-image
+    background-repeat
+    background-size
