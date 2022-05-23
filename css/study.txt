@@ -25,7 +25,7 @@ all   up right down left      up down / left right
 why does height = 100% NOT work? How to make it work?            enough, change body
 how to get height 100% totally?                                  body 100%, html 100%
 
-3. border-box  vs  content-box
+3. border-box  vs  content-box  (box-sizing)
 in border-box width = content-box width + padding + border
 
 
@@ -117,11 +117,17 @@ display: none         block            inline             inline-block          
                                                                margin:auto;
                                           
 **remember:
-  to centerlize something:
+  to centerlize something in parellel:
   picture:                                                     background-image    background-position
   text:                                                        text-align:center
   block/incline-block:                                         margin:5px auto(上下有空间)    vertical-align:middle
   flex:                                                        align-items: center  jusfity-content: center
+
+  to centerlize something in vertical:
+
+  padding and margin:    (height:50% 没有用）(使用 box-sizing: border-box 效果佳)
+  position               (很方便)
+
 
 27. 如果 a 中有很多元素 考虑 ：  display: block   (其他inline元素也同样如此)
    27.1 什么情况下a中有很多元素？                            我们希望整块面板都可以做超链接(project_4)
@@ -131,3 +137,18 @@ display: none         block            inline             inline-block          
 29. float 的本质是什么？                              将 element 悬浮在空中， 脱离原来的 elment flow (project_4)
 
 30. 如何在使用 float 后修改原来的 element flow ？                  <div></div>         clear:both      (project_4)
+
+31. position :  static (default)   absolute  relative  fixed   sticky 
+
+    static:  normal file flow      no :    top   buttom   left  right 
+
+    relative: normal file flow                     yes             other element miss
+
+    abosulte: out of normal file flow              yes             other element miss  
+              (related to the closed not static parent element until window)
+
+    fixed: out of normal              yes                          other element miss
+              (related to window)
+
+32. 为什么设置字体大小后，其容器也会发生相应的大小变化？                                (project_6)
+    因为没有设置 padding
