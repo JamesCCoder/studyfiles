@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+body {
+  height: 2000px;
+}
+
 .background {
   background-image: url("../img/memories.png");
   background-repeat: no-repeat;
@@ -12,9 +16,6 @@
   z-index: -1;
 }
 
-body {
-  height: 2000px;
-}
 .outer {
   position: static;
   z-index: -2;

@@ -178,6 +178,22 @@ display: none         block            inline             inline-block          
         left:0;
     }
 
+34.1  如何增加灰色蒙版？（project_7）
+    <body>
+       <div class="background"></div>
+    .....
+    </body>
+     
+    .background {
+       background-color: rgba(0, 0, 0, 0.5);
+       position: fixed;
+       height: 100%;
+       width: 100%;
+       z-index: -1;
+     }
+
+     
+
 35. **remember  (project_4)
     position:fixed                             制作  navigation bar，     background-image   
     position:absolute(配合relative)           制作  badge
@@ -193,11 +209,67 @@ display: none         block            inline             inline-block          
 
 38，理解 background 各个属性的作用       （project_5）
 
-    background-image
+    background-image              url()          linear-gradient()    radial-gradient()
     background-repeat
     background-size               100px      300px 100px      50%       contain    cover
                                  (自适应)     （整体调节）   （按比例调节）（确保图片显示）（确保全覆盖）
 
     background-position          similiar like （top left right buttom）
+    background-attachment: scroll/fixed                   图片跟着滚轮滑动/固定不动
+    background-origin: padding-box(default 独有)    content-box     border-box
+    background-clip: padding-box       content-box  border-box
 
-    
+38.1  background 滤镜
+     
+      filter
+
+39. 区分 background-origin   background-clip
+    1. 将图片放入 padding，content，border 范围内，显示完整图片
+    2. 将图片按照原图裁剪到 padding，content， border 大小，不保留剩余部分
+
+** 设计理念：设计出两个水平的 block                (project_7)
+
+   1. <div class="div_1">123</div>
+      <div class="div_2">345</div>
+
+   2.  .div_1{
+         display: inline-block;
+         vertical-align:middle;
+         width: 50%;
+       }
+
+       .div_2{
+         display: inline-block;
+         vertical-align:middle;
+         width: 50%;
+
+       }
+
+** remember:  inline-box 的两种使用：
+                
+            1. 用于 li   配合 padding/margin         project_3
+            2. 用于 div  配合 width                  project_1 project_7
+
+40. 计量单位
+
+   1. pixel 
+
+   2. %     position:   fixed (viewpoint)  absolute(parent)  static/relative(parent)
+
+   3. em    相对于父类的 font-size
+
+   4. rem （root-em）  相对于 html root element 的 font-size （默认 16px）
+
+   5. vw, vh  相对于 viewpoint 的 1%
+
+   6. vm      vw，vh中的较小值
+
+what are these units use for ? 
+
+   font-size     
+
+   padding border margin
+
+   width height
+
+   top buttom  left right 
