@@ -1,5 +1,6 @@
 1. who develop bootstrap?                                          twitter
 2. what is bootstrap?                                              css framework
+3. how to install bootstrap?                                       two links， one for head，before css；one for body，before javascript
 
 3. container 
    <div class="container"></div>                       container-sm md lg xl xxl fluid
@@ -31,4 +32,104 @@
 
 
 
-Topography
+5. Topography  (project_4)
+
+<h1> -- <h6>
+<p class="h1">                         h1-h6
+
+<h1 class="display-1">                 display-1 ~ 6
+
+<h1 class="lead">
+<h1 class="small">
+
+<h1 class="text-muted">
+
+<h1 class="text-justify">
+<h1 class="text-nowrap">
+
+<h1 class="text-left">
+<h1 class="text-right">
+<h1 class="text-center">
+
+<h1 class="text-uppercase">
+<h1 class="text-lowercase">
+<h1 class="text-capitalize">
+
+
+6. table   (project_5)
+
+basic structure:
+
+      <table class="table">
+         <thead>
+            <tr>
+               <th>name</th>
+               <th>age</th>
+               <th>sex</th>
+            </tr>
+         </thead>   
+         <tbody>
+             <tr>
+                <td>James</td>
+                <td>23</td>
+                <td>male</td>
+             </tr>
+             <tr>
+                <td>Weiwei</td>
+                <td>21</td>
+                <td>female</td>
+             </tr>
+         </tbody>
+         <tfoot>
+             <tr>
+                <td>XX</td>
+                <td>XXX</td>
+                <td>XXXX</td>
+             </tr>
+         </tfoot>
+      </table>
+
+backgroundcolor:    table-dark    light    primary  secondary   danger  success      info         warning
+            black        gray     blue       gray       red      green   blue-green     yellow 
+
+* 可应用于整表，行，列，单元格。
+
+ table-striped   条纹背景
+
+ 边框：   table-bordered     table-borderless
+ 其他：   table-hover                                                                    悬停效果
+          table-responsive                                                               scroll bar 
+
+
+
+7. button /  button-group    (project_6)
+ 
+ *** button type: button submit reset  (submit and reset are using in forms to submit or reset data that from form)
+
+class="btn"                     默认的 btn 无背景色，无边框
+class="btn btn-primary"         生成有背景色的 btn， 无边框,文字颜色默认为白色
+class="btn btn-outline-primary" 生成无背景色 btn， 有边框，边框色和文字色一致
+
+class="btn btn-sm"              btn-sm  btn-lg   改变 btn 大小
+
+disabled                        禁用 btn
+active                          激活状态  btn
+
+插入 <span> 实现效果:
+   
+        <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span> Loading...
+        </button>
+
+     spinner-border      spinner-grow
+     spinner-border-sm   spinner-grow-lg
+
+
+<div clsss="btn-group">
+    <button class="btn btn-primary">This is a button</button>
+    <button class="btn btn-success">This is a button</button>
+    <button class="btn btn-warning">This is a button</button>
+</div>
+
+其他： d-flex               两端对齐
+       btn-group-vertical   垂直排列 
