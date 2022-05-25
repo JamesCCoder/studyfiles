@@ -1,0 +1,13 @@
+.container {
+}
+
+.col {
+  padding: 1px;
+  margin: 1px;
+}
+
+.row {
+  padding: 50px;
+  margin: 10px;
+  background-color: aqua;
+}

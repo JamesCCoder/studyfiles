@@ -273,3 +273,33 @@ what are these units use for ?
    width height
 
    top buttom  left right 
+
+how to change the "font-size" in "root element"?
+
+  html{
+      font-size: 100%;        // 75%  50%                            
+      //     1rem = 16px
+  }
+
+
+41. what is "max/min-width" and "max/min-height" use for ?
+
+    when we made a responsive webpage, some element will be change with the change of the website, then we setup
+    these two varibles to set a limitation of the change.
+
+42. when change the "setting ----> appearance ----> font-size"             (project_8)
+    "rem em" will change
+    "px" won't 
+
+
+** remember:  how to make webpage responsive?
+  
+  1. font-size:  em/rem (随着setting变化而变化)    vh/vw/vm  (随着高度/宽度/较小值变化而变化)   
+  2. min/max width/height
+
+
+43. how to solve "100% height" problem ?
+
+    1.  100% height to all ancesters
+    2.  position: fixed/absolute
+    3.  use vw/vh

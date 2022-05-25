@@ -1,0 +1,21 @@
+.zero {
+  font-size: 100px;
+}
+
+.one {
+  font-size: 100px;
+}
+
+.two {
+  font-size: 2em;
+}
+
+.three {
+  font-size: 10vw;
+}
+.four {
+  font-size: 10vh;
+}
+.five {
+  font-size: 10vm;
+}

@@ -1,0 +1,18 @@
+.container-sm {
+  background-color: red;
+}
+.container-md {
+  background-color: orange;
+}
+.container-lg {
+  background-color: yellow;
+}
+.container-xl {
+  background-color: green;
+}
+.container-xxl {
+  background-color: blue;
+}
+.container-fluid {
+  background-color: violet;
+}
