@@ -133,3 +133,34 @@ active                          激活状态  btn
 
 其他： d-flex               两端对齐
        btn-group-vertical   垂直排列 
+
+
+
+8. common API
+
+   1. sizing   (project_7)
+
+      class="w-25"                      w-50  w-75  w-100 w-auto
+      class="h-25"                      50 75 100 auto
+
+      * class="d-inline-block"
+    
+      class="mh-100"                    max-width:100%
+      class="mw-100"                     max-height:100%
+
+      class="vh-100"
+      class="vw-100"
+
+   2. spacing
+    
+      class="m-1"                         margin
+      class="p-1"                         padding
+
+      t                                   top
+      b                                   buttom
+      s                                   start(left)
+      e                                   end(right)
+      x                                   left + right
+      y                                   top + buttom
+       
+      
