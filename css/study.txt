@@ -303,3 +303,47 @@ how to change the "font-size" in "root element"?
     1.  100% height to all ancesters
     2.  position: fixed/absolute
     3.  use vw/vh
+
+
+*44. 设计 “灰幕” + “选择框”， 并增加相应事件
+
+     （project_1)
+
+
+*45. 设计 sidebar，并制作为 responsive 事件
+
+      (project_9)    (nav bar, side bar, backdrop 相互配合)
+
+
+responsive setup:                                                            (project_9)
+
+    <meta name="viewpoint" content="width=divice-width, initial-scale=1.9">
+
+    make website indentify the view of cellphone or other hardware (default value for html:5)
+
+media queries:
+
+@media (max-width: 40rem) {
+  .sidebar {
+    display: block;
+  }
+  .backdrop {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+} 
+
+1. syntax 为 
+
+   @media (breaking point){
+      list the different varible
+   }
+2. we cam also setup multiple @media  (media queries)
+
+3. for multiple conditions:
+
+    @media (min-width: 40rem) and (min-height:60rem){
+        
+    }

@@ -37,13 +37,13 @@ logical operators:   &&    ||    !
 
 9. document.    createElement("h1")           setAttribute("class","h1")
                 createTextNode("test")        appendChild()
-                                      
+                                                                                             virtural DOM
                 getElementById("h1")          innerHtml = "123"
                 QuerySelector(".h1")          textContent = "123"
                                               value       = "123"
-
-                                              style.backGround = "red"
-                                              classList.add("h1")
+                                                                                             setup value
+                                              style.backGround = "red"                       setup css value
+                                              classList.add("h1")                            setup css class
                                                        .remove("h1")
 
-                                              addEventListener("click", check);
+                                              addEventListener("click", check);              virtural event
