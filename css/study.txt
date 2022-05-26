@@ -362,3 +362,58 @@ media queries:
     [color ^= red]                  all                          color begins    "red"
    a[color |= red]                   a                           color begins or equals "red"
     [color $= red]                  all                          color ends      "red"
+
+
+47. label 标签可以用于任何 input、textarea 等需要 focus 属性的 element 中     (project_10)
+    只需要 label for 属性对应内容 和 相应的 input id 相同即可
+
+    关于 label 标签 和 input 标签的顺序问题：
+    input标签是带一定效果的，比如：input type=“text” 是一个输入框， input type=“checkbox” 是一个check框，
+    label标签则代表效果之外的文字，
+    因此，二者之间的顺序问题取决于“效果”和“文字”之间的顺序问题
+
+    关于label 标签 和 input 标签的layout：
+    二者的layout，包括 margin padding 等，是分开进行设置的。
+
+    input 标签常见的 css event：
+    hover，focus
+
+    如何改变输入框的边界？
+    border outline
+
+
+48. 4种 button (project_11)
+
+    1. <input type = "button" />
+       无javascript， 无event
+
+    2. <input type = "submit" />
+       无javascript，有event，除非用javascript 阻止
+
+    3. <button>
+        form 中也有动作，但按钮内容更加丰富，但有浏览器兼容问题
+    
+    4. <a> <img> <span> <div> 进行伪装
+    
+    原则： 1. form 中用type=submit，form外用type=button
+          2. button 和 input 设置文字方法不同，前者为<button>....</button>，后者为<input type="" value="...">
+
+49. -webkit-appearance：none     
+    -moz-appearance：none
+
+    -webkit-: safari + chrome
+    -moz-   : firefox
+
+
+50. 如何改变 input 行为？
+
+    举例：  改变 checkbox 中 check 框的动作
+    默认状态下，当点击checkbox时，check 框背景色变蓝，同时出现tip
+
+    如何修改它？
+
+    1. appearance： none 消除整个 check 框
+    2. 设置 width height border，自己制作 check 框
+    3. 设置 checked 动作，为 background-color：green
+
+    结果：生成一个自定义的 check 框， 其动作为：选中后，背景色为绿色 
