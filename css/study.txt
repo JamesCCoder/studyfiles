@@ -14,7 +14,7 @@ div + p{
     adjancent sibling
 }
 
-
+content model: height width --> (content)    padding  border(outline)  margin     
 
 all   up right down left      up down / left right 
 
@@ -352,3 +352,13 @@ media queries:
 
    orientation: portrait /  landscape 
                 (画面纵向时)  (画面横向时)
+
+
+46. advanced selector
+
+    [color = red]                   all                          color equals    "red"    
+   a[color ~= red]                   a                           color contains  "red"
+    [color *= red]                  all                          color contains  "red"
+    [color ^= red]                  all                          color begins    "red"
+   a[color |= red]                   a                           color begins or equals "red"
+    [color $= red]                  all                          color ends      "red"
