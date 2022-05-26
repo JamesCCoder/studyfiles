@@ -345,5 +345,10 @@ media queries:
 3. for multiple conditions:
 
     @media (min-width: 40rem) and (min-height:60rem){
-        
+
     }
+
+4. other condition
+
+   orientation: portrait /  landscape 
+                (画面纵向时)  (画面横向时)
