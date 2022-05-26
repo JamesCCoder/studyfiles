@@ -376,7 +376,7 @@ media queries:
     二者的layout，包括 margin padding 等，是分开进行设置的。
 
     input 标签常见的 css event：
-    hover，focus
+    hover，focus, invalid(validation feedback)
 
     如何改变输入框的边界？
     border outline
@@ -417,3 +417,77 @@ media queries:
     3. 设置 checked 动作，为 background-color：green
 
     结果：生成一个自定义的 check 框， 其动作为：选中后，背景色为绿色 
+
+
+51. form validation feedback
+
+    :invalid
+
+52. 如何设置 button 使之失去作用？ 如何写出相应 selector 在 css ？
+
+    <button disabled> 123 </button>    
+    button[disabled]{
+
+    }
+
+53. google font
+
+54. font-family
+    font-weight
+    font-style
+    font-size
+    font-variant: small-caps
+
+    letter-spacing
+    white-space：normal（default）
+    line-height
+    text-decoration
+    text-shadow
+
+    区分： line-height  vs     padding 
+
+
+*** 55. display: flex 使用场景： 取代 display:inline-block   (project_12)
+
+
+                            display: flex;
+
+        Parent:                                              Children:
+
+    flex-direction: row / row-reverse /                    order
+                 column / column-reverse          
+
+    flex-wrap: nowrap / wrap / wrap-reverse                flex-grow (responsive)
+
+    ** flex-flow: row wrap (above two)                     flex-shrink (responsive)
+
+    jusfity-content:                                       flex-basis （取代width，height 受限于max/min-width/height）
+          flex-start  flex-end   center
+          space-between    space-around                    align-self:
+          space-evenly                                          auto / flex-start / flex-end /
+                                                                center /  stretch / baseline
+    align-items:
+          flex-start  flex-end    center
+          stretch
+          baseline
+
+    align-content:
+          flex-start flex-end   center
+          stretch
+          space-between  space-around
+    
+    gap, row-gap, column-gap
+
+
+
+56. 制作 header 对比 （proejct 13  vs  project 14）
+
+    display：inline-block;
+    display：flex;
+
+    gap   vs    padding
+
+57. z-index 使用范围
+
+    1. position 不是 static, 例如：relative, absolute, fixed
+    2. flex items

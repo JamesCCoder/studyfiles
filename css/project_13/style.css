@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    height:1000px;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+}
+
+.nav{
+    background-color: dodgerblue;
+    width:100%;
+    height:100%;
+    text-align:right;
+    
+}
+
+.nav h3{
+    display: inline-block;
+    padding:35px;
+    margin-right: 30px;
+}
