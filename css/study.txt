@@ -491,3 +491,18 @@ media queries:
 
     1. position 不是 static, 例如：relative, absolute, fixed
     2. flex items
+
+
+**58.  设计  
+
+                                          3333333
+       111111111            222222222                    44444444444            align-self:flex-start
+
+
+
+       111111111     222222222                           333333333                flex:1;
+
+
+*** 难题：
+
+    看到：按钮和按钮外边框的距离，想到：padding
