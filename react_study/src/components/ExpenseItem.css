@@ -1,7 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 .overall {
-  display: inline-block;
-  background-color: gray;
-  width: 100%;
-  vertical-align: middle;
-  margin: 5px;
+  background-color: darkgray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.overall p {
+  padding: 24px;
+}
+
+.third {
+  align-self: right;
 }

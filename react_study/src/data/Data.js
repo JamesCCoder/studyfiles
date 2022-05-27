@@ -17,7 +17,7 @@ export const Data = [
     id: 3,
     name: "c",
     time: "Apr 21th, 2021",
-    name: "Body Insurance",
+    name: "Insurance",
     price: "$123.67",
   },
 ];

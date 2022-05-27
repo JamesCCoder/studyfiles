@@ -4,11 +4,9 @@ import "./ExpenseItem.css";
 const ExpenseItem = (props) => {
   return (
     <div className="overall">
-      <div className="first">{props.time}</div>
-      <div>
-        <h2 className="second">{props.name}</h2>
-        <div className="third">{props.price}</div>
-      </div>
+      <p className="first">{props.time}</p>
+      <p className="second">{props.name}</p>
+      <p className="third">{props.price}</p>
     </div>
   );
 };
