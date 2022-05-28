@@ -1,0 +1,23 @@
+.overall_date {
+  background-color: slategrey;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.month_day {
+  font-size: 12px;
+  padding: 0.25rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.year {
+  font-size: 18px;
+  color: white;
+  font-weight: bolder;
+}

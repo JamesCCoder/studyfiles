@@ -4,3 +4,84 @@
    ----> reusable component
          single page application (server only sends one html file)
 
+3. basic sytax:
+
+   1.for basic component:                            2. for css file:
+
+   import React from "react";
+   import "./ExpenseItem.css";                       .overall{           .first{
+
+   const ExpenseItem = (props) => {                  }                   }
+   
+   return (
+    <div className="overall">
+      <p className="first">{props.time}</p>
+      <p className="second">{props.name}</p>
+      <p className="third">{props.price}</p>
+    </div>
+  );
+};
+
+   export default ExpenseItem;
+   
+
+   3. for parent                                       
+
+    import ExpenseItem from "../ExpenseItem.js";
+
+    function App() {
+  
+    return (
+      <>
+        <ExpenseItem/>
+      </>
+    );
+  });
+}
+
+     export default App;
+
+
+  4. for data file:                                    
+
+  export const Data = [                              
+  {
+    id: 1,                                             
+    name: "a",
+    time: "Mar 28th, 2021",
+    name: "Car Insurance",
+    price: "$294.67",
+  },
+  {
+    id: 2,
+    name: "b",
+    time: "Apr 21th, 2021",
+    name: "Body Insurance",
+    price: "$123.67",
+  },
+  {
+    id: 3,
+    name: "c",
+    time: "Apr 21th, 2021",
+    name: "Insurance",
+    price: "$123.67",
+  },
+];
+
+
+how to import data:   (import and filter data)
+
+import { Data } from "./data/Data.js";
+
+function App() {
+  return Data.map((oneData) => {
+    const { time, name, price } = oneData;
+    return (
+      <>
+        <ExpenseItem time={time} name={name} price={price} />
+      </>
+    );
+  });
+}
+
+4. props.children 用法

@@ -8,7 +8,7 @@ function App() {
     const { time, name, price } = oneData;
     return (
       <>
-        <ExpenseItem time={time} name={name} price={price} />
+        <ExpenseItem time={time} name={name} price={price}></ExpenseItem>
       </>
     );
   });
