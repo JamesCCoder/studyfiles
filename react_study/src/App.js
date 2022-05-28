@@ -1,17 +1,15 @@
 import React from "react";
 import "./App.css";
-import { Data } from "./data/Data.js";
-import ExpenseItem from "./components/ExpenseItem";
+import Expense from "./components/Expenses/Expense.js";
+import NewExpense from "./components/NewExpense/NewExpense.js";
 
 function App() {
-  return Data.map((oneData) => {
-    const { time, name, price } = oneData;
-    return (
-      <>
-        <ExpenseItem time={time} name={name} price={price}></ExpenseItem>
-      </>
-    );
-  });
+  return (
+    <>
+      <NewExpense />
+      <Expense />
+    </>
+  );
 }
 
 export default App;

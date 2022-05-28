@@ -1,6 +1,6 @@
 import React from "react";
 import "./ExpenseDate.css";
-import Frame from "../UI/Frame.js";
+import Frame from "../../UI/Frame.js";
 
 const ExpenseDate = (props) => {
   let { time } = props;

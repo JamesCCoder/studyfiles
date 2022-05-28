@@ -1,6 +1,6 @@
 import React from "react";
 import "./ExpenseCost.css";
-import Frame from "../UI/Frame.js";
+import Frame from "../../UI/Frame.js";
 
 const ExpenseCost = (props) => {
   return (

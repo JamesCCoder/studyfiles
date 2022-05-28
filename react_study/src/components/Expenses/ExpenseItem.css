@@ -10,10 +10,3 @@ body {
 .first {
   font-weight: bolder;
 }
-
-.second {
-  flex: 1;
-  margin: 0.5rem;
-  color: white;
-  font-weight: bolder;
-}

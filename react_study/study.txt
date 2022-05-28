@@ -69,7 +69,7 @@
 ];
 
 
-how to import data:   (import and filter data)
+how to import a set of data:   (import and filter data)
 
 import { Data } from "./data/Data.js";
 
@@ -91,3 +91,14 @@ function App() {
 5. 掌握要点：
    1. 如何将某一个 component 中的一部分变为另一个 component
    2. 如何从 component 的套嵌结构中设计出共有部分（举例：UI）
+   overall: 1. props 向下转移 
+            2. css 向下（或者向UI）
+
+
+6. label for  =>  label htmlFor
+
+7. form 设计要点：
+    1. form 包括两部分： input 和 button
+    2. input 总有 label 进行包裹，作为文字部分
+    3. 每个 input + label 和 button 都作为 独立个体 被 div 包裹，方便格式调整
+    4. 注意 input 的 type 多样性
