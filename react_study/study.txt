@@ -85,3 +85,9 @@ function App() {
 }
 
 4. props.children 用法
+   const names = props.className;
+
+
+5. 掌握要点：
+   1. 如何将某一个 component 中的一部分变为另一个 component
+   2. 如何从 component 的套嵌结构中设计出共有部分（举例：UI）

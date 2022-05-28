@@ -7,19 +7,6 @@ body {
   background-color: gray;
 }
 
-.overall {
-  display: flex;
-  background-color: darkgray;
-  margin: 1rem 0.5rem;
-  padding: 0.75rem;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
 .first {
   font-weight: bolder;
 }
@@ -29,12 +16,4 @@ body {
   margin: 0.5rem;
   color: white;
   font-weight: bolder;
-}
-
-.third {
-  background-color: blueviolet;
-  padding: 0.75rem;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: white;
 }
