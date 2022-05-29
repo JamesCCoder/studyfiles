@@ -113,3 +113,23 @@ function App() {
        onChange 利用 e.target.value 接受 input 发生的变化
     2. input 对应数值为 value, 进行双向绑定.
     3. 用 onSubmit 将 onChange 接收到的数据总结为一组数据
+    4. 用 e.preventDefault() 阻止 button（input）的默认事件
+
+
+8. 数据从上到下的引用和再加工：
+
+   要点：1. props
+         2.  const {name, age, sex} = props/Data, 进行 data filter
+
+  数据从下到上的引用和再加工：
+
+   要点：1. 父类写一个 用于“引用数据”的 function   onSavedData = {onSavedDataHandler}
+         2. onSaveData 利用 props 在子类中使用： props.onSavedData("onSubmit中get到的数据")
+         3. onSavedDataHandler 在父类中使用，用于加工数据
+              const onSavedDataHandler = (data) => {
+                const newData = {
+                  ...data,                               ==> 获取数据
+                  id: Math.random().toString(),
+                }
+                 console.log(newData);
+              }
