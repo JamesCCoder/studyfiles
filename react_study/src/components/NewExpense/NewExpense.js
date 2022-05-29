@@ -16,20 +16,29 @@ const NewExpense = (props) => {
   };
 
   const dateHandler = (e) => {
-    setDate(e.target.value);
+    const date = new Date(e.target.value);
+    const date_1 =
+      date.toLocaleString("en-US", {
+        month: "short",
+      }) +
+      " " +
+      date.getDay() +
+      "," +
+      date.getFullYear();
+    setDate(date_1);
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
     const submitData = {
-      title: title,
-      amount: amount,
-      date: date,
+      time: date,
+      name: title,
+      price: "$" + amount,
     };
     props.onSavedData(submitData);
-    setAmount("");
-    setDate("");
-    setTitle("");
+    // setAmount("");
+    // setDate("");
+    // setTitle("");
   };
 
   return (

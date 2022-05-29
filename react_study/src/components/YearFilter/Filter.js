@@ -1,22 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Filter.css";
 import Expense from "../Expenses/Expense";
 
 const Filter = (props) => {
   const { Data } = props;
+  let [YearNumber, setYearNumber] = useState(2021);
+  const numberHandle = (e) => {
+    setYearNumber(e.target.value);
+  };
   return (
     <div className="filter">
       <div className="two">
         <div className="content">Filter by year</div>
         <div className="year">
-          <select>
-            <option>2020</option>
-            <option>2021</option>
-            <option>2022</option>
+          <select value={YearNumber} onChange={numberHandle}>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
           </select>
         </div>
       </div>
-      <Expense Data={Data} />
+      <Expense OldData={Data} YearNumber={YearNumber} />
     </div>
   );
 };
