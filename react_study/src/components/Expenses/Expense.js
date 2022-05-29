@@ -1,14 +1,20 @@
 import React from "react";
 import "./Expense.css";
-import { Data } from "../../data/Data.js";
+
 import ExpenseItem from "./ExpenseItem";
 
-const Expense = () => {
+const Expense = (props) => {
+  const { Data } = props;
   return Data.map((oneData) => {
-    const { time, name, price } = oneData;
+    const { id, time, name, price } = oneData;
     return (
       <>
-        <ExpenseItem time={time} name={name} price={price}></ExpenseItem>
+        <ExpenseItem
+          key={id}
+          time={time}
+          name={name}
+          price={price}
+        ></ExpenseItem>
       </>
     );
   });

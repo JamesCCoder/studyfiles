@@ -93,7 +93,12 @@ function App() {
    2. 如何从 component 的套嵌结构中设计出共有部分（举例：UI）
    overall: 1. props 向下转移 
             2. css 向下（或者向UI）
-
+   
+   掌握要点：
+   1.如何将某一层引用的 data 向上一层转移
+     要点： 1. 更上一层引用（import data）
+            2. children 利用 props, 例如：const {name} = Data  ==>   const {name} = props
+             3. parent 利用新的引用  例如： Data = {Data} 或者 Name = {Name}
 
 6. label for  =>  label htmlFor
 
@@ -102,3 +107,9 @@ function App() {
     2. input 总有 label 进行包裹，作为文字部分
     3. 每个 input + label 和 button 都作为 独立个体 被 div 包裹，方便格式调整
     4. 注意 input 的 type 多样性
+
+    关于 form 的event：
+    1. input 对应方法为 onChange， button（input）无方法， form 对应方法为 onSubmit
+       onChange 利用 e.target.value 接受 input 发生的变化
+    2. input 对应数值为 value, 进行双向绑定.
+    3. 用 onSubmit 将 onChange 接收到的数据总结为一组数据
