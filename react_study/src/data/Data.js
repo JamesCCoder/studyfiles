@@ -1,13 +1,6 @@
 export const Data = [
   {
-    id: 1,
-    na: "a",
-    time: "Mar 28, 2021",
-    name: "Car Insurance",
-    price: "$294.67",
-  },
-  {
-    id: 2,
+    id: 0.46465465456465456,
     na: "b",
     time: "Apr 21, 2021",
     name: "Body Insurance",
@@ -26,5 +19,13 @@ export const Data = [
     time: "Apr 21, 2022",
     name: "Insurance",
     price: "$123.67",
+  },
+  {
+    id: 5,
+    na: "c",
+    nac: "dfsf",
+    time: "Apr 21, 2022",
+    name: "Insurance",
+    price: "$999.67",
   },
 ];

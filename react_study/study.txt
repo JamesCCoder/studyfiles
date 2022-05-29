@@ -203,4 +203,35 @@ function App() {
       注意：1. getDay（）方法之间必须加入其他符号，否则数据会被覆盖
             2. getDay（）等方法获取的是数字，如果需要字母，则需要 toLocaleString（）方法
             
-       
+14. * 自下朝上加工数据
+
+      在 child 得到的数据为 ：   {name: "a", amount:1, sex:"male"}
+
+      现在需要在 parent 加入 id：    
+           1. parent 写入方法：
+                    getData = getDataHandler(Data)
+
+                    const getDataHandler = (Data) => {
+                         const newData = {
+                            ...Data,
+                            id: Math.random(),
+                         }
+                    }
+           2. child 写入引用
+
+                    props
+
+                    props.getData("getted Data");
+
+
+      原始数据为 array：   [{},{},{}]
+      现在get到一个 {} ，如何添加到 array 里面？
+
+                  const newArray = (newObject) => {
+                      return [...oldArray, newOblect];
+                  }
+
+      不断加入新数值： 
+                    const newArray = (newObject) => {
+                       setNewArray(...pre, newObject);
+                    }        

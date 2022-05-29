@@ -15,11 +15,9 @@ function App() {
   let [updateData, setUpdateData] = useState(usefulData);
 
   const getDataHandler = (datafromlast) => {
-    const newGetData = {
-      ...usefulData,
-      newData: datafromlast,
-    };
-    console.log(newGetData);
+    setUpdateData((pre) => {
+      return [...pre, datafromlast];
+    });
   };
   return (
     <>
