@@ -225,6 +225,7 @@ function App() {
 
 
       原始数据为 array：   [{},{},{}]
+      
       现在get到一个 {} ，如何添加到 array 里面？
 
                   const newArray = (newObject) => {
@@ -234,4 +235,38 @@ function App() {
       不断加入新数值： 
                     const newArray = (newObject) => {
                        setNewArray(...pre, newObject);
-                    }        
+                    }   
+
+       注意： pre 关键字只有在 useState 中的 “set”里才会有
+               
+15. child  --->   child  ---->   child   ------> parent(root)
+    props.event   event                                         -----
+                                                                    | -->   useState
+    child  <---  child   <-----  child   <------- parent(root)  -----                         
+    porps          props
+
+
+16. filter 不到数据的情况
+
+    if(newData.length === 0 ){
+      return <p>Nothing found</p>
+    }else{
+      return newData.map(oneData => {
+          return ...
+      })
+    }
+
+17. 程序设计：
+
+    一个 block，上面显示“一个按钮”，点击之后，按钮消失，生成三个“输入框”
+
+    设计：1.一个parent，作为“按钮”或者“输入框” children 的载体
+         2. 两个 child，一个设计一个按钮，一个设计三个“输入框”
+
+    原理：1. 有按钮的 child 在按钮上设计onClick事件，获得点击变量 false -> true
+          2. 将获得的变量传递到 parent: virable
+          3. parent 设计 conditional statement：
+            <parent>
+             {!virable && component_1}
+             {virable && component_2}
+            </parent>

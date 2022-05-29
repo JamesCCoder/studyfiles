@@ -36,9 +36,9 @@ const NewExpense = (props) => {
       price: "$" + amount,
     };
     props.onSavedData(submitData);
-    // setAmount("");
-    // setDate("");
-    // setTitle("");
+    setAmount("");
+    setDate("");
+    setTitle("");
   };
 
   return (
