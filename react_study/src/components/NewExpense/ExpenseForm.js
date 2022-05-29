@@ -1,5 +1,6 @@
 import React from "react";
 import "./ExpenseForm.css";
+import Frame from "../../UI/Frame";
 
 import NewExpense from "./NewExpense";
 
@@ -14,9 +15,9 @@ const ExpenseForm = (props) => {
 
   return (
     <>
-      <div className="expenseform">
+      <Frame className="expenseform">
         <NewExpense onSavedData={onSavedDataHandler} />
-      </div>
+      </Frame>
     </>
   );
 };

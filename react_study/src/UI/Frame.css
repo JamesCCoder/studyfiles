@@ -36,3 +36,14 @@
   color: white;
   font-weight: bolder;
 }
+
+.new_overall {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.expenseform {
+  background-color: darkslateblue;
+  margin: 5px auto;
+}

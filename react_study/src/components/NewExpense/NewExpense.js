@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./NewExpense.css";
+import Frame from "../../UI/Frame";
 
 const NewExpense = (props) => {
   let [title, setTitle] = useState("");
@@ -34,7 +35,7 @@ const NewExpense = (props) => {
   return (
     <>
       <form className="form" onSubmit={submitHandler}>
-        <div className="new_overall">
+        <Frame className="new_overall">
           <div className="combo new_title">
             <label htmlFor="title">Title</label>
             <input
@@ -59,7 +60,7 @@ const NewExpense = (props) => {
             <label htmlFor="date">Date</label>
             <input id="date" type="date" value={date} onChange={dateHandler} />
           </div>
-        </div>
+        </Frame>
         <div className="new_button">
           <button type="input">Add Expense</button>
         </div>
