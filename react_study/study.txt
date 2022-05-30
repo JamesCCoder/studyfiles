@@ -143,8 +143,12 @@ function App() {
                Data = {Data}
    
    child：     props
-               const {name， age，sex} = props                        ===> data filter     
-
+               const {name， age，sex} = props                        ===> data filter (难点：数据转换)
+                                                                (*容易遗忘：利用set中的pre不断添加新数据)
+                                                                (**对比：1.给每个数据添加一个id)
+                                                                （2. 每次 (在原数据基础上) 添加一组数据）    
+                                                             1. setNewData = (...)([...oldData, gettedNewData])
+                                                             2. setNewData = (...)([...pre, modifiedNewData])
 
    无加工的向上引用：
 
@@ -289,3 +293,18 @@ function App() {
     });
   };
 
+19. validation effect
+
+    1. 无效的字母输入 （长度为0）
+       设置变量： valid，setValid (handle 数据的那一层 component)
+       如果"长度为0"，则 valid 由 true --->  false
+    
+       1.利用 inline 设置 css属性:{{borderColor: !isValid ? "red" : "black", bakcground: !isValid ? "red" : "black" }}
+       2.利用 css 文件属性的动态命名
+
+**20. react_project_2 问题
+
+      valid 和 background 有一个回合的延迟
+
+      原因： 向上传递慢
+      解决方法： 把 notvalid component 在 upcomponent 一个层级

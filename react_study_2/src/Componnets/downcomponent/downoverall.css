@@ -1,0 +1,11 @@
+.overall {
+  width: 50%;
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.content {
+  padding: 1rem;
+}

@@ -14,13 +14,19 @@
   font-size: 15px;
 }
 
-.form div input {
+.input_valid {
   width: 100%;
   border: 2px solid darkgray;
 }
 
+.input_notvalid {
+  width: 100%;
+  border: 2px solid red;
+  background-color: salmon;
+}
+
 .button {
-  margin: 10px 10px;
+  margin: 0.75rem 1.25rem;
   background-color: blueviolet;
   color: white;
   padding: 0.25rem 0.75rem;
