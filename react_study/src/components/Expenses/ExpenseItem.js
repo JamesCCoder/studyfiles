@@ -8,16 +8,16 @@ import ExpenseCategory from "./ExpenseCategory";
 import { useState } from "react";
 
 const ExpenseItem = (props) => {
-  let { name } = props;
+  let { name, time, price } = props;
   let [newName, setNewName] = useState(name);
   const ChangeName = () => {
     setNewName("name has been changed");
   };
   return (
     <Frame className="overall">
-      <ExpenseDate time={props.time} />
+      <ExpenseDate time={time} />
       <ExpenseCategory name={newName} />
-      <ExpenseCost price={props.price} />
+      <ExpenseCost price={price} />
       <button onClick={() => ChangeName()}>Change Title</button>
     </Frame>
   );
