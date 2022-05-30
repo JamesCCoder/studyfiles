@@ -3,6 +3,7 @@ import "./Chart.css";
 
 const Chart = (props) => {
   const { Data } = props;
+  const month = Data.map((oneMonth) => {});
 
   const [jan, setJan] = useState(0);
   const [feb, setFeb] = useState(0);

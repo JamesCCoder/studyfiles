@@ -16,6 +16,7 @@ function App() {
 
   const getDataHandler = (datafromlast) => {
     setUpdateData((pre) => {
+      console.log(updateData);
       return [...pre, datafromlast];
     });
   };
