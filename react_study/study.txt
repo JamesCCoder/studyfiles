@@ -270,3 +270,22 @@ function App() {
              {!virable && component_1}
              {virable && component_2}
             </parent>
+
+18. 关于 array 的渲染
+
+    在对 array 进行 element 渲染时， 我们常用 map 函数进行，但在使用 map 函数前，我们需要先用 return
+    再进行 map，
+    再 map 后再使用一次 return
+
+    const DeleteComponent = (props) => {
+    const { content } = props;
+
+    return content.map((oneContent) => {
+      return (
+        <div className="outer">
+          <p className="content">{oneContent}</p>;
+        </div>
+      );
+    });
+  };
+
