@@ -9,6 +9,10 @@ const reducer = (state, action) => {
             return state + 1;
         case "minus":
             return state - 1;
+        case "time":
+            return state * 2;
+        case "divide":
+            return state / 2;
         case "reset":
             return initialState;
         default:
@@ -18,13 +22,15 @@ const reducer = (state, action) => {
 
 const UseReducer = () => {
 
-    const [count, dispatch] = useReducer(reducer, initialState);
+    const [value, dispatch] = useReducer(reducer, initialState);
 
     return (<>
-    <p>{count}</p>
+    <p>{value}</p>
     <button onClick={() => dispatch("add")}>add</button>
-    <button onClick={() => dispatch("reset")}>reset</button>
     <button onClick={() => dispatch("minus")}>minus</button>
+    <button onClick={() => dispatch("time")}>time * 2</button>
+    <button onClick={() => dispatch("divide")}>divied / 2</button>
+    <button onClick={() => dispatch("reset")}>reset</button>
     </>);
 }
  

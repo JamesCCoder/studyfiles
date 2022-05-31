@@ -8,20 +8,34 @@ const UseState = () => {
             return pre+1;
         })
     }
-    const resetHandler = () => {
-        setValue(0);
-    }
-
     const minusHandler = () => {
         setValue((pre) => {
             return pre-1;
         })
     }
+    const timeHandler = () => {
+        setValue((pre) => {
+            return pre * 2;
+        })
+    }
+    const divideHandler = () => {
+        setValue((pre) => {
+            return pre / 2;
+        })
+    }
+    const resetHandler = () => {
+        setValue(0);
+    }
+
+ 
     return ( <>
         <p>{value}</p>
         <button onClick={addHandler}>add</button>
-        <button onClick={resetHandler}>reset</button>
         <button onClick={minusHandler}>minus</button>
+        <button onClick={timeHandler}>time * 2</button>
+        <button onClick={divideHandler}>divide / 2</button>
+        <button onClick={resetHandler}>reset</button>
+        
     </> );
 }
  
