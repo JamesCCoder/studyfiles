@@ -1,0 +1,23 @@
+.overall {
+  background-color: bisque;
+  width: 50%;
+  height: 200px;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: black;
+  font-weight: bolder;
+}
+
+.form div {
+  margin: 1.25rem auto;
+}
+
+.button {
+  width: 100%;
+}

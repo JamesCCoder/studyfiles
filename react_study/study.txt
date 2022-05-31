@@ -308,3 +308,27 @@ function App() {
 
       原因： 向上传递慢
       解决方法： 把 notvalid component 在 upcomponent 一个层级
+
+21. 关于 react_project_3
+
+      input 中的 useState 可以用 useRef 替代：
+      
+      1. useState
+
+input：onChange  value -> dataOne      const [valueOne, setValueOne] = useState("");   
+form： onSubmit
+
+
+onChange ---> setValueOne
+       
+onSubmit  ---> setDataOne                         props.getData(dataOne)              
+
+        
+
+      2. useRef
+
+input: ref = {dataSecondHandler}       const dataSecondHandler = useRef();
+form: onSubmit
+
+onSubmit  ---> setDataOne                         props.getData(dataSecondHandler.current.value);           
+         
