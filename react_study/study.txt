@@ -332,3 +332,26 @@ form: onSubmit
 
 onSubmit  ---> setDataOne                         props.getData(dataSecondHandler.current.value);           
          
+
+23. 如何利用 useEffect 监视 side effect，从而实现对输入有效性的判断？
+
+   const [isValid, setIsValid] = useState(true);          定义 isValid， 并实现对 css 的 conditional
+
+    useEffect(() => {
+    const timing = setTimeout(() => {
+      setValid(valueOne.length > 0);                  将判断条件写在 useEffect 里面
+    },200);
+
+    return () => {
+      clearTimeout(timing);                          setTimeout 和 clearTimeout(配合return) 是为了 cleanup
+    }                                                多余的验证次数
+    
+    },[setValid, valueOne]);
+
+    注意：useRef 无法和 useEffect 配合使用
+
+    关于 dependency:
+    1. 没有 dependency                           任何改变都 trigger
+    2. []                                        仅在页面载入时 trigger
+    3. [varible, function...]                     在[]中 variable/function 发生改变时 trigger
+
