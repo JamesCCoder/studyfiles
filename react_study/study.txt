@@ -385,3 +385,9 @@ onSubmit  ---> setDataOne                         props.getData(dataSecondHandle
 
                                                              <p> {value} </p>
                                                              <button onClick = {() => dispatch("add")} > press </button>
+
+25. when to use useState and when to use useReducer ?
+
+    useState : independent numbers
+
+    useReducer: for the numbers those are depend on other numbers
