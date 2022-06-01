@@ -367,7 +367,7 @@ onSubmit  ---> setDataOne                         props.getData(dataSecondHandle
     alternative/replacement to "useState"
 
 
-          useState                                                 useReducer
+          useState                                                 useReducer(注意：useReducer的setup顺序不能变)
 
  
   const [value, setValue] = useState(0);                     const init = 0;
@@ -413,3 +413,23 @@ onSubmit  ---> setDataOne                         props.getData(dataSecondHandle
    2. 数据传输至 button 层，写 event，操作传输上来的数据
    3. 将操作完成的数据利用 props 传递回去
         
+
+27. createContext & useContext 
+
+   1. button                        l1 -> l2 -> l3 -> l4 -> l5 <p>{number}</p>
+     
+      number                   
+(button,number 在一层)
+(利用 button 改变number)            
+     
+export const myContext = createContext();                 const value = createContext(myContext);
+
+<myContext.Provider value = {value}>                      <p>{value}</p>
+</myContext> 
+
+  注意： “value” 是 keyword，不能变。
+
+
+28. project_7 问题
+
+    无法利用 useContext pass "function"
