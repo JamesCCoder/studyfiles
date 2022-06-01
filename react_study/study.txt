@@ -391,3 +391,25 @@ onSubmit  ---> setDataOne                         props.getData(dataSecondHandle
     useState : independent numbers
 
     useReducer: for the numbers those are depend on other numbers
+
+
+26.*** 设计：
+
+   普通加法：
+
+   1. button                        l1 -> l2 -> l3 -> l4 -> l5 <p>{number}</p>
+     
+      number                   
+(button,number 在一层)
+(利用 button 改变number)            通过 props 不断传递到下一层 ---->
+
+
+   2. button                        l1 -> l2 -> l3 -> l4 -> l5 <p>{number}</p>
+
+                                                                    number (button 和 number 不在同一层)
+
+   思路：
+   1. 设定一个初始值 number，利用 props.function 不断地将数据向上传递, 最底层利用 useEffect 实现自动执行(没有可触发event)
+   2. 数据传输至 button 层，写 event，操作传输上来的数据
+   3. 将操作完成的数据利用 props 传递回去
+        
