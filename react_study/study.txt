@@ -433,3 +433,35 @@ export const myContext = createContext();                 const value = createCo
 28. project_7 问题
 
     无法利用 useContext pass "function"
+
+
+29. ** 设计：普通浮动对话框
+
+     效果： 点击 按钮 后， 出现对话框， 同时出现 backdrop; 点击对话框按钮/backdrop后，对话框和 backdrop 消失
+
+     方案： 1. 设计 Button 和 ErrorPortal 两个components
+           2. 设计分歧
+
+           App(root)                                  App(root)
+              |                                          |
+            Button                                   ----------
+              |                                  Button      ErrorPortal
+          ErrorPortal
+
+          结论：必须用第一种，如果用第二种，数据传输需要一个回合，所以点击两次才能实现效果
+
+          3. ErrorPortal 中第一行写入 backdrop， 下面写其他的内容
+            <div className="backdrop"></div>
+            ...
+
+          4. 在 Button 中引入 ErrorPortal，并用 [valid，setValid] 实现它的显示/消失
+             {!valid && <ErrorPortal />}
+
+
+          1. 在 Button 中写方法 newErrorHandler， 改变 valid
+          2. 将该方法通过 props 传入 ErrorPortal
+          3. 在 ErrorPortal 的 backdrup<div> 和 <button onClick> 中实现这一方法
+
+          小结：实现效果不延迟，则涉及变量必须在同一层
+               数据的传输利用 props function + useEffect 可以实现即使传输，但效果实现不行，rendering 总是慢一回合 
+               举例：{isvalid && <ErrorPortal />}
