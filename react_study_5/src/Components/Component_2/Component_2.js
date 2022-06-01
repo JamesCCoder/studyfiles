@@ -6,7 +6,6 @@ import Q_1 from "./Q_1";
 const Component_2 = () => {
   const [number, setNumber] = useState();
   const getvaluehandler = (data) => {
-    console.log(data);
     setNumber(data);
   };
 
