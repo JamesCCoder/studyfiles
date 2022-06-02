@@ -1,0 +1,39 @@
+.input_overall {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input_input {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 1.25rem;
+  font-weight: bolder;
+}
+
+.input_input input {
+  margin-top: 0.5rem;
+  border: 1px solid lightgray;
+  height: 1.5rem;
+  width: 15rem;
+}
+
+.input_button {
+  align-self: flex-end;
+  margin: 1.25rem;
+}
+
+.input_button button {
+  background-color: blueviolet;
+  padding: 0.25rem;
+  height: 2rem;
+  width: 4.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
