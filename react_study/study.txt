@@ -514,3 +514,21 @@ export const myContext = createContext();                 const value = createCo
 
      1. useEffect 和 useCallback 的联合使用
      2. 如何使用 firebase
+
+  35. setInterval. setTimeout 在 useEffect 中使用的标准写法
+     
+     const [number, setNumber] = useState(0);
+
+     useEffect(() => {
+        const interval = setInterval(() => {
+            setNumber((pre) => {
+                return pre + 1;
+            })
+        }, 1000);                                    useEffect 和 setInterval, setTimeout 一样，需要参数。
+        
+        return () => clearInterval(interval);         确保1s发生一次                              
+     },[]);                           
+
+  36. cunstom hook 的写法和使用
+
+      react_study_11
