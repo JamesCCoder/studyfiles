@@ -302,6 +302,8 @@ function App() {
        1.利用 inline 设置 css属性:{{borderColor: !isValid ? "red" : "black", bakcground: !isValid ? "red" : "black" }}
        2.利用 css 文件属性的动态命名
 
+       注意： 初始值设为 true，可以避免新刷新的页面出现 not valid 效果
+
 **20. react_project_2 问题
 
       valid 和 background 有一个回合的延迟
@@ -545,3 +547,9 @@ export const myContext = createContext();                 const value = createCo
        |                                                              |________|   |
        |                                                                           |
        |___________________________________________________________________________|
+
+***38. 三种情况下的 validation
+
+     1. submit
+     2. losing focus
+     3. every stroke
