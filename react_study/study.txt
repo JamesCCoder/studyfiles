@@ -496,8 +496,21 @@ export const myContext = createContext();                 const value = createCo
       ];
     });
     getData(listData);
-    console.log(listData);
     setN((pre) => {                                                               ---与上文配合fetch多个数据
       return pre + 1;
     });
   };
+
+  思考： 如何一次性 fetch 全部数据 ？    提示：试一试 fetch("https://swapi.dev/api/films")
+
+
+  31. 如何设置 loading... ?    react_study_10
+
+  32. how to catch an error ?    react_study_10
+
+  33. 如何实现 刷新 立即 fetch data？      react_study_10                             useEffect
+
+  34. react_study_10 未解决问题
+
+     1. useEffect 和 useCallback 的联合使用
+     2. 如何使用 firebase
