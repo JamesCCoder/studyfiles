@@ -1,0 +1,19 @@
+.fetch_container {
+  background-color: white;
+  width: 50%;
+  margin: 0.5rem auto;
+  text-align: center;
+  height: 10vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fetch_button {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+}

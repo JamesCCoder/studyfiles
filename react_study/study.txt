@@ -465,3 +465,39 @@ export const myContext = createContext();                 const value = createCo
           小结：实现效果不延迟，则涉及变量必须在同一层
                数据的传输利用 props function + useEffect 可以实现即使传输，但效果实现不行，rendering 总是慢一回合 
                举例：{isvalid && <ErrorPortal />}
+
+               如何确保 ErrorPortal 中的对话框 和 backdrop 的显示顺序（对话框在backdrop上面显示）？
+               1. 将 二者 的css 文件中，position：fixed
+               2. 将 对话框 z-index 数值设置的大于 backdrop
+
+               进一步改进：利用 react-portal 实现 dom 的跨父类转移
+
+***30. 数据结构转换
+
+   使用 API get 数据时， 如何将拿到的数据转化为自己需要的组成结构？
+
+   举例： Star War API 
+
+  const [listData, setListData] = useState([{}]);                 --------需要的数据结构初始化
+  
+   let [N, setN] = useState(1);                                                    ---与下文配合fetch多个数据
+  
+   const fetchHandler = async () => {
+    const data = await fetch(`https://swapi.dev/api/films/${N}`);                  --- async / await 语法
+    const data_1 = await data.json();
+    setListData((pre) => {
+      return [                                                    ------- 但凡是“增加数据”，就要用setState(中的pre)
+        ...pre,                                                   -------初始化最内部为object，此处也为 object
+        {                                                          
+          id: Math.random(),
+          title: data_1.title,                                    ----get 到的新数据如何保存 （加id）
+          content: data_1.opening_crawl,
+        },
+      ];
+    });
+    getData(listData);
+    console.log(listData);
+    setN((pre) => {                                                               ---与上文配合fetch多个数据
+      return pre + 1;
+    });
+  };
