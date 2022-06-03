@@ -605,3 +605,8 @@ export const myContext = createContext();                 const value = createCo
 
          <p>{counter}</p>
          <button onClick={clickHandler}></button>
+
+      
+    40. how to use react-router?
+
+       0. npm i react-router-dom
