@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import {Route, Routes, BrowserRouter} from "react-router-dom";
+import {Route, Routes, BrowserRouter, Navigate} from "react-router-dom";
 
 import Main from "./components/Main";
 import Product from "./components/Product";
@@ -20,9 +20,17 @@ function App() {
                     <Route path="/"
                         element={<Main/>}/>
                     <Route path="/main"
-                        element={<Main/>}/>
+                        element={
+                            <Navigate
+                        replace
+                        to="/"/>
+                        }/>
                     <Route path="/home"
-                        element={<Main/>}/>
+                        element={
+                            <Navigate
+                        replace
+                        to="/"/>
+                        }/>
                     <Route path="/cart"
                         element={<Cart/>}/>
                     <Route path="/product"

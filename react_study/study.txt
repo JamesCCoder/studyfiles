@@ -607,6 +607,117 @@ export const myContext = createContext();                 const value = createCo
          <button onClick={clickHandler}></button>
 
       
-    40. how to use react-router?
+    40. how to use react-router?   react_study_16
 
        0. npm i react-router-dom
+
+       1. 需要进行route 的元素都必须在App.js中通过Router建立连接
+
+          import { BrowserRoute, Routes, Route } from "react-route-dom";
+
+          <BrowserRoute>
+             <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/about" element={<About />} />
+             </Routes>
+          </BrowserRoute>
+
+       2. 在component中建立需要的 Link
+
+          import { Link } from "react-route-dom";
+
+          <p> about </p>
+        --->
+          <p>
+             <Link to = "/about"> about </Link>
+          <p>
+       
+       注意：1. 如何改变 Link 的 style：(把 style 添加到 Link 之中)
+         
+             <Link style={{textDecoration:none}} to="/about" > about </Link>
+
+            2. difference between <Link to = "about"> about </Link>
+                            and   <a href = "/about"> about </a>
+
+              <a> will refresh the page（send a new request and get a new response）
+              <Link > will not, <Link> is the foundation of single page application
+
+              remember: we CAN do same thing through <a>, just make some default prevent
+                        to fulfill the requirement, but <Link> is better.
+                        (write a click listen, prevent loading, load component/update the url)
+
+            3. a is for external link, <Link>,<NavLink> is for internal link.
+
+            4. <Link> and <NavLink>
+              <NavLink> wii be highlighted with some styles by using activeClassName
+
+               <NavLink activeClassName="active">      in CSS, .active{}
+
+            5. multiple links
+
+                    <Route path="/"
+                        element={<Main/>}/>
+                    <Route path="/main"
+                        element={<Main/>}/>
+                    <Route path="/home"
+                        element={<Main/>}/>
+
+
+      41. nested Routes
+
+          root/help   --->     component:   <Help />
+          root/help/new   ---> component:   <Help_new />    
+          root/help/old   ---> <p>Hi old one</p>
+
+
+          1. in App.js
+
+             <Routes>
+               .....
+                 <Route path="/help">
+                    <Route index={true} element={<Help />}
+                    <Route index={false} path="new" element={<Help_new />}           ---not full url
+                    <Route index={false} path="old" element={<p>Hi old one</p>}
+                 </Route>
+               ......
+             </Routes>
+
+          2. in Help.js
+            
+            <Link to= "/help/new" > new </Link>                                  ---full url
+            <Link to= "/help/old" > old </Link>
+
+      42. redirection
+
+          import { Navigate } from "react-router-dom";
+
+          <Routes>
+               <Route path="/" element = {<Home />} />
+               <Route path="/home" element = {<Navigate replace to = "/" />}  />
+          </Routes>
+
+
+      43. dynamic router
+
+         <Routes>
+             <Route path= "/product" element={<Product />} />
+             <Route path= "/product/:productId" element={<ProductDetails />} />
+         </Routes>
+
+         In ProductDetails component:
+
+         import { useParams } from "react-router-dom";
+
+         const params = useParams();
+         <p>{params.productId}</p>
+
+
+
+    44. authentication (firebase)
+
+        process: 1. get permission
+                 2. send request to protected resource
+
+        what do we use?
+
+        authentication token   --->   JWT (JSON web token)
