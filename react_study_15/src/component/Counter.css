@@ -1,0 +1,29 @@
+.frame {
+  width: 50%;
+  height: 15vh;
+  background-color: white;
+  margin: 4rem auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.caption {
+  font-size: 10px;
+  font-weight: bolder;
+}
+.value {
+  font-size: 16px;
+  color: blueviolet;
+  font-weight: bolder;
+}
+.button {
+  font-size: 10px;
+  padding: 0.25rem 1rem;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
