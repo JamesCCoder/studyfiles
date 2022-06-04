@@ -506,3 +506,50 @@ media queries:
 *** 难题：
 
     看到：按钮和按钮外边框的距离，想到：padding
+
+
+
+  59. grid (developer tools ---> layout)
+
+     parent:                                                                      child:
+
+     display: grid;
+
+     grid-template-columns:[line1] 50% [line2] 50% [line3]                        grid-column: 1/2  (line1 to line2)
+
+     grid-template-rows:[row1] 25% [row2] 25% [row3] 25% [row4] 25% [row5]        gird-row: 2/4 (line2 to line4)
+
+
+     常用的表示距离的单位和效果包括： px,rem, repeat(3, 20px, [row1]), 1fr , auto, minmax(10px, 200px), span 
+                                   fit-content(8rem)
+
+     parent:                                                                  child:
+
+     display: grid                                                grid-area: header
+
+     grid-template-colomns: 200px 200px 200px 200px               grid-area:main
+
+     grid-template-rows: auto                                     grid-area:sidebar
+
+     grid-remplate-areas:                                         gird-area:footer
+           "header header header header"
+           "main main . sidebar"                                  place-self
+           "footer footer footer footer"                          justify-self
+                                                                  align-self
+    缺点：不能出现横向不连续的相同 grid-area
+
+
+    通用属性：
+           parent：  gap                                             child:
+                     row-gap                                              grid-column-start: [line-name]/area number
+                     column-gap                                           grid-column-end:
+
+                     place-items                                          grid-row-start:
+                     justify-items                                        grid-row-end:
+                     align-items
+                                                                          z-index
+                     place-content
+                     justify-content
+                     align-content
+
+                     grid-auto-flow: row/column

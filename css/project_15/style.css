@@ -1,9 +1,62 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.container{
-    background-color: black;
-    width:100%;
-    height:100px;
+.container {
+  background-color: green;
+  width: 100%;
+  height: 200px;
+  display: grid;
+  grid-template-columns: [line1] 20% [line2] 20% [line3] 20% [line4] 20% [line5] 20% [line6];
+  grid-template-rows: [row1] 25% [row2] 25% [row3] 25% [row4] 25% [row5];
+  gap: 2px;
+}
+
+.one {
+  grid-column: 2 / span 3;
+  grid-row: 1/2;
+  background-color: black;
+}
+
+.two {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-color: blue;
+}
+
+.three {
+  grid-column: 4/6;
+  grid-row: 3/4;
+  background-color: blueviolet;
+}
+
+.four {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background-color: darkgreen;
+}
+
+.test_1 {
+  grid-area: header;
+  background-color: red;
+}
+
+.test_2 {
+  grid-area: main;
+  background-color: yellow;
+}
+.test_3 {
+  grid-area: sidebar;
+  background-color: green;
+}
+
+.drawing {
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header . ."
+    "main main main ."
+    ". sidebar sidebar sidebar";
 }
