@@ -10,13 +10,15 @@
   justify-content: center;
   align-items: center;
 }
+
 .icon div {
   padding: 0.75rem 1rem;
   color: white;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.spe:hover {
+.icon div:hover {
   background-color: darkgray;
 }
 
