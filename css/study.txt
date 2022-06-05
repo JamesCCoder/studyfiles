@@ -196,7 +196,7 @@ display: none         block            inline             inline-block          
 
 35. **remember  (project_4)
     position:fixed                             制作  navigation bar，     background-image   
-    position:absolute(配合relative)           制作  badge
+    position:absolute( ***配合relative(已经犯过错误))           制作  badge
 
 36. overflow:hidden  作用
                                              parent 使用   overflow：hidden
@@ -555,8 +555,109 @@ media queries:
                      grid-auto-flow: row/column
 
 
-51. transform
+51. transform  project_16 (https://juejin.cn/post/6844903780937367565)
 
-1. rotate move skew scale
+1. rotate(旋转) move skew（倾斜） scale（缩放）
+
+   transform: rotateZ(45deg)  translateX(1rem)  translateY(0.25rem)
+
+   transform-origin: top buttom left right (一个或两个，决定8个点)
+
+
+
+   应用：倾斜的badge，
+   
+   1.利用 position: relative/absolute 配合固定badge位置（不随frame的大小变化而变化）
+   2.transform：rotateZ 进行旋转
+   3.translateX，translateY 进行位置调整
+   4.parent 进行 overflow：hidden 进一步美化
+
+   应用：倾斜的照片
+   1.利用skew和scale，将skew应用在border上， 改变图片边框的形状，再利用scale改变图片的大小。
+   2.利用 overflow：hidden 隐藏边框外的图片边角。
 
 2. 3D transform
+
+   parent:                                                child:
+
+   perspective: 1000px;                                   transform: perspective(1000px) rotateX(30deg) translateX:10px
+   perspective-origin: center;
+
+   transform-style: flat / preserve-3d; (flat:完全平面旋转，正面视角)
+                                        （preserve-3d：带一定角度的拉远旋转，正面视角）
+
+   backface-visibility:hidden;    (隐藏后方的element)         z-index    
+
+
+   注意：
+
+   1. 单独的 rotateX，rotateY 看起来就是X，Y轴的缩放（3D旋转后的平面映射效果）
+   2. 单独的 translateZ 看起来就是Scale缩放（Z轴远近对应的大小映射）
+
+
+
+52. transition / animation
+
+    transition 与 opacity、transform 配合使用。（project_17）
+               需要javascript的帮助
+
+    .origin{
+        transform: rotateZ(45deg) translateX(2rem);
+        opacity: 0.5; 
+        transition: transform ease-in 500ms, opacity 1000ms;                    ease-in 先慢后快
+    }                                                                           ease-out 先快后慢
+
+    .add{
+        transform: rotateZ(90deg) translateX(8rem);
+        opacity: 1;
+    }
+
+    onclick= "click()"
+
+    const click = () => {
+        document.querySelector(".origin").classList.add("add");
+    }
+
+    效果 origin 中的效果将被 add 中的效果替代，经历时间分别为 500ms 和 1000ms
+
+    注意： 
+        display: none 时动画效果将会消失
+        补救办法： javascript 中event中添加:  backdrop.style.display = "block";
+
+
+
+   animation:
+
+   @keyframes change {
+       from{
+          transform: rotateZ(45deg) translateX(2rem);
+          opacity: 0.5;
+       }
+
+       to{
+          transform: rotateZ(90deg) translateX(6rem);
+          opacity:1;
+       }
+   }
+
+   .open{
+       animation: change 2000ms 1s 8/infinate normal/reverse/alternate/alternate-reverse
+   }
+
+keyframes 可以有“阶段”写法：
+
+   @keyframes change {
+       0%{
+
+       }
+       50%{
+
+       }
+       100%{
+
+       }
+   }
+   from === 0%
+   to === 100%
+
+   animation 应用： 右上方“不断跳动”的“注册”按钮
