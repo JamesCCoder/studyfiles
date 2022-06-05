@@ -5,3 +5,5 @@
    }
 
 2. 给多个 element 添加属性 menu-icon
+
+3. search bar 本质： input

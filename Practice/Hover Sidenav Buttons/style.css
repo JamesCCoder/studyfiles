@@ -1,0 +1,85 @@
+.frame {
+  width: 70%;
+  height: 400px;
+  border: 1px solid black;
+  margin: 2rem auto;
+
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.green {
+  position: absolute;
+  top: 20px;
+  left: -90px;
+  background-color: green;
+  height: 60px;
+  width: 150px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 0.5s;
+}
+
+.blue {
+  position: absolute;
+  top: 120px;
+  left: -90px;
+  background-color: skyblue;
+  height: 60px;
+  width: 150px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 0.5s;
+}
+
+.red {
+  position: absolute;
+  top: 220px;
+  left: -90px;
+  background-color: lightcoral;
+  height: 60px;
+  width: 150px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 0.5s;
+}
+
+.grey {
+  position: absolute;
+  top: 320px;
+  left: -90px;
+  background-color: grey;
+  height: 60px;
+  width: 150px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  transition: 0.5s;
+}
+
+.green p,
+.blue p,
+.red p,
+.grey p {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  width: 100%;
+}
+
+.green p:hover,
+.blue p:hover,
+.red p:hover,
+.grey p:hover {
+  opacity: 1;
+}
+
+.green:hover,
+.blue:hover,
+.red:hover,
+.grey:hover {
+  transform: translateX(90px);
+}
