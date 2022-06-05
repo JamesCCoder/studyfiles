@@ -4,7 +4,7 @@
 }
 
 .nav {
-  margin: auto;
+  margin: 1rem auto;
   width: 50%;
   overflow: auto;
   white-space: nowrap;
@@ -22,5 +22,25 @@
 }
 
 .nav a:hover {
+  background-color: gray;
+}
+
+.nav_1 {
+  margin: 1rem auto;
+  width: 50%;
+  overflow: auto;
+  white-space: nowrap;
+  background-color: black;
+}
+
+.nav_1 div {
+  width: 10%;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.nav_1 div:hover {
   background-color: gray;
 }

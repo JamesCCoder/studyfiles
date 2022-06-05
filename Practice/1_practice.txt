@@ -21,3 +21,31 @@
       margin:0;
 
    此时产生的排列元素往往是拥挤的， 这时候把他们变的宽松的最好方法是： 改变子元素的 padding 进行微调
+
+
+6.     (Horizontal Scroll Menu)
+   
+      方法一： 
+   parent:  display: flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+            justify-content: spacing-between;
+   
+   child:   padding
+
+      方法二:
+
+    parent:  ----
+
+    child:   display: inline-block;
+             width: 10%;                   ***
+             padding
+
+
+
+7.  (Vertical Menu)
+
+    case 可以居中的前提： 
+       
+           1. 设置 width = 40%;
+           2. margin:auto;
