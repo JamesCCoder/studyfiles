@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 50%;
+  height: 300px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid gray;
+}
+
+.city {
+  width: 30%;
+  border-right: 1px solid gray;
+  background-color: lightgray;
+}
+
+.city p {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.city p:hover {
+  background-color: gray;
+}
+
+.content {
+  padding: 0.75rem;
+}
+
+.content .caption {
+  font-weight: bolder;
+  padding: 0.75rem 0;
+  font-size: 18px;
+}
