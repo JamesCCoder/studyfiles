@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  margin: auto;
+  width: 50%;
+  overflow: auto;
+  white-space: nowrap;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  padding: 12px 20px;
+}
+
+.nav a:hover {
+  background-color: gray;
+}

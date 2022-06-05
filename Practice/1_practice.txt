@@ -7,3 +7,17 @@
 2. 给多个 element 添加属性 menu-icon
 
 3. search bar 本质： input
+
+
+4. overflow: auto/scroll                 确保产生scroll   
+***white-space: nowrap;                  确保内容在同一行
+
+
+5. display: flex;                         (Horizontal Scroll Menu)
+   flex-direction: row;
+   flex-wrap: nowrap;
+
+   ** padding: 0;
+      margin:0;
+
+   此时产生的排列元素往往是拥挤的， 这时候把他们变的宽松的最好方法是： 改变子元素的 padding 进行微调
