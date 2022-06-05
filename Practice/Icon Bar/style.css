@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.icon div {
+  padding: 0.75rem 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.spe:hover {
+  background-color: darkgray;
+}
+
+.home {
+  background-color: green;
+}
+
+.search {
+  background-color: gray;
+}
+.mail {
+  background-color: gray;
+}
+.global {
+  background-color: gray;
+}
+
+.trash {
+  background-color: gray;
+}
