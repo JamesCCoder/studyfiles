@@ -1,0 +1,26 @@
+.icon {
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  background-color: black;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(-40deg) translateX(-3px);
+  transform-origin: right;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(40deg) translateY(-5px) translateX(-2px);
+}

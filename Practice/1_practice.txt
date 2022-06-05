@@ -1,0 +1,7 @@
+1. 引用多个class，之间需要 “，”
+
+   .bar1, .bar2, .bar3{
+
+   }
+
+2. 给多个 element 添加属性 menu-icon

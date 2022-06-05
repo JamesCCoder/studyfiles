@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border: 1px solid lightgray;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid lightgray;
+  background-color: darkgrey;
+}
+
+.header div {
+  padding: 1.25rem;
+}
+
+.header div:hover {
+  background-color: gray;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid lightgray;
+  height: 120px;
+}
+
+.content div {
+  padding: 1.25rem 0.5rem;
+}
+
+.content div .caption {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 1rem 0;
+}
+
+.content div .sentence {
+  font-size: 16px;
+}
