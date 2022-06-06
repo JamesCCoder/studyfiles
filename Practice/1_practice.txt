@@ -49,3 +49,52 @@
        
            1. 设置 width = 40%;
            2. margin:auto;
+
+8.  在做 position：fixed 的 nav 时， 注意设置 width：100%；
+
+9.  如果结构为
+
+    <div>
+        <a>1</a>
+        <a>1</a>
+        <a>1</a>
+    </div>
+
+    当 div 的 display：flex，则 a 自动变为 block ，这一点和 display：inline-block 很像。但是前者用于parent， 后者用于child
+
+    如果结构为：
+
+    <div>
+       <div>
+           <a>1</a>
+           <a>1</a>
+       </div>
+       <div>
+           <a>1</a>
+           <a>1</a>
+           <a>1</a>
+       </div>
+    </div>
+
+    则 最外围的 display：flex 无法影响到最内侧的 a，解决办法：在中间层 div 同样设置： display：flex
+
+
+10. Equal Width Menu links
+
+   难点： 该设计中我们利用  justify-content: space-evenly; 对其中的 children 进行平均距离的排列，但出现如下情况：
+
+   ____________________________________________
+   |  | child |   | ......
+   --------------------------------------------
+   | -- a:width --|
+
+   解决方法， 设置 a width 为 25%；(4个children)
+
+11. 各种 dropdown 的整体思路：
+   1. 触发element（一般button） + dropdown element（一般div） 
+   2.用 flex 确定大体位置，
+     再使用 absolute，精确位置
+
+    好处：1. position定位精确，不随页面变化而变化
+         2. absolute的元素体积会变小,出发鼠标hover等效果会更加精确。
+    

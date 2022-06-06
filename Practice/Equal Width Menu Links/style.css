@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.frame {
+  width: 40%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  background-color: gray;
+}
+
+.frame a {
+  color: white;
+  padding: 0.75rem 1.5rem;
+  width: 25%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.home {
+  background-color: green;
+}
+
+.search:hover,
+.contact:hover,
+.login:hover {
+  background-color: black;
+}

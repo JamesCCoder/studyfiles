@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.left,
+.middle,
+.right {
+  display: flex;
+}
+
+.left a,
+.middle a,
+.right a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 1.5rem;
+}
+
+.home {
+  background-color: green;
+}
+
+.news:hover,
+.contact:hover,
+.search:hover,
+.about:hover {
+  background-color: whitesmoke;
+  color: black;
+}
