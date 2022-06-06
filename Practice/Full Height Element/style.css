@@ -1,0 +1,49 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/* html{
+    height:100%;
+}
+
+body{
+    height:100%;
+}
+
+.one{
+    height:100%;
+    width:10%;
+    background-color: black;
+} */
+
+/* ................................................. */
+
+/* body{
+    height:100px;
+}
+.one{
+    height:100%;
+    width:10%;
+    background-color: cornflowerblue;
+} */
+
+/* ................................................... */
+
+
+/* .one{
+    position:absolute;
+    background-color: cornflowerblue;
+    height:10%;
+    width:10%;
+} */
+
+
+/* ......................................................... */
+
+.one{
+    position:fixed;
+    background-color: cornflowerblue;
+    height:10%;
+    width:10%;
+}

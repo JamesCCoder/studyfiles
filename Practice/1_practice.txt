@@ -181,3 +181,9 @@
 20. 难点：重写自带的 element 中的样式
     比如：复选框的tip颜色
          range 轴的样式 
+
+21. 如何改变 placeholder 的颜色
+
+    ::placeholder{
+        color:red;
+    }
