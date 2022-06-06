@@ -1,0 +1,78 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.frame{
+    width:70%;
+    margin: 40px auto;
+}
+
+.frame div{
+    padding:0.5rem;
+}
+
+.whole{
+    width:100%;
+    background-color: whitesmoke;
+    position:relative;
+    height:30px;
+
+}
+
+.html .whole div{
+    position: absolute;
+    width:90%;
+    background-color: green;
+    height:30px;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    color:white;
+}
+.css .whole div{
+    position: absolute;
+    width:80%;
+    background-color: blue;
+    height:30px;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    color:white;
+}
+.js .whole div{
+    position: absolute;
+    width:65%;
+    background-color: red;
+    height:30px;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    color:white;
+}
+.php .whole div{
+    position: absolute;
+    width:60%;
+    background-color: grey;
+    height:30px;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    color:white;
+}

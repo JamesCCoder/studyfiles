@@ -152,3 +152,19 @@
              </div>
         </div>
     </div>
+
+18. badge      突兀的各种小图形都是 badge
+
+    如何画圆？   <div></div>       height:1rem   width:1rem   border-radius: 50px;
+
+
+19. skill bar 的设计
+
+    特点： 双色 bar 代表百分比的设计模式
+
+    方法：设计内外两层 <div> 的包裹结构
+         外层设置为 width：100%， 代表全轴总宽度 100
+         内层设置为 width：90%， 代表内层轴宽度占比
+
+         两层之间使用 position：relative
+                    position：absolute 进行“完全的覆盖”定位 
