@@ -160,7 +160,7 @@
 
 19. skill bar 的设计
 
-    特点： 双色 bar 代表百分比的设计模式
+    特点： 双色 bar 代表百分比的设计模式     
 
     方法：设计内外两层 <div> 的包裹结构
          外层设置为 width：100%， 代表全轴总宽度 100
@@ -168,3 +168,16 @@
 
          两层之间使用 position：relative
                     position：absolute 进行“完全的覆盖”定位 
+
+
+20.  双色bar （skill bar， notes）== absolute
+     有颜色的 div                 == width height
+
+
+21. styled hr        ---->     border
+    一条垂直的线       ---->     border
+    
+
+20. 难点：重写自带的 element 中的样式
+    比如：复选框的tip颜色
+         range 轴的样式 

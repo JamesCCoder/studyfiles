@@ -1,0 +1,19 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.frame{
+    width:50%;
+    margin:40px auto;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.left{
+    width:50%;
+    border-right: 10px solid blue;
+}
+
