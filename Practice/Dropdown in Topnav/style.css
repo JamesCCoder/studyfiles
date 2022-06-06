@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 100%;
+  background-color: black;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.frame a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}

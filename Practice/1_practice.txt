@@ -92,9 +92,22 @@
 
 11. 各种 dropdown 的整体思路：
    1. 触发element（一般button） + dropdown element（一般div） 
-   2.用 flex 确定大体位置，
+   2.用 flex 确定大体位置(也可以不使用flex， 因为总是会涉及到 display：none 的问题，如果已经定义为 flex，则会发生冲突
+     因为需要后续显示时设定为：display：block)，
+     
      再使用 absolute，精确位置
 
     好处：1. position定位精确，不随页面变化而变化
          2. absolute的元素体积会变小,出发鼠标hover等效果会更加精确。
+
+
+    细节：
+
+    1. 充分了解 box-shadow： 1px 1px 7px rgba(0,0,0,0.5) 中各个数据的含义
+    2. 子类的 display：none 如何通过 hover 进行显示？
+
+       父类：hover 子类{
+           display：block；
+       }
     
+       翻译：当父类被 hover 时，其某个子类的 display：block；

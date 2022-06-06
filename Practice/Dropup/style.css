@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 40%;
+  margin: 200px auto;
+  position: relative;
+}
+
+.frame:hover .content {
+  display: block;
+}
+
+.frame:hover .content_1 {
+  display: block;
+}
+
+.content_1 {
+  display: none;
+}
+
+.dropup {
+  background-color: darkturquoise;
+  padding: 1rem;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.content a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 1rem;
+  background-color: whitesmoke;
+  width: 140%;
+}
