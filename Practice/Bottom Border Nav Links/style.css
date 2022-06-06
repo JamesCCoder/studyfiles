@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: whitesmoke;
+}
+
+.frame a {
+  text-decoration: none;
+  color: black;
+  padding: 0.6rem 1rem;
+}
+
+.frame .home {
+  border-bottom: 2px solid red;
+}
+
+.frame .news:hover,
+.frame .contact:hover {
+  border-bottom: 2px solid red;
+}
