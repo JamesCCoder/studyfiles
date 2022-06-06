@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 1000px;
+}
+
+.frame {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.frame .one {
+  width: 4rem;
+  height: 4rem;
+  background-color: darkblue;
+}
+.frame .two {
+  width: 4rem;
+  height: 4rem;
+  background-color: skyblue;
+}
+.frame .three {
+  width: 4rem;
+  height: 4rem;
+  background-color: orange;
+}
+.frame .four {
+  width: 4rem;
+  height: 4rem;
+  background-color: blue;
+}
+.frame .five {
+  width: 4rem;
+  height: 4rem;
+  background-color: red;
+}
+
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover {
+  background-color: black;
+}

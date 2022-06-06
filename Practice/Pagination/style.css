@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 40%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  width: 12.5%;
+  text-align: center;
+  transition: all 1s;
+}
+
+.two {
+  background-color: blue !important;
+  color: white !important;
+}
+
+.frame a:hover {
+  background-color: gray;
+}

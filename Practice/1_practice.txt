@@ -111,3 +111,27 @@
        }
     
        翻译：当父类被 hover 时，其某个子类的 display：block；
+
+
+
+12. 分页符的本质： 一组 anchor
+
+13. hover 效果也可以用 transition 实现
+
+    方法：
+
+    1. 某 element 写下 css 效果
+    2. element：hover 写下 hover 效果
+    3. 1 中 增加 transition 变量
+
+14. button group 本质
+
+    display：flex 的 button
+
+15. 纵向 和 横向 排列的通用技巧区别：
+
+    纵向需要额外关注 width
+
+    二者都可以通过 padding 调整，但纵向的 padding 容易被 width 所限制
+
+16. 用空元素 <div></div> 定义出的有颜色的块状结构都 必须 自定义高度和宽度

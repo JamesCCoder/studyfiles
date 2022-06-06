@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 30%;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.frame button {
+  width: 60%;
+  padding: 1rem 1.5rem;
+  border: 1px solid darkgreen;
+  background-color: green;
+  color: white;
+}
+
+.frame button:hover {
+  background-color: darkgreen;
+}
