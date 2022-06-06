@@ -1,0 +1,37 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.frame{
+    width:50%;
+    margin:40px auto;
+}
+
+.frame button{
+    padding:1rem 1.25rem;
+    background-color: white;
+}
+
+.success{
+    color:green;
+    border:1px solid green;
+}
+.info{
+    color:blue;
+    border: 1px solid blue;
+}
+
+.warning{
+    color:orange;
+    border:1px solid orange;
+}
+
+.danger{
+    color:red;
+    border:1px solid red;
+}
+
+.default{
+    border:1px solid gray;
+}

@@ -1,0 +1,59 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.frame{
+    width:40%;
+    margin:40px auto;
+    position:relative;
+}
+
+.button{
+    background-color:darkturquoise;
+    border:none;
+    color:white;
+    padding: 1rem 1.25rem;
+   
+}
+
+.drop-down{
+    position:absolute;
+    top:0;
+    left:78px;
+    
+}
+
+.drop-button{
+    border:none;
+    border-left:1px solid turquoise;
+    width:40px;
+    height:48px;
+    background-color: darkturquoise;
+}
+
+.drop-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: whitesmoke;
+    display:none;
+}
+
+.drop-content a{
+    text-decoration: none;
+    color: black;
+    padding:1rem 1.75rem;   
+}
+
+.drop-down:hover .drop-content{
+    display: flex;
+}
+
+.drop-content a:hover{
+    background-color: darkgray; 
+}
+
+.drop-button:hover, .button:hover{
+    background-color: blue;
+}

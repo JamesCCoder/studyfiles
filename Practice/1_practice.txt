@@ -126,7 +126,7 @@
 
 14. button group 本质
 
-    display：flex 的 button
+    display：flex 的 button  (只有 flex 可以让 button 连接在一起, inline 都不行)
 
 15. 纵向 和 横向 排列的通用技巧区别：
 
@@ -135,3 +135,20 @@
     二者都可以通过 padding 调整，但纵向的 padding 容易被 width 所限制
 
 16. 用空元素 <div></div> 定义出的有颜色的块状结构都 必须 自定义高度和宽度
+
+
+17. 空 div 和 dropdown 的合体 （split buttons）
+
+    设计：
+
+    <div>
+        <button> button </button>                                 button 本体
+        <div>                                                     dropdown 整体（absolute定位）
+             <div></div>                                          dropdown 与 button 连接的部分(手写高宽)
+             <div>                                                dropdown 剩余部分
+                 <a></a>
+                 <a></a>
+                 <a></a>
+             </div>
+        </div>
+    </div>
