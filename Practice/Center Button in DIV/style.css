@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  height: 100px;
+  width: 50%;
+  margin: 50px auto;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 10px;
+}
+
+.button:hover {
+  background-color: antiquewhite;
+}

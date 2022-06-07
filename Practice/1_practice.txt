@@ -187,3 +187,10 @@
     ::placeholder{
         color:red;
     }
+
+    如何改变选定文字效果?
+
+    ::selection{
+        color:red;
+        background-color: yellow;
+    }

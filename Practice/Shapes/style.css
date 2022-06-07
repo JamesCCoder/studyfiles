@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  width: 40%;
+  margin: 40px auto;
+  border: 1px solid black;
+}
+
+.frame .triangle {
+  width: 0;
+  height: 0;
+  border-top: 30px solid green;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.frame .oval {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+}
