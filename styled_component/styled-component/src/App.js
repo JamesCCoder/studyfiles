@@ -5,6 +5,8 @@ import ButtonTest from "./components/Button";
 import Title from "./components/Title";
 import AnotherHeader from "./components/AnotherHeader";
 import ComplexComponent from "./components/ComplexComponent";
+import Theme from "./components/Theme";
+import InputAndButton from "./components/InputAndButton";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <ButtonTest />
       <Title />
       <ComplexComponent />
+      <Theme />
+      <InputAndButton />
     </div>
   );
 }

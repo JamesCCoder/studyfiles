@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const TitleStyle = styled.div`
   width: 40%;
@@ -9,12 +9,22 @@ const TitleStyle = styled.div`
 const TitleContent = styled.h2`
   font-size: 2rem;
   color: ${({ special }) => (special ? "red" : "blue")};
+  ${({ large }) =>
+    large
+      ? css`
+          font-size: 40px;
+        `
+      : css`
+          font-size: 10px;
+        `}
 `;
 
 const Title = () => {
   return (
     <TitleStyle>
-      <TitleContent special>Let me have a try</TitleContent>
+      <TitleContent special large>
+        Let me have a try
+      </TitleContent>
       <TitleContent>Looks great</TitleContent>
     </TitleStyle>
   );

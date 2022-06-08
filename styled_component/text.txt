@@ -133,3 +133,91 @@
       import {colors} from "./utils.js";
 
       color = ${colors.primary};
+
+7. 增加 hover 效果 (& 的使用)
+
+      const StyledComponent = styled.button`
+      
+           border: 1px solid blue;
+           background-color: blue;
+           color:white;
+
+           &:hover{
+               background-color:white;
+               color:blue;
+           }
+      `
+
+
+*8. ThemeProvider
+
+    import styled, {ThemeProvider} from "styled-components";
+
+    const BaseTheme = {
+          
+         color: "black",
+         background:"white",
+    }
+
+    const SpecialTheme = {
+
+        color: "yellow",
+        background:"purple",
+    }
+
+    const Container = styled.div`
+          
+        color: ${props => props.theme.color};
+        background-color: ${props => props.theme.background};
+    `
+
+    return (
+
+        <ThemeProvider theme={SpecialTheme}>
+          <Container>this is a theme test</Container>
+        </ThemeProvider>
+    )
+
+9. as (向内包裹)
+
+   const StyledButton = styled.button`
+        
+         border: 1px solid blue;
+         background-color: blue;
+         color: white;
+   `
+
+   <StyledButton as="a" href="#"> Press </StyledButton>
+
+   相当于：(Press的style不变)
+
+   <StyledButton>   
+       <a>
+         Press
+       </a>
+   </StyledButton>
+
+** 10.css
+
+   const {css} from "styled-components";
+
+   const StyledButton = styled.button`
+   
+        ${({large}) => (large ? css`font-size: 40px` : css`font-size:20px`)}
+   `
+   <div>
+      <StyledButton large>press</StyledButton>
+      <StyledButton>press</StyledButton>
+   </div>
+
+   11. attrs 设置默认属性
+
+    const StyledButton = styled.button.attrs((props) => {
+
+        return {type: props.type || "text"} 
+    })`
+        border: 1px solid blue;
+        background-color: blue;
+        color: white;
+        padding: 0.5rem 0.75rem;
+    `

@@ -9,6 +9,14 @@ const Combination = styled.div`
   p {
     color: blue;
   }
+
+  p:hover {
+    color: red;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 const ComplexComponent = () => {
