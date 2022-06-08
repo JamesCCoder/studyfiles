@@ -1,0 +1,18 @@
+1. mui installation
+
+   https://mui.com/material-ui/getting-started/installation/
+
+
+2. import { Button } from "@mui/material"
+
+3. Header:
+
+   (AppBar + Toolbar) + 
+   (Tabs(value + onChange) + Tab(label)) + 
+   Button + 
+   (Menu(open = {true}) + MenuItem)
+
+   side:
+
+   footer: grid(container item)
+

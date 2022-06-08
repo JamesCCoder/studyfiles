@@ -1,38 +1,33 @@
-import React from "react";
-import styled from "styled-components";
+import React,{useState} from "react";
 
-import {AppBar, Toolbar, Tabs, Tab, Button} from "@mui/material";
+import {AppBar, Toolbar, Tabs, Tab, Button, Menu, MenuItem } from "@mui/material";
 
-const StyledAppBar = styled(AppBar)`
-      background-color:green;
-`
-
-const StyledTab = styled(Tab)`
-      color:white;
-      margin:0 3rem;
-`
-
-const StyledButton = styled(Button)`
-      background-color: orange;
-      color:white;
-      position:absolute;
-      right:1.25rem;
-`
 
 const Header = () => {
+    const [value ,setValue] = useState(0);
+    const changeHandler = (e, value) => {
+        setValue(value);
+    }
+
+
     return ( 
-        <StyledAppBar>
+        <AppBar position="foxed">
             <Toolbar>
-                <Tabs>
-                    <StyledTab label="Home"/>
-                    <StyledTab label="Services"/>
-                    <StyledTab label="Revolution"/>
-                    <StyledTab label="About Us"/>
-                    <StyledTab label="Contact Us"/>
+                <Tabs value={value} onChange={changeHandler}>
+                    <Tab label="Home"/>
+                    <Tab label="Services"/>
+                    <Tab label="Revolution"/>
+                    <Tab label="About Us"/>
+                    <Tab label="Contact Us"/>
                 </Tabs>
-                <StyledButton>Free Estimate</StyledButton>
+                <Button variant="contained" >Free Estimate</Button>
+                <Menu open={false}>
+                    <MenuItem>Service 1</MenuItem>
+                    <MenuItem>Service 2</MenuItem>
+                    <MenuItem>Service 3</MenuItem>
+                </Menu>
             </Toolbar>
-        </StyledAppBar>
+        </AppBar>
      );
 }
  
