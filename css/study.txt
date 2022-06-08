@@ -664,8 +664,11 @@ keyframes 可以有“阶段”写法：
 
 
 
-   53. what is SASS?
+   53. 如何在 css 中引入并使用 primary、secondary 的 color？
 
-       syntactically awesome style sheets, extension of CSS, superset of CSS
+      :root {
+          --primary: #654cff;
+          --secondary: #eb7713;
+      }
 
-       SASS does not run in the browser. 
+      color = var(--primary);

@@ -1,0 +1,135 @@
+1. how to install and use styled components?
+
+  1> npm install styled-components
+  2> import styled from "styled-components"
+  3> out of the function:
+
+     const Button = styled.button`
+     
+           background-color: red;
+           color: white;
+           border: 1px solid red;
+     `
+
+     in the function:
+
+     const ButtonComponent = () => {
+         return (
+              <div>
+                  <Button>Press</Button>
+              </div>
+         )
+     }
+
+2. seperate styled component file
+
+   (1) 
+   
+   import styled from "styled-components";
+
+   const DefaultButton = styled.button`
+
+         border: 1px solid red;
+         background-color: white;
+         color: red;
+         font-size: 1.25rem;
+         padding: 0.75rem 0.75rem;    
+         border-radius: 5px;
+   `
+
+   export default DefaultButton;
+
+   import DefaultButton from "./AllButtons.js";
+
+   **********OR:
+
+   (2)
+
+   import styled from "styled-components";
+
+   export const DefaultButton = styled.button`
+
+         border: 1px solid red;
+         background-color: white;
+         color: red;
+         font-size: 1.25rem;
+         padding: 0.75rem 0.75rem;    
+         border-radius: 5px;
+   `
+
+    import { DefaultButton } from "./AllButtons.js";
+
+
+
+3. 增加 props
+
+   const Button = styled.button`
+   
+         color: ${props => props.special && "red"};
+   `
+
+   const Button = styled.button`
+   
+         color = ${({special}) => (special ? "red" : "blue")};
+   `
+
+4. extended styled components (我们可以用此方法编辑MUI中的元素)
+
+   import styled from "styled-components";
+
+   export const DefaultButton = styled.button`
+        
+          color: red;
+          border: 1px solid red;
+          background-color: white;
+   `
+
+   export const SpecialDefaultButton = styled(DefaultButton)`
+          
+          font-size = 1.25rem;
+   `
+
+5. complex component (nested)
+
+   import React from "react";
+   import styled from "styled-components";
+
+   const Test = styled.div`
+        .content{
+            color: red;
+        }   
+        
+        p{
+            color: blue;
+        }
+   `
+
+   const ComplexComponent = () => {
+
+       <Test>
+           <h1 className="content"> this is a content </h1>
+           <p> this is a sentence </p>
+       </Test>
+   }
+
+6. 将 color 作为变量进行设置和引用的两种方法：(可用于自定义任意变量)
+
+   1. CSS (css and styles component)
+
+      :root {
+          --primary: red;
+      }
+
+      color: var(--primary);
+
+    2. utils (styled components)
+
+      export const colors = {
+
+        primary: red;
+        secondary: orange;
+      }
+
+      import {colors} from "./utils.js";
+
+      color = ${colors.primary};
