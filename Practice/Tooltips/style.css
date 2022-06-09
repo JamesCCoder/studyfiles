@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.position {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 30px;
+  left: -12px;
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  display: none;
+}
+
+.position:hover .tooltip {
+  display: block;
+}
+
+.tooltip:before {
+  position: absolute;
+  top: -10px;
+  left: 19px;
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}

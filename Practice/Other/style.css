@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.form {
+  position: relative;
+}
+
+.checkbox {
+  display: none;
+  appearance: none;
+}
+
+.label:before {
+  content: " ";
+  position: absolute;
+  padding: 5px;
+  border: 1px solid black;
+  top: 3px;
+  left: -14px;
+}
+
+.checkbox:checked + label:before {
+  background-color: black;
+}
+
+.form_1 {
+  position: relative;
+}
+
+.radio {
+  appearance: none;
+  display: none;
+}
+
+.label_1:before {
+  position: absolute;
+  content: " ";
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  top: 3px;
+  left: -14px;
+}
+
+.radio:checked + .label_1:before {
+  background-color: black;
+}

@@ -245,3 +245,89 @@
 
     仅存在于 block 和 inline-block， 不存在于 flex，
     这也是为什么 flex 有 gap 这个属性的原因
+
+
+24. 如何重写 checkbox 和 radio ？
+
+    <form>                                        ----checkbox的input在label前面
+        <input type="checkbox" id="checkbox" name="checkbox" class="checkbox"/>
+        <label for = "checkbox"> plz choose your answer </label>
+    </form>
+
+    1. 先让css自带的效果消失
+      
+    .checkbox{
+       display:none;
+       appearance: none;
+    }
+
+ 
+    2.写自己定义的效果,用absolute定位
+
+    .form{
+        position:relative;
+    } 
+    
+    .label:before{
+       position:absolute;                                         四个属性缺一不可
+       content:"";
+       border:1px solid black;
+       padding: 5px;
+       top:..;
+       left:..;
+    }
+
+    3. 点击后效果                                      和dropdown的显示写法类似，但是是“+”
+
+    .checkbox:checked + label:before{                         
+        background-color:black;
+    }
+
+    
+    4. radio唯一的区别是效果的模仿
+       需要使用border-radius: 50%; 制作一个圆形
+
+
+25. tooltip
+
+    ________/\___________
+   |                     |
+   <       tooltip       >
+   |________  ___________|
+            \/
+
+    难点： 如何制作相应的arrow区域
+
+    .tooltip:after{                              before 也可以 仅仅是定位问题
+       position: absolute;                       absolute 两个作用：1.定位 2.撑开图形
+       content: "";
+       border-width:5px;
+       border-style:solid;
+       border-color: black transparent transparent transparent
+    }                                             ---black的位置决定了arrow的方向
+
+
+26. transition 的位置区别
+
+    .button{
+         ....
+         transition: all 0.5s;
+    }
+
+    .button:hover{
+        opacity: 0.7;
+        transition: all 0.5s;
+    }
+
+    以上的例子中，transition 放置的位置不同会有什么区别吗？
+
+    1. 第一种情况下，button所有的“变化”都会视为“动画”（hover + style）
+    2. 第二种情况下，仅有hover中的变化被视为动画
+
+27. sidebar 设计的小心得
+
+    如何实现 sidebar 从“消失”到“出现”的过程中屏幕右移的情况？
+
+    屏幕的 position：absolute，整体右移 sidebar 的宽度即可
+
+    （collapsed sidebar）
