@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 50%;
+  margin: 40px auto;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.breadcrumb li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.breadcrumb li:before {
+  padding: 5px;
+  content: "/\00a0";
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+}

@@ -112,6 +112,23 @@
     
        翻译：当父类被 hover 时，其某个子类的 display：block；
 
+    难点：dropdown menu in navbar
+
+    <header>
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <div>
+            <button>Dropdown</button>                      button 的 style 参考同级的 a，
+            <div class="content">                          a 要设置 border，不然大小会变
+                 <a href = "#">link 1</a>
+                 <a href = "#">link 2</a>        默认下拉菜单的宽度和button是一样的（flex的原因）
+                 <a href = "#">link 3</a>        如果要给下拉菜单加宽，则在 .content使用 
+            </div>                               width = 140%;
+        </div>
+    </header>
+
+    有时候并不需要 absolute 协助进行定位，特别是下拉菜单本身就是 header 一部分的情况
+    （dropdown menu in sidenav）这个时候需要特别注意
 
 
 12. 分页符的本质： 一组 anchor
@@ -194,3 +211,24 @@
         color:red;
         background-color: yellow;
     }
+
+22. breadcrumbs （本质：li）
+
+    <ul>
+       <li><a>Home</a></li>
+    </ul>
+
+    li:      list-style-type: none
+    a:       text-decoration: none
+    ul:      display: flex;
+             flex-direction: row;
+             flex-wrap: nowrap;
+    
+   *li:before{
+       content: "/\00a0";
+   }
+
+23. margin collapse 
+
+    仅存在于 block 和 inline-block， 不存在于 flex，
+    这也是为什么 flex 有 gap 这个属性的原因
