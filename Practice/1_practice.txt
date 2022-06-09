@@ -331,3 +331,50 @@
     屏幕的 position：absolute，整体右移 sidebar 的宽度即可
 
     （collapsed sidebar）
+
+28. 如何让 img 正好被箍在 div 之中？
+
+    .img{
+        display:block;
+        margin:auto;
+        width:100%;                               width 可调节
+    }
+
+29. overlay 效果的本质 （div）的覆盖
+
+    原理：
+    <div class="container">                 position：relative
+       <img src = "" alt = "" />
+       <div>                                position：absolute；
+          <div> Hello World <div>
+       </div>
+    </div>
+
+    利用 absolute 进行定位，hover 改变 opacity
+    注意： 利用 hover 下 对 img 和 与之平级的 div 的 opacity 进行调整
+          可以调整出不同的样式
+
+
+slide 动作的本质 
+
+      height，width的变化时动作
+      top bottom left right 的配合是变化的方向（position：absolute/fixed）
+
+30. overlay slide
+
+   hover 前：
+           
+             top:0;
+           
+             height: 0;            height:0;       
+
+   hover 后：
+                                   bottom:0;
+
+             height: 100%;         height:100%
+
+   上下进出，width保持不变，height在变化
+   左右进出，height不变，width在变化
+
+
+31.
