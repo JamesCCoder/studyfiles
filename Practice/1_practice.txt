@@ -130,6 +130,19 @@
     有时候并不需要 absolute 协助进行定位，特别是下拉菜单本身就是 header 一部分的情况
     （dropdown menu in sidenav）这个时候需要特别注意
 
+    在header中遇到 a 和 div（button + div） 混合出现的情况，除了每个a的style 和 button
+    style要一致（padding，background-color，border等）外，还要使用
+    align-items：center 协助进行居中，这样 button 才会看起来和 a 一模一样
+
+    使用flex排列header上的元素后，其中的button一边会有一条很细的边，所以需要给button
+    的height 单独加一条 style，使得 button 的style高度和header的高度一致即可；
+
+    subnavigation menu
+
+    如何给absolute的元素设置一个宽度横跨整个屏幕？
+
+    width： 100vw；
+
 
 12. 分页符的本质： 一组 anchor
 

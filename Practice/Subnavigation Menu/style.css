@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header .link {
+  padding: 1rem;
+}
+
+.header .button {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  padding: 1rem;
+}
+
+.button {
+  height: 50px;
+}
+
+.link:hover,
+.button:hover {
+  background-color: red;
+}
+
+.position_1,
+.position_2,
+.position_3 {
+  position: relative;
+}
+
+.content_1 {
+  position: absolute;
+  background-color: red;
+  width: 100vw;
+  top: 49px;
+  left: -61px;
+  height: 50px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding-left: 10px;
+}
+
+.position_1:hover .content_1 {
+  display: flex;
+}
+
+.content_1 a {
+  border: 1px solid black;
+}
+.content_2 {
+  position: absolute;
+}
+.content_3 {
+  position: absolute;
+}
