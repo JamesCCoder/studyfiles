@@ -12,9 +12,5 @@
   display: block;
   margin: auto;
   width: 100%;
-  border: 4px solid gray;
-}
-
-.image:hover {
-  outline: 1px solid red;
+  border: 4px solid green;
 }
