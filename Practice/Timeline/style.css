@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.left {
+  background-color: darkslateblue;
+  width: 50%;
+  margin: 2px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 80px;
+  position: relative;
+}
+
+.right {
+  background-color: darkslateblue;
+  width: 50%;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.middle {
+  position: relative;
+  z-index: 100;
+}
+
+.out_1 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  top: 80px;
+  left: -10px;
+}
+
+.in_1 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+}
+
+.out_2 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  top: 190px;
+  left: -10px;
+}
+
+.in_2 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+}
+
+.out_3 {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  top: 300px;
+  left: -10px;
+}
+
+.in_3 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+}
+
+.left div {
+  padding: 40px;
+  background-color: white;
+  width: 50%;
+}
+
+.left .div_1:after {
+  position: absolute;
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  top: 80px;
+  right: 55px;
+}
+
+.left .div_2:after {
+  position: absolute;
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  top: 300px;
+  right: 55px;
+}
+
+.right div {
+  padding: 40px;
+  background-color: white;
+  width: 50%;
+}
+
+.right .div_3:after {
+  position: absolute;
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  top: 190px;
+  left: 54px;
+}
