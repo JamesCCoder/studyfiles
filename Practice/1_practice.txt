@@ -360,7 +360,7 @@ slide 动作的本质
       height，width的变化时动作
       top bottom left right 的配合是变化的方向（position：absolute/fixed）
 
-30. overlay slide
+30. overlay slide (image overlay slide/ image overlay zoom)
 
    hover 前：
            
@@ -376,5 +376,21 @@ slide 动作的本质
    上下进出，width保持不变，height在变化
    左右进出，height不变，width在变化
 
+   absolute 下， top 和 height 的使用 tip：二者相加得 100
+   （image overlay title）
 
-31.
+31. top = 100%
+    bottom = 100%
+    left = 100%
+    right = 100%
+
+    究竟在哪里?
+
+32. div 和 里面的文字都变半透明得方法
+
+    background-color：black；
+    opacity：0.5；
+
+    div 半透明 但是里面的文字不受影响的办法
+
+    background-color: rgba(0,0,0,0.5);

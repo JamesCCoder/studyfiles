@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 50%;
+  margin: 50px auto;
+  position: relative;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.overlay .content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.25rem 2.25rem;
+}

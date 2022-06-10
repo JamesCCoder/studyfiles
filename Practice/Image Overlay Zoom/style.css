@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  width: 40%;
+  margin: 50px auto;
+}
+
+.container {
+  border: 1px solid black;
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  transition: all 1s;
+}
+
+.overlay p {
+  display: none;
+}
+
+.container:hover .overlay {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container:hover p {
+  display: block;
+  transition: all 1s;
+}
