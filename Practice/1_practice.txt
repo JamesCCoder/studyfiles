@@ -394,3 +394,11 @@ slide 动作的本质
     div 半透明 但是里面的文字不受影响的办法
 
     background-color: rgba(0,0,0,0.5);
+
+
+33. 图片模糊处理
+
+    .image{
+
+        filter(blur(5px));
+    }
