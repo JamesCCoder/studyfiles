@@ -413,3 +413,32 @@ slide 动作的本质
 35. Scroll To Top Button
 
     写一个回到 top 的 anchor
+
+36. 对一个 div 一分为二？ （split screen）
+
+    还是 flex
+
+37. 调整图片大小的 tricky （续28）
+
+       <div>
+          <img src="#" alt="img" />
+       </div>
+
+    1. 如果想要图片刚好被箍在 div 之中，则需要设置 div 的宽度（px，%）
+       然后将 img 宽度设置到和 div 一致
+       （px 一致 或者 width：100%）
+       再设置：
+
+       display：block；
+       margin: auto;
+       width：（== div：width）
+
+       即可
+
+    2. 如果想要一个正方形/正圆形的图片被箍在 div 之中，则设置 div 的宽度，
+       然后将 img 宽度设置与其一致，再设置 img 高度与宽度一致
+
+       display：block;
+       margin:auto;
+       width: 100%;
+       height: 200px;

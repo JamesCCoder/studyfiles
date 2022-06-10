@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  width: 50%;
+  margin: 50px auto;
+}
+
+ul {
+  position: relative;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li:before {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background-color: red;
+  content: "";
+  border-radius: 50%;
+  top: 7px;
+  left: -15px;
+}
