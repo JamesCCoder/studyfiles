@@ -1,0 +1,420 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #f3f6f4;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto&display=swap");
+
+/* setup root and outer source */
+
+body {
+  overflow: scroll;
+}
+
+/* force to have scroll bar */
+
+.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: bolder;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* setup header */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:active {
+  text-decoration: underline;
+}
+
+/* setup footer  */
+
+.anchor {
+  position: absolute;
+  right: 40px;
+  bottom: 80px;
+}
+
+.anchor button {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+.anchor a {
+  text-decoration: none;
+}
+
+.anchor a:active {
+  color: black;
+}
+
+/* setup "Top" anchor, I made it binding to footer, since footer is fixed */
+
+.space {
+  width: 100%;
+  height: 60px;
+}
+
+/* create it a space for extra space in normal data flow 
+because of fiexed element */
+
+.main {
+  height: 1000px;
+  width: 97%;
+  margin: auto;
+}
+
+.nav {
+  background-color: var(--primary);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_left {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.75rem;
+}
+
+.img_bucket {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+.nav_right {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.img_search,
+.img_shop {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+.nav_one,
+.nav_two,
+.nav_three,
+.nav_four,
+.nav_five,
+.nav_six {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+}
+
+.nav_one:hover img,
+.nav_two:hover img,
+.nav_three:hover img,
+.nav_four:hover img,
+.nav_five:hover img,
+.nav_six:hover img {
+  opacity: 1;
+}
+
+.nav_one img,
+.nav_two img,
+.nav_three img,
+.nav_four img,
+.nav_five img,
+.nav_six img {
+  height: 4px;
+  width: 100%;
+  opacity: 0;
+}
+
+/* layout of nav bar */
+
+.bags_dropdown {
+  position: absolute;
+  width: 96vw;
+  top: 31px;
+  left: -151px;
+  height: 400px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.nav_two:hover .bags_dropdown {
+  display: block;
+}
+
+.accesseries_dropdown {
+  position: absolute;
+  width: 96vw;
+  top: 31px;
+  left: -200px;
+  height: 400px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.nav_three:hover .accesseries_dropdown {
+  display: block;
+}
+
+.experience_dropdown,
+.about_dropdown {
+  position: absolute;
+}
+
+.bags_dropdown img,
+.accesseries_dropdown img {
+  width: 100%;
+  height: 100%;
+}
+
+.bags_dropdown_group,
+.accesseries_dropdown_group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+
+.bags_dropdown_one,
+.bags_dropdown_two,
+.bags_dropdown_three,
+.accesseries_dropdown_one,
+.accesseries_dropdown_three {
+  padding: 10px 50px;
+}
+
+.accesseries_dropdown_one {
+  text-align: center;
+}
+
+.bags_dropdown_one,
+.bags_dropdown_two,
+.accesseries_dropdown_one {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.bags_dropdown_one p,
+.bags_dropdown_two p,
+.accesseries_dropdown_one p {
+  padding: 15px;
+}
+
+.bags_dropdown_one .caption,
+.bags_dropdown_two .caption,
+.accesseries_dropdown_one .caption {
+  font-size: 1.25rem;
+}
+
+.bags_dropdown_three,
+.accesseries_dropdown_three {
+  width: 40%;
+  height: 100%;
+}
+
+.bags_dropdown_three img,
+.accesseries_dropdown_three img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+/* setup dropdowns, I just made two....
+and leave a question in file: quesitons to Jason */
+
+.figure {
+  width: 100%;
+}
+.figure img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* fill up biggest img */
+
+.section .section_content {
+  text-align: center;
+  margin: 10px 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.25rem;
+}
+
+.img_sea {
+  grid-area: sea;
+}
+
+.img_guns {
+  grid-area: guns;
+}
+
+.img_jocker {
+  grid-area: jocker;
+}
+
+.img_tiffiny {
+  grid-area: tiffiny;
+}
+
+.img_cars {
+  grid-area: cars;
+}
+
+.img_games {
+  grid-area: games;
+}
+
+.img_steak {
+  grid-area: steak;
+}
+
+.img_steak img,
+.img_games img,
+.img_cars img,
+.img_tiffiny img,
+.img_jocker img,
+.img_guns img,
+.img_sea img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img_group {
+  width: 100%;
+  height: 1100px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: [line1] 33% [line2] 33% [line3] 33% [line4];
+  grid-template-rows: [row1] 13.6% [row2] 13.6% [row3] 13.6% [row4] 13.6% [row5] 13.6% [row6] 13.6% [row7] 13.6% [row8];
+  grid-template-areas:
+    "sea sea cars"
+    "sea sea cars"
+    "guns jocker cars"
+    "guns jocker games"
+    "tiffiny jocker games"
+    "tiffiny steak steak"
+    "tiffiny steak steak";
+}
+
+/* layout for imgs */
+
+.img_sea,
+.img_cars,
+.img_jocker,
+.img_games,
+.img_steak,
+.img_guns,
+.img_tiffiny {
+  position: relative;
+  width: 100%;
+}
+
+.sea_overlay,
+.cars_overlay,
+.jocker_overlay,
+.games_overlay,
+.steak_overlay,
+.guns_overlay,
+.tiffiny_overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 240px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: none;
+}
+
+.img_sea:hover .sea_overlay,
+.img_cars:hover .cars_overlay,
+.img_jocker:hover .jocker_overlay,
+.img_games:hover .games_overlay,
+.img_steak:hover .steak_overlay,
+.img_guns:hover .guns_overlay,
+.img_tiffiny:hover .tiffiny_overlay {
+  display: block;
+}
+
+.overlay {
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: auto;
+  height: 200px;
+}
+
+.overlay img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* adjust the position, layout for imgs and setup basic action */

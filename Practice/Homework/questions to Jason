@@ -1,0 +1,10 @@
+1. dropdown 的位置设定一般使用 absolute，这样在 postioning 时会非常灵活
+   但随之而来的问题就是其宽度的设定。
+   我在制作project中，遇到dropdown的宽度设定往往采用以下几种方法：
+   1.多数dropdown宽度与其父类（一般为触发button）宽度一致，width：100% 即可
+   2.有的dropdown宽度略大于其父类，采用width：140% 等方式
+   3.有的dropdown宽度跨越整个屏幕，采用width：100vw 方法
+
+本次作业中，遇到dropdown 的宽度设定感到很头疼，似乎无法使用相对值进行定义，
+（除非使用绝对数值px，但这样会对 responsive 效果产生很不好的效果），
+还请您赐教。
