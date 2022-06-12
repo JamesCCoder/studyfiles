@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 50%;
+  margin: 50px auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.year {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  background-color: green;
+  gap: 200px;
+}
+
+.year li {
+  list-style-type: none;
+  color: white;
+}
+
+.year .a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.year .a p {
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.week {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: lightgray;
+  color: gray;
+}
+
+.week li {
+  list-style-type: none;
+  width: 13.6%;
+  text-align: center;
+}
+
+.day {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.day li {
+  width: 13.6%;
+  text-align: center;
+  margin: 12px 2px;
+}

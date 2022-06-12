@@ -447,3 +447,11 @@ slide 动作的本质
 38. z-index 
 
     flex 的巧妙布局 （timeline）
+
+
+39. 构建等间距的子元素 （canlendar）
+
+    可以考虑的因素
+    1. flex  space-evenly
+    2. gap ，padding 做调整
+    3. width： 13.6%；  ！！！！
