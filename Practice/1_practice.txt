@@ -455,3 +455,8 @@ slide 动作的本质
     1. flex  space-evenly
     2. gap ，padding 做调整
     3. width： 13.6%；  ！！！！
+
+40. 如何强制显示 / 关闭 scroll bar？
+
+    overflow: scroll;
+    overflow: hidden;

@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 3px solid lightgray;
+  height: 300px;
+  position: relative;
+}
+
+.left p {
+  padding: 20px 10px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.right {
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.up {
+  position: absolute;
+  top: 29px;
+  left: 50px;
+  width: 80%;
+  height: 90%;
+  border: 2px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.chat {
+  padding: 1.75rem 0.5rem 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px 5px;
+}
+
+.message .textarea {
+  width: 150%;
+  height: 100px;
+  background-color: whitesmoke;
+}
+
+::placeholder {
+  padding: 10px;
+}
+
+.send,
+.close {
+  width: 95%;
+  margin: 3px 5px;
+  padding: 5px;
+  border: none;
+}
+
+.send {
+  background-color: green;
+  color: white;
+}
+
+.close {
+  background-color: red;
+  color: white;
+}
+
+.ch {
+  position: absolute;
+  bottom: 15px;
+  right: 23px;
+  width: 251px;
+  height: 25px;
+  background-color: lightgray;
+  color: white;
+  border: none;
+}
+
+.ch:hover + .right {
+  display: flex;
+}
