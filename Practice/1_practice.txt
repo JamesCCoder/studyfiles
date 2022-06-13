@@ -504,3 +504,12 @@ slide 动作的本质
     1. 设置变化的limit
     2. 修改需要修改的属性项
     3. 做出微调
+
+45. 多条件 responsive
+
+    responsive text
+
+
+46. 多行显示（list group）
+
+    多行显示 用 div 和 list 显示效果完全一致

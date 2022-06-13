@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  width: 60%;
+  margin: 50px auto;
+}
+
+.first {
+  background-color: whitesmoke;
+}
+
+.first ul {
+  list-style-type: none;
+}
+
+.first ul li {
+  border: 1px solid grey;
+  padding: 10px 15px;
+}
+
+.second {
+  background-color: whitesmoke;
+}
+
+.second div {
+  padding: 10px 15px;
+  border: 1px solid grey;
+}

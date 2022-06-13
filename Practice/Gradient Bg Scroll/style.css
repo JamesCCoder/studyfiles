@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 2000px;
+  background-color: aqua;
+}
+
+.second {
+  position: fixed;
+  left: 0;
+  top: 50%;
+}
