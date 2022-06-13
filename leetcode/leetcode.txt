@@ -1,0 +1,43 @@
+1. two sum
+
+   1. 使用 map
+   2. map 增加元素的方法： map.set(nums[i], i)
+   3. map 获取元素的方法： map.get(nums[i]) -->  i
+   4. 判断 map 是否存在某元素：  map.has(nums[i]) 
+
+
+map：
+
+value   ：    index
+
+has
+
+get(value) --> index
+
+
+2. two sum (ListNode)
+
+   1. 使用 ListNode
+   2. 新建 ListNode 的方法： let res = new ListNode(0);
+   3. javascript 的计算是不严谨的：
+
+      所以：1. % 运算尽量直接引用
+            2. / 运算使用 Math.floor
+
+
+9. 回文数
+
+   1. string 方法
+      注意： string 只有使用 split 之后才能使用 reverse
+
+   2. 数学方法
+      1.哪些数字一定不是回文数？
+      2.生成部分回文数的方法
+      3. / 符号在 javascript 中的特殊性
+      4. 最后的判断（分奇偶两种情况） 
+
+
+20. 有效的括号
+   
+    用 [] 模拟 stack
+    方法： push
