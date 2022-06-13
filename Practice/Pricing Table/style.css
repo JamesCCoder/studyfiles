@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  width: 70%;
+  margin: 50px auto;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.basic,
+.pro,
+.pre {
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic div,
+.pro div,
+.pre div {
+  padding: 0.75rem 1.25rem;
+}
+
+.basic_one,
+.pre_one {
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.pro_one {
+  background-color: green;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.basic_two,
+.pre_two,
+.pro_two {
+  background-color: lightgray;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+.basic_seven,
+.pre_seven,
+.pro_seven {
+  background-color: lightgray;
+  width: 100%;
+  text-align: center;
+}
+
+.basic_button,
+.pre_button,
+.pro_button {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+}
+
+.basic:hover,
+.pre:hover,
+.pro:hover {
+  transition: all 0.7s;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .frame {
+    flex-direction: column;
+  }
+  .basic,
+  .pre,
+  .pro {
+    width: 100%;
+  }
+}

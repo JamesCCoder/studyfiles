@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  width: 50%;
+  margin: 50px auto;
+  border: none;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.image {
+  display: block;
+  margin: auto;
+  width: 100%;
+  border: none;
+}
+
+.name {
+  padding: 10px 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.name p {
+  font-weight: bolder;
+}

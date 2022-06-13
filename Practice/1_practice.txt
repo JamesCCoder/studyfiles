@@ -457,6 +457,50 @@ slide 动作的本质
     3. width： 13.6%；  ！！！！
 
 40. 如何强制显示 / 关闭 scroll bar？
-
+ 
     overflow: scroll;
     overflow: hidden;
+
+41. img 与文字
+
+    img 与文字的显示有几种情况：1. 文字居中，文字在上方，文字在下方等
+    同时还常常伴随各种animation：2. slide 划入， 渐变等
+
+    总设计原则：
+    1.多一个元素多一个div   有文字那么在 img 下方制作一个 img，有overlay，那么同样多一个 div
+    2.图片之外的元素利用 absolute 使之与 img 密不可分，利用 width 调整与 img 的相对宽度
+
+42. box-sizing: border-box
+
+    再设置 box-sizing 为 border-box 之后，
+    当设置 content 的 padding 时，content 的 width 不会发生变化，但是设置 margin 时依然会发生变化
+    即：border-box 之中，width = content.width + padding.width
+                        height = content.height + padding.height
+
+43. loader  (animation)
+
+    @keyframes spin {
+
+    }
+
+    @keyframes 里写的是 animation 的具体动作
+
+    再利用 animation 对这一动作进行引用：
+
+    animation: spin 2s   linear   infinate
+               名称 周期 动作style  总次数  
+
+44. responsive (pricing table)
+
+    @media (max-width:800px){
+        .frame{
+            flex-direction: colomn;
+        }
+        .basic, .pre, .pro{
+            width:100%;
+        }
+    }
+
+    1. 设置变化的limit
+    2. 修改需要修改的属性项
+    3. 做出微调
