@@ -2,7 +2,7 @@
 
   1> npm install styled-components
   2> import styled from "styled-components"
-  3> out of the function:
+  3> out of the function:                                命名 styled element 必须首字母大写
 
      const Button = styled.button`
      
