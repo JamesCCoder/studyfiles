@@ -36,14 +36,22 @@ logical operators:   &&    ||    !
 
 
 9. document.    createElement("h1")           setAttribute("class","h1")
+                                              removeAtrbibute()
+                                              hasAttribute()
+
                 createTextNode("test")        appendChild()
+                                              removeChild()
+                                              contains() --> boolean
                                                                                              virtural DOM
-                getElementById("h1")          innerHtml = "123"
+                getElementById("h1")          innerHtml = "123" "<p>123</p>"
                 QuerySelector(".h1")          textContent = "123"
                                               value       = "123"
                                                                                              setup value
                                               style.backGround = "red"                       setup css value
                                               classList.add("h1")                            setup css class
                                                        .remove("h1")
+                                                       .replace()
+                                                       .contains()
+                                                       .toggle()
 
                                               addEventListener("click", check);              virtural event
