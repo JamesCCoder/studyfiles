@@ -1,17 +1,14 @@
-
 import React, { useState } from "react";
 
 import Wrap from "./components/Wrap";
 import Input from "./components/Input";
 
-import './App.css';
-
+import "./App.css";
 
 import ButtonBox from "./components/ButtonBox";
 import Button from "./components/Button";
 
 const btnValues = [
-
   ["C", "+-", "%", "/"],
   [7, 8, 9, "X"],
   [4, 5, 6, "-"],
@@ -156,23 +153,4 @@ const App = () => {
   );
 };
 
-=======
-   ["C", "+/-","%","/"],
-   [7,8,9,"*"],
-   [4,5,6,"-"],
-   [1,2,3,"+"],
-   [0,".","="],
-]
-
-const App = () => {
-  return ( 
-      <Wrap>
-        <Screen/>
-        <ButtonBox>
-          <Button className="" value="0" onClick={() => console.log("click!")}/>
-        </ButtonBox>
-      </Wrap>
-    );
-}
- 
 export default App;
