@@ -16,8 +16,6 @@ const btnValues = [
   [0, ".", "="],
 ];
 
-const removeSpaces = (num) => num.toString().replace(/\s/g, "");
-
 const App = () => {
   let [calc, setCalc] = useState({
     sign: "",
@@ -26,16 +24,17 @@ const App = () => {
   });
 
   const numClickHandler = (e) => {
+    e.preventDefault();
     const value = e.target.innerHTML;
 
-    if (removeSpaces(calc.num).length < 16) {
+    if (calc.num.toString().length < 16) {
       setCalc({
         ...calc,
         num:
           calc.num === 0 && value === "0"
             ? "0"
-            : removeSpaces(calc.num) % 1 === 0
-            ? Number(removeSpaces(calc.num + value))
+            : calc.num % 1 === 0
+            ? Number(calc.num + value)
             : calc.num + value,
         res: !calc.sign ? 0 : calc.res,
       });
@@ -43,6 +42,7 @@ const App = () => {
   };
 
   const commaClickHandler = (e) => {
+    e.preventDefault();
     const value = e.target.innerHTML;
 
     setCalc({
@@ -52,6 +52,7 @@ const App = () => {
   };
 
   const signClickHandler = (e) => {
+    e.preventDefault();
     const value = e.target.innerHTML;
 
     setCalc({
@@ -78,11 +79,7 @@ const App = () => {
         res:
           calc.num === "0" && calc.sign === "/"
             ? "Can't divide with 0"
-            : math(
-                Number(removeSpaces(calc.res)),
-                Number(removeSpaces(calc.num)),
-                calc.sign,
-              ),
+            : math(Number(calc.res), Number(calc.num), calc.sign),
 
         sign: "",
         num: 0,
@@ -93,15 +90,15 @@ const App = () => {
   const invertClickHandler = () => {
     setCalc({
       ...calc,
-      num: calc.num ? toLocaleString(removeSpaces(calc.num) * -1) : 0,
-      res: calc.res ? toLocaleString(removeSpaces(calc.res) * -1) : 0,
+      num: calc.num ? calc.num * -1 : 0,
+      res: calc.res ? calc.res * -1 : 0,
       sign: "",
     });
   };
 
   const percentClickHandler = () => {
-    let num = calc.num ? parseFloat(removeSpaces(calc.num)) : 0;
-    let res = calc.res ? parseFloat(removeSpaces(calc.res)) : 0;
+    let num = calc.num ? parseFloat(calc.num) : 0;
+    let res = calc.res ? parseFloat(calc.res) : 0;
 
     setCalc({
       ...calc,
