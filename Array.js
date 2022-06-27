@@ -789,3 +789,158 @@
 // };
 
 // console.log(palindrome(arr));
+
+// 33. minimun number of jumps to the end
+
+// 34. stock span problems
+
+// const arr = [100, 80, 40, 70, 60, 75, 85];
+// const arr1 = [10, 4, 5, 90, 120, 80];
+
+// const stock = (arr) => {
+//   let res = [];
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     let count = 1;
+//     for (let j = i - 1; j >= 0; j--) {
+//       if (arr[i] > arr[j]) {
+//         count++;
+//       } else {
+//         break;
+//       }
+//     }
+//     res.push(count);
+//   }
+//   return res.reverse();
+// };
+
+// console.log(stock(arr));
+
+// 25. find a triplet sum Array
+
+// const arr = [1, 4, 45, 6, 10, 8];
+
+// const find = (arr, target) => {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = arr[i];
+//     for (let j = i + 1; j < arr.length; j++) {
+//       sum = arr[i] + arr[j];
+//       for (let k = j + 1; k < arr.length; k++) {
+//         sum = arr[i] + arr[j] + arr[k];
+//         if (sum === target) {
+//           return true;
+//         }
+//       }
+//     }
+//   }
+//   return false;
+// };
+
+// console.log(find(arr, 13));
+
+//26. smallest positive missing number
+
+// const arr = [1, 2, 3, 4, 5];
+// const arr1 = [0, -10, 1, 3, -20];
+// const arr2 = [-1, 0, 2, 3, 4, 5];
+// const arr3 = [-1, 1, 2, -10, 3, 4, 5, 6, 7];
+
+// const find = (arr) => {
+//   arr.sort(function (a, b) {
+//     return a - b;
+//   });
+//   let count = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       if (arr[i] != 1) return 1;
+//       for (let j = i + 1; j < arr.length; j++) {
+//         count++;
+//         if (arr[j] != arr[i] + count) {
+//           return arr[i] + count;
+//         }
+//       }
+//       return arr[arr.length - 1] + 1;
+//     }
+//   }
+// };
+
+// console.log(find(arr));
+
+//27. row with max 1s
+
+// const arr = [
+//   [0, 1, 1, 1],
+//   [0, 0, 1, 1],
+//   [1, 1, 1, 1],
+//   [0, 0, 0, 0],
+// ];
+
+// const one = (arr) => {
+//   let row = 0;
+//   let res = 0;
+//   let sum;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum = 0;
+//     for (let j = 0; j < arr[0].length; j++) {
+//       if (arr[i][j] == 1) {
+//         sum++;
+//       }
+//       if (sum > res) {
+//         res = sum;
+//         row = i;
+//       }
+//     }
+//   }
+//   return row;
+// };
+
+// console.log(one(arr));
+
+//28. array subset of another array
+
+// const arr1 = [11, 1, 13, 21, 3, 7];
+// const arr2 = [11, 3, 7, 1, 2];
+
+// const subst = (arr1, arr2) => {
+//   for (let i = 0; i < arr1.length; i++) {
+//     for (let j = 0; j < arr2.length; j++) {
+//       if (arr1[i] == arr2[j]) {
+//         arr1[i] = "*";
+//         continue;
+//       }
+//     }
+//   }
+//   let count = 0;
+//   for (let i of arr1) {
+//     if (i == "*") {
+//       count++;
+//     }
+//   }
+//   if (count !== arr2.length) return false;
+//   return true;
+// };
+
+// console.log(subst(arr1, arr2));
+
+//29. majority element
+
+// const arr = [3, 1, 3, 3, 2, 2, 2, 2, 2];
+
+// const majority = (arr) => {
+//   let res = arr[0];
+//   let sign = 1;
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] == res) {
+//       sign++;
+//     } else {
+//       sign--;
+//     }
+//     if (sign == 0) {
+//       sign = 1;
+//       res = arr[i];
+//     }
+//   }
+//   return res;
+// };
+
+// console.log(majority(arr));

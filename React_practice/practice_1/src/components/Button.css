@@ -1,0 +1,13 @@
+.equal {
+  grid-column: 3/5;
+  background-color: red;
+}
+
+button {
+  background-color: cornflowerblue;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 30px;
+  color: white;
+}
