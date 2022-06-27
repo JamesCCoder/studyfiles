@@ -34,8 +34,8 @@ const App = () => {
           calc.num === 0 && value === "0"
             ? "0"
             : calc.num % 1 === 0
-            ? Number(calc.num + value)
-            : calc.num + value,
+            ? Number(calc.num + value) //取消第一位的0
+            : calc.num + value, //后几位无所谓
         res: !calc.sign ? 0 : calc.res,
       });
     }
@@ -58,7 +58,7 @@ const App = () => {
     setCalc({
       ...calc,
       sign: value,
-      res: !calc.res && calc.num ? calc.num : calc.res,
+      res: calc.num && !calc.res ? calc.num : calc.res, //保留上一次的计算结果
       num: 0,
     });
   };
