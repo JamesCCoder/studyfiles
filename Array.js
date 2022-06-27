@@ -815,7 +815,7 @@
 
 // console.log(stock(arr));
 
-// 25. find a triplet sum Array
+// 35. find a triplet sum Array
 
 // const arr = [1, 4, 45, 6, 10, 8];
 
@@ -838,7 +838,7 @@
 
 // console.log(find(arr, 13));
 
-//26. smallest positive missing number
+//36. smallest positive missing number
 
 // const arr = [1, 2, 3, 4, 5];
 // const arr1 = [0, -10, 1, 3, -20];
@@ -866,7 +866,7 @@
 
 // console.log(find(arr));
 
-//27. row with max 1s
+//37. row with max 1s
 
 // const arr = [
 //   [0, 1, 1, 1],
@@ -896,7 +896,7 @@
 
 // console.log(one(arr));
 
-//28. array subset of another array
+//38. array subset of another array
 
 // const arr1 = [11, 1, 13, 21, 3, 7];
 // const arr2 = [11, 3, 7, 1, 2];
@@ -922,7 +922,7 @@
 
 // console.log(subst(arr1, arr2));
 
-//29. majority element
+//39. majority element
 
 // const arr = [3, 1, 3, 3, 2, 2, 2, 2, 2];
 
@@ -944,3 +944,129 @@
 // };
 
 // console.log(majority(arr));
+
+//40.maximum index
+
+// const arr = [34,8,10,3,2,80,30,33,1];
+// const arr1 = [3,43,2,12,43,6,3,12,97,78,3,4];
+
+// const max = (arr) => {
+//    let res = 0;
+//    for(let i = 0; i<arr.length; i++){
+//        for(let j = i + 1; j<arr.length; j++){
+//            if(arr[j] > arr[i]){
+//               res = Math.max(res, j - i);
+//            }
+//        }
+//    }
+//     return res;
+// }
+
+// console.log(max(arr1));
+
+//41 max sum path in two arrays
+
+//42 find missing and repeating
+
+// const arr = [5,3,2,11,7,1,4,7,8,9,6,12];
+
+// const find = (arr) => {
+//     let hash = new Map();
+//     let n = arr.length;
+//     let res = [];
+//     for(let i of arr){
+//         if(!hash.has(i)){
+//             hash.set(i, true);
+//         }else{
+//             res.push(i);
+//         }
+
+//     }
+//     for(let i = 1; i<=n; i++){
+//         if(!hash.has(i)){
+//             res.push(i);
+//         }
+//     }
+//     return res;
+// }
+
+// console.log(find(arr));
+
+//43 closest sum in a sorted array
+
+// const arr = [10,22,28,29,30,40];
+
+// const close = (arr, target) => {
+//     let res = [];
+//     let diff = 999;
+//     let sum = 0;
+//     for(let i = 0; i<arr.length; i++){
+//        sum = arr[i];
+//        for(let j = i + 1; j<arr.length; j++){
+//            sum = arr[i] + arr[j];
+//            if(Math.abs(sum - target) < diff){
+//                diff = Math.abs(sum - target);
+//                res[0] = arr[i];
+//                res[1] = arr[j];
+//            }
+//        }
+//     }
+//     return res;
+// }
+
+// console.log(close(arr, 54));
+
+//44.merge two sorted array
+
+// const arr1 = [1,3,4,6,7,9,11];
+// const arr2 = [2,4,5,6,8,9,11,32,55,56,100];
+
+// const merge = (arr1, arr2) => {
+//     let i = 0;
+//     let j = 0;
+//     let res = [];
+//     while(i<arr1.length || j < arr2.length){
+//         if(arr1[i]<= arr2[j]){
+//            res.push(arr1[i]);
+//            i++;
+//         }else{
+//             res.push(arr2[j]);
+//             j++;
+//         }
+//     }
+
+//     return res;
+// }
+
+// console.log(merge(arr1,arr2));
+
+//45.contains duplicate         Map 和 Set 都能够利用 has 方法进行快速的查找，前者为pair，后者为个数
+
+// const arr = [1,2,3,1];
+
+// const dup = (arr) => {
+//     let hash = new Set();
+//     for(let i of arr){
+//         if(hash.has(i)){
+//            return true;
+//         }else{
+//           hash.add(i);
+//         }
+//     }
+//     return false;
+// }
+
+// console.log(dup(arr));
+
+//46 N-largest number
+
+// const arr = [19,-10,20,14,2,16,10];
+
+// const nlarge = (arr, n) => {
+//     arr.sort(function(a,b){
+//         return a - b;
+//     })
+//     return arr[arr.length - n];
+// }
+
+// console.log(nlarge(arr,3));
