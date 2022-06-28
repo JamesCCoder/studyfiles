@@ -99,12 +99,12 @@
 
 //5.2 count numbers of hops(1,3,5)
 
-// const hop = (n) => {
-//   if (n < 0) return 0;
-//   if (n == 0) return 1;
-//   return hop(n - 1) + hop(n - 3) + hop(n - 5);
-// };
-// console.log(hop(7));
+const hop = (n) => {
+  if (n < 0) return 0;
+  if (n == 0) return 1;
+  return hop(n - 1) + hop(n - 3) + hop(n - 5);
+};
+console.log(hop(6));
 
 //6. minimum number of deletions and insertions
 
@@ -130,3 +130,7 @@
 // };
 
 // console.log(subset(arr, 6));
+
+//8. largest sum of non-adjacent numbers
+//9. maximum product subarray
+//10. paint house

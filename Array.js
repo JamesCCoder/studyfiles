@@ -346,6 +346,24 @@
 
 // console.log(printKMax(arr, 4));
 
+// const arr = [4, 3, 8, 9, 0, 1];
+// const k = 3;
+
+// const circular = (arr, k) => {
+//   const res = [];
+//   let max = -999;
+//   for (let i = 0; i < arr.length - k + 1; i++) {
+//     max = 0;
+//     for (let j = 0; j < k; j++) {
+//       max = Math.max(max, arr[i + j]);
+//     }
+//     res.push(max);
+//   }
+//   return res;
+// };
+
+// console.log(circular(arr, k));
+
 //15. max and min in an array
 
 // const arr = [1, 2, 0, 4, 999, 2, -3];
@@ -1070,3 +1088,198 @@
 // }
 
 // console.log(nlarge(arr,3));
+
+//47. product of an array
+
+// const arr = [1, 2, 3, 4]; //exprect result = [24,12,8,6];
+
+// const product = (arr) => {
+//   let res = [];
+//   let time = 1;
+//   for (let i = 0; i < arr.length; i++) {
+//     time = time * arr[i];
+//   }
+//   for (let i = 1; i <= arr.length; i++) {
+//     res.push(time / i);
+//   }
+//   return res;
+// };
+
+// console.log(product(arr));
+
+//48. shorstest unsorted continious subarray
+
+//49. maximum sum of hour glass in matrix
+
+// const arr = [
+//   [0, 3, 0, 0, 0],
+//   [0, 1, 0, 0, 0],
+//   [1, 1, 1, 0, 0],
+//   [0, 0, 2, 4, 4],
+//   [0, 0, 0, 2, 4],
+// ];
+
+// const sum = (arr) => {
+//   let n = arr.length;
+//   let m = arr[0].length;
+//   let sum = 0;
+//   let res = 0;
+//   for (let i = 0; i < n - 2; i++) {
+//     sum = 0;
+//     for (let j = 0; j < m - 2; j++) {
+//       sum =
+//         arr[i][j] +
+//         arr[i][j + 1] +
+//         arr[i][j + 2] +
+//         arr[i + 1][j + 1] +
+//         arr[i + 2][j] +
+//         arr[i + 2][j + 1] +
+//         arr[i + 2][j + 2];
+//       res = Math.max(res, sum);
+//     }
+//   }
+//   return res;
+// };
+
+// console.log(sum(arr));
+
+//50. jump to reach end
+
+// const arr = [2, 3, 1, 1, 4];
+// const arr1 = [3, 2, 1, 0, 4];
+
+// const jump = (arr) => {
+//   let fastestpoint = arr.length - 1;
+//   for (let i = arr.length - 2; i >= 0; i--) {
+//     if (fastestpoint >= i + arr[i]) {
+//       fastestpoint = i;
+//     }
+//   }
+//   return fastestpoint == 0;
+// };
+
+// console.log(jump(arr));
+
+//51. triplet maximum product
+
+// const arr = [-4, 1, -8, 9, 6, -5, 5, 4];
+
+// const product = (arr) => {
+//   let res = 1;
+//   let max = -999;
+//   let type = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     res = arr[i];
+//     for (let j = i + 1; j < arr.length; j++) {
+//       res = arr[i] * arr[j];
+//       for (let k = j + 1; k < arr.length; k++) {
+//         res = arr[i] * arr[j] * arr[k];
+//         if (res > max) {
+//           max = res;
+//           type[0] = arr[i];
+//           type[1] = arr[j];
+//           type[2] = arr[k];
+//           type[3] = max;
+//         }
+//       }
+//     }
+//   }
+//   return type;
+// };
+
+// console.log(product(arr));
+
+//52. maximum sum circular subarray (circular ===> duplicate array)
+
+// const arr = [2, 1, -5, 4, -3, 1, -3, 4, -1];
+// const arr_1 = [-3, 1, -3, 4, -1, 2, 1, -5, 4];
+
+// const circular = (arr) => {
+//   const arr1 = [];
+//   for (let i of arr) {
+//     arr1.push(i);
+//   }
+//   for (let i of arr) {
+//     arr1.push(i);
+//   }
+//   let sum = 0;
+//   let max = -999;
+//   let res = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     sum = arr1[i];
+//     for (let j = i + 1; j < arr1.length; j++) {
+//       sum += arr1[j];
+//       if (sum > max) {
+//         max = sum;
+//         res[0] = i;
+//         res[1] = j;
+//       }
+//     }
+//   }
+//   return arr1.slice(res[0], res[1] + 1);
+// };
+
+// console.log(circular(arr_1));
+
+//53. coin change
+
+// const arr = [1, 2];
+// m = 2;
+
+// const coin = (arr, m, n) => {
+//   if (n == 0) return 1;
+//   if (n < 0) return 0;
+//   if (m <= 0 && n >= 1) return 0;
+//   return coin(arr, m - 1, n) + coin(arr, m, n - arr[m - 1]);
+// };
+
+// console.log(coin(arr, m, 4));
+
+// const coin1 = (n) => {
+//   if (n == 0) return 1;
+//   if (n < 0) return 0;
+
+//   return coin1(n - 1) + coin1(n - 2);
+// };
+
+// console.log(coin1(4));
+
+// const jump = (n) => {
+//   if (n == 0) return 1;
+//   if (n == 1) return 1;
+//   return jump(n - 1) + jump(n - 2);
+// };
+
+// console.log(jump(4));
+
+// 54. max/min coin change
+
+// const arr = [1, 2, 5];
+
+// target = 12;
+
+// const max = (arr, target) => {
+//   let res = [];
+//   let max = 0;
+//   let min = 0;
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     while (target >= arr[i]) {
+//       target -= arr[i];
+//       max++;
+//     }
+//   }
+//   target = 12;
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     while (target >= arr[i]) {
+//       target -= arr[i];
+//       min++;
+//     }
+//   }
+//   res.push(max);
+//   res.push(min);
+//   return res;
+// };
+
+// console.log(max(arr, target));
+
+//55. house robber
