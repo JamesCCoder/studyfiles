@@ -47,7 +47,7 @@ const App = () => {
       sign: "",
     });
   };
-  const operateHandler = (e) => {
+  const calHandler = (e) => {
     e.preventDefault();
     let value = e.target.innerHTML;
     setStatus({
@@ -60,18 +60,16 @@ const App = () => {
   const numHandler = (e) => {
     e.preventDefault();
     let value = e.target.innerHTML;
-    if (status.num.toString().length < 16) {
-      setStatus({
-        ...status,
-        num:
-          status.num === 0 && value === "0"
-            ? "0"
-            : status.num % 1 === 0
-            ? Number(status.num + value)
-            : status.num + value,
-        res: !status.sign ? 0 : status.res,
-      });
-    }
+    setStatus({
+      ...status,
+      num:
+        status.num === 0 && value === "0"
+          ? "0"
+          : status.num % 1 === 0
+          ? Number(status.num + value)
+          : status.num + value,
+      res: !status.sign ? 0 : status.res,
+    });
   };
   const commaHandler = (e) => {
     e.preventDefault();
@@ -85,7 +83,7 @@ const App = () => {
   };
   const equalHandler = () => {
     if (status.num && status.sign) {
-      const Math = (a, b, sign) => {
+      const math = (a, b, sign) => {
         return sign === "+"
           ? a + b
           : sign === "-"
@@ -97,7 +95,7 @@ const App = () => {
       setStatus({
         ...status,
         num: 0,
-        res: Math(Number(status.res), Number(status.num), status.sign),
+        res: math(Number(status.res), Number(status.num), status.sign),
         sign: "",
       });
     }
@@ -112,7 +110,7 @@ const App = () => {
             <Button
               key={i}
               value={btn}
-              className={btn === "=" ? "equals" : ""}
+              className={btn === "=" ? "equal" : ""}
               onClick={
                 btn === "C"
                   ? resetHandler
@@ -125,7 +123,7 @@ const App = () => {
                   : btn === "="
                   ? equalHandler
                   : btn === "+" || btn === "-" || btn === "*" || btn === "/"
-                  ? operateHandler
+                  ? calHandler
                   : numHandler
               }
             />
