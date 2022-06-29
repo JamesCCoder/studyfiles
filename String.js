@@ -256,7 +256,7 @@
 
 // console.log(shuffle(s,indice));
 
-// 15 maximum balanced string 
+// 15 maximum balanced string
 
 // const str = "LRLLRRLRRL";
 
@@ -297,7 +297,6 @@
 
 // console.log(lower(str));
 
-
 //17. morse code
 
 //18. substring with only one distinct letter
@@ -311,7 +310,7 @@
 //     while(i < str.length){
 //         while(j<str.length && str[i] === str[j]){
 //             res++;
-//             j++;  
+//             j++;
 //         }
 //         i++;
 //         j = i;
@@ -442,7 +441,6 @@
 
 // const exp = "[(])";
 
-
 // const valid = (exp) =>{
 //     const res = [];
 //     for(let i of exp){
@@ -463,8 +461,24 @@
 
 //26. longest substring without repeating characters
 
-const str = "abcabcbb";
+// const str = "bbbbb";
 
-const long = (str) =>{
-    
-}
+// const long = (str) => {
+//   let res = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     let mySet = new Set();
+//     for (let j = i; j < str.length; j++) {
+//       if (mySet.has(str[j])) {
+//         break;
+//       }
+//       mySet.add(str[j]);
+//     }
+//     res = Math.max(res, mySet.size);
+//   }
+//   return res;
+// };
+// console.log(long(str));
+
+//27. Longest Palindromic Substring
+
+//28.
