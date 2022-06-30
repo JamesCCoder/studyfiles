@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 
-const Parent = ({ children }) => {
+import Child from "./child";
+
+const Parent = () => {
   let [value, setValue] = useState(null);
+  let [childValue, setChildValue] = useState(null);
+  const getValue = (one) => {
+    setChildValue(one);
+  };
   return (
     <div>
+      <p>The value from child should be:{childValue} </p>
       <input
         type="text"
         value={value}
-        setValue={(e) => setValue(e.target.value)}
+        onChange={(e) => setValue(e.target.value)}
       />
-      <button>change</button>
-      {children}
+      <Child value={value} getValue={getValue}></Child>
     </div>
   );
 };
