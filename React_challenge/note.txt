@@ -1,0 +1,8 @@
+1. onChange 从 e 里面实时get数据， onClick 则是从value中获取数据
+
+onChange = {(e) => setValue(e.target.value)}           from child to child
+onClick = {() => {getValue(value)}}                    from child to parent
+
+onClick = {() => {getValue(another)}}                  from child to child
+
+子类到子类的非实时数据传递，方法：设置另外一个数据，点击赋值即可
