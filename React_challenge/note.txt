@@ -6,3 +6,10 @@ onClick = {() => {getValue(value)}}                    from child to parent
 onClick = {() => {getValue(another)}}                  from child to child
 
 子类到子类的非实时数据传递，方法：设置另外一个数据，点击赋值即可
+
+
+2. 练习：
+
+   data 传输： 1. parent -> child   2. child -> child
+   方式： 1. App.js 位置组合 2. parent，child 单独组合
+   方法： 1. props，useState  2. useContext
