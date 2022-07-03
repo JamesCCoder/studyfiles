@@ -3,6 +3,8 @@ import "./App.css";
 
 const url = "https://swapi.dev/api/people";
 
+//注意用useEffect实现loading时载入效果时的写法
+
 function App() {
   let [data, setData] = useState([]);
   const getData = async () => {

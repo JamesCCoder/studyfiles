@@ -13,3 +13,45 @@ onClick = {() => {getValue(another)}}                  from child to child
    data 传输： 1. parent -> child   2. child -> child
    方式： 1. App.js 位置组合 2. parent，child 单独组合
    方法： 1. props，useState  2. useContext
+
+
+3. disabled === {value.length === 0}
+   {value && <p>The senteance is here</p>}
+
+   按钮的显示/隐藏 和 某行文字是不一样的
+
+
+4. 同一个 onClick 下绑定多个event
+
+   onChange={(e) => {setValue(e.target.value);getValue(e.target.value)}
+
+   或者：
+
+   onClick = ((e) => changeHandler(e));
+
+   const changeHandler = (e) =>{
+       setValue(e.target.value);
+       getValue(e.target.value);
+   }
+
+
+5. useEffect 与 useContext 的几点异同
+
+   1. 在引用时相同
+
+      value = {value}
+      onClick = {(e) => getValue(e.target.value)}
+
+   2. 传递时不同
+
+      <Child value={value}/>
+      <Parent getValue = {getValue}></Parent>
+
+      <myContext.Provider value={{value, getValue}}>
+
+    3. 使用时不同
+      
+      const Child = ({value}) => {}
+      const Parent = {children, getValue} =>{}
+
+      const {value} = useContext(myContext);
