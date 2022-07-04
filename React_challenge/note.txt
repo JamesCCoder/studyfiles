@@ -55,3 +55,6 @@ onClick = {() => {getValue(another)}}                  from child to child
       const Parent = {children, getValue} =>{}
 
       const {value} = useContext(myContext);
+
+6. 对array数据增加id后变为obj，再进行map后显示在li中
+   对复杂的obj属性进行筛选，挑选出需要的属性，再增加id组成新的obj，再利用li进行显示。
