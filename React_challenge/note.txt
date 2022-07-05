@@ -58,3 +58,61 @@ onClick = {() => {getValue(another)}}                  from child to child
 
 6. 对array数据增加id后变为obj，再进行map后显示在li中
    对复杂的obj属性进行筛选，挑选出需要的属性，再增加id组成新的obj，再利用li进行显示。
+
+
+7. counter
+
+   1. 单个 App.js function
+   2. 单个 App.js class
+   3. component function
+   4. component class
+
+                class Content extends React.Component {
+                     render(){
+                         return(
+                            <p>The num is :{this.props.value}</p>
+                         )
+
+                     }
+
+                 }
+                export default Content;
+
+                class Button extends React.Component{
+                     render(){
+                         return ( <>
+                             <button onClick={() => this.props.addHandler(this.props.value)}>add</button>
+                         </> );
+                     }
+                }
+               export default Button;
+
+               class App extends React.Component{
+
+                constructor(props){
+                    super(props);
+                    this.state={
+                         value:0,
+                    }
+                }
+  
+               addHandler = () =>{
+                     this.setState({
+                       value: this.state.value + 1,
+                     })
+               }
+
+               render(){
+                return ( 
+                       <>
+                         <Content value={this.state.value}/>
+                         <Button value={this.state.value} addHandler={this.addHandler}/>
+                       </>);
+                }
+               }
+               export default App;
+
+
+   5. component useContext
+   6. component Context API ?
+   6. component redux
