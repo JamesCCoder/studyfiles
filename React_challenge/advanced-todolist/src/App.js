@@ -85,6 +85,16 @@ const App = () => {
               :  sign === 2 ? !one.style && one.content.toLowerCase().includes(search.toLowerCase()) 
               : ""
         })
+
+      //   list.filter((one) => {
+      //   return(
+      //     sign === 1 ? one.style === true 
+      //   : sign === 2 ? one.style === false
+      //   : one
+      //   )
+      // })
+      // .filter((one) => one.content.toLowerCase().includes(searchValue.toLowerCase()))
+
         .sort((a,b) => a.order - b.order)
         .map((one, i) =>{
           return (
