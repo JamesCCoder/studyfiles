@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.overall{
+    border:1px solid grey;
+    width:600px;
+}
+
+
+.overall{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.city{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    width:100%;
+}
+
+.city div{
+    padding:10px;
+}
+
+.city div:hover{
+    background-color: grey;
+}
+
+.content{
+    padding:10px;
+    height:100px;
+}
