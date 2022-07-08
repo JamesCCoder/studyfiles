@@ -105,21 +105,89 @@
 
 //5. container with most water
 
-height = [5,1,2,4];
+// height = [5,1,2,4];
 
-let mx = (height) => {
-  let maxArea = 0;
-  let i = 0;
-  let j = height.length - 1;
-  while (i < j) {
-    maxArea = Math.max(maxArea, Math.min(height[i], height[j]) * (j - i));
-    if (height[i] < height[j]) {
-      i++;
-    } else {
-      j--;
-    }
-  }
-  return maxArea;
-};
+// let mx = (height) => {
+//   let maxarea = 0;
+//   let a = 0;
+//   let b = height.length-1;
+//   while(a<b){
+//     maxarea = Math.max(maxarea, Math.min(height[a], height[b]) * (b-a));
+//     if(height[a] < height[b]){
+//       a++;
+//     }else{
+//       b--;
+//     }
+//   }
+//   return maxarea;
+// };
 
-console.log(mx(height));
+// console.log(mx(height));
+
+//6. longest common prefix
+
+// arr = ["flooooooooo","floor","flow"];
+
+// const common = (arr) =>{
+//    for(let i = 0; i<arr[0].length; i++){
+//      for(let s of arr){
+//        if(s[i] !== arr[0][i]){
+//          return s.substring(0, i);
+//        }
+//      }
+//    }
+//    return arr[0];
+// }
+
+// console.log(common(arr));
+
+//7. remove dumplicate in an array
+
+// arr = [1,1,1,2,3,3,4,5,5];
+
+// const remove = (arr) =>{
+//   let read = 0;
+//   let write = 0;
+//   while(read < arr.length){
+//     if(arr[write] !== arr[read]){
+//       write++;
+//       arr[write] = arr[read];
+//     }
+//     read++;
+//   }
+//   return arr.slice(0, write+1);
+// }
+
+// console.log(remove(arr));
+
+//8. remove all duplicates in an array
+
+// arr = [1,1,1,2,3,3,4,5,5];
+
+// const remove = (arr) =>{
+//   let myMap = new Map();
+//   for(let i = 0;i<arr.length; i++){
+//     if(myMap.has(arr[i])){
+//       myMap.set(arr[i], myMap.get(arr[i])+1);
+//     }else{
+//       myMap.set(arr[i], 1);
+//     }
+//   }
+//   for(let i = 0; i<arr.length; i++){
+//     if(myMap.get(arr[i]) > 1){
+//       arr[i] = null;
+//     }
+//   }
+
+//   let i = 0;
+//   while(i < arr.length){
+//     if(arr[i] === null){
+//       arr.splice(i,1);
+//     }else{
+//       i++;
+//     }
+//   }
+//   return arr;
+// }
+
+// console.log(remove(arr));
