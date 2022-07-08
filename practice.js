@@ -669,9 +669,89 @@
 
 // console.log(rearr(arr));
 
-//35. maximum of all subarrays of size k
+////////////35. maximum of all subarrays of size k
 
-arr = [8,5,10,7,9,4,15,12,90,13];
+// arr = [1, 2, 3, 1, 4, 5, 2, 3, 6];
+
+// const mx = (arr, n) =>{
+//     let max = 0;
+//     let res = [];
+//    for(let i = 0; i<arr.length - n + 1; i++){
+//       max = arr[i];
+//       for(let j = i + 1; j< i + n; j++){
+//          if(arr[j] > max) max = arr[j];
+//       }
+//       res.push(max);
+//    }
+//    return res;
+// }
+
+// console.log(mx(arr, 3));
+
+//36. index of an extra element
+
+// const arr1 = [2,4,6,8,9,10,12];
+// const arr2 = [2,4,6,8,10,12];
+
+// const index = (arr1, arr2) =>{
+//     let mySet = new Set();
+//     for(let i of arr2){
+//         mySet.add(i);
+//     }
+//     for(let i of arr1){
+//         if(!mySet.has(i)){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// console.log(index(arr1, arr2));
+
+/////////37. union of two sorted array
+
+// arr1 = [2,2,3,4,5];
+// arr2 = [1,1,2,3,4];
+
+// const union = (arr1 ,arr2) =>{
+//     let res = [];
+//     let mySet = new Set();
+//     for(let i of arr1){
+//         mySet.add(i);
+//     }
+//     for(let i of arr2){
+//         mySet.add(i);
+//     }
+//     for(let i of mySet){
+//        res.push(i);
+//     }
+//     return res;
+// }
+
+// console.log(union(arr1, arr2));
+
+//38. intersection of two arrays
+    //   arr1 = [1,2,3,4,5,6];
+    //   arr2 = [3,4,5,6,7];
+    //   let res = 0;
+
+    //   const inter = (arr1, arr2) =>{
+    //       let mySet = new Set();
+    //       for(let i of arr1){
+    //           mySet.add(i);
+    //       }
+    //       for(let i of arr2){
+    //           if(mySet.has(i)){
+    //               res++;
+    //           }
+    //       }
+    //       return res;
+    //   }
+
+    //   console.log(inter(arr1, arr2));
+
+
+
+
 
 //27. equilibrium point
 
@@ -696,3 +776,5 @@ arr = [8,5,10,7,9,4,15,12,90,13];
 //33. coin change
 
 //34. stock buy and sell
+
+//39. longest common prefix in an array
