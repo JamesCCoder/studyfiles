@@ -513,3 +513,7 @@ slide 动作的本质
 46. 多行显示（list group）
 
     多行显示 用 div 和 list 显示效果完全一致
+
+47. input 和 紧跟其后的button 如何“严丝合缝”？
+    border:none
+    (w3school: search bar)
