@@ -53,7 +53,8 @@
 // 11. return 不能返回 promise 本身，否则会报错
 // 12. then 中的参数应当是 function， 否则会发生值穿透（4）
 // 13. then 中如果有两个参数，res、err，则传来的reject 会进入err，而不是之后的catch
-// 14. 两个 then 之间的 finally 一定会执行，不传值，不接值，传来的数值会传递到之后的 then（5）
+// 14. finally 一定会执行，不传值，不接值，传来的数值会传递到之后的 then（5）
+//     finally 之前是 then，则执行完 finally 之后 继续执行 then，finally 之前是 error，则 执行完finally后继续执行 catch
 
 // 1----------------------------
 

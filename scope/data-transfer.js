@@ -5,13 +5,21 @@
 // Number("")                                 0
 // Number("123")                              123
 // Number("sdf")                              NaN
-
-
+// Number([])                                 0
+// Number({})                                 NaN
 
 
 // +        means     string
 // - * /    means     number
 
+// "1" + undefined                               "1undefined"
+// "1" + null                                    "1null"
+// 1 + undefined                                 NaN
+// 1 + null                                      1
+// 1 ++ undefined                                1 + (+undefined) = 1 + NaN = NaN
+// 1 ++ null                                     1 + (+null) = 1 + 0 = 1
+// 1 + true                                      1 + 1 = 2
+// "1" + true                                    "1true"
 
 
 // "3" + 1                                    "31"
@@ -30,3 +38,7 @@
 // [[]]                                       [[]]
 // [[]] + 1                                   "1"
 // {} + + []                                  [object Object] + 0 = "[object Object]0"
+
+
+// Boolean(object)                              true
+   // Boolean(new Boolean(false))               true
