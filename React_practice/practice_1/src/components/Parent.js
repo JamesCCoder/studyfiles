@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { myContext } from "../App";
-const Parent = ({ children }) => {
-  let { num } = useContext(myContext);
+import React from "react";
+import Child from "./Child";
+
+const Parent = () => {
   return (
-    <div>
-      <p>The number is: {num}</p>
-      {children}
-    </div>
+    <p>
+      this is parent
+      <Child />
+    </p>
   );
 };
 
