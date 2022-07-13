@@ -1,9 +1,7 @@
 import React from "react";
 
 const Body = ({children}) => {
-    return (
-        <div>{children}</div>
-        );
+    return ( <>{children}</> );
 }
  
 export default Body;

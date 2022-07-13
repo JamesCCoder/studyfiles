@@ -69,9 +69,3 @@
   padding: 0 140px;
 }
 
-@media (max-width: 600px){
-
-   .navagation{
-     display: none;
-   }
-}
