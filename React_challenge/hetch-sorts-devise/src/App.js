@@ -39,8 +39,6 @@ const App = () => {
        ):(
             <Page2 />
        )}
-        
-        
      </Body>
 
   </Wrapper> 
