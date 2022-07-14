@@ -15,6 +15,21 @@
 //                  仅数值相同 ----> false      a = []   b = []
 
 
+
+// var a = {
+//     a:1
+// }
+
+// var b = {
+//     a :1
+// }
+
+// console.log(a == b);
+
+
+
+
+
 // ==
 
 // 1. primitive

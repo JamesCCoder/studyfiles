@@ -28,3 +28,22 @@ addNum(10);
 addNum(21);
 addNum(10);
 
+///////////////////////////////////////
+// closure 朝上边找
+var a = 10;
+a=100;
+
+function outerFunc(a) {
+  function inner() {
+    var b = 20;
+    console.log(a + b);
+  }
+
+  return inner;
+}
+
+var func = outerFunc(a);
+
+a = 30;
+
+func();
