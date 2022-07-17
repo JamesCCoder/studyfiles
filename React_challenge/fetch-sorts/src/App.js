@@ -25,7 +25,7 @@ function App() {
     const response = await fetch(url);
     if(response){
       const jsonData = await response.json();
-      const result = jsonData.results;
+      const result = await jsonData.results;
       for(let i = 0; i<result.length; i++){
         result[i].like = false;
         result[i].block = false;

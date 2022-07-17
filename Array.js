@@ -223,7 +223,7 @@
 
 // console.log(addOne(arr));
 
-//11. missing number
+// 11. missing number
 
 // const arr = [5, 3, 4, 2, 1];
 // const arr1 = [2, 1, 4, 6, 5, 0];
@@ -246,11 +246,14 @@
 
 //12.1 smallest common number
 
-// const arr = [0, 2, 4, 5, 7, 9, 11, 13, 14];
-// const arr1 = [4, 5, 6, 7, 9, 12, 14];
-// const arr2 = [3, 6, 7, 12, 14];
+// let arr = [45,-10,-5,1,2,3,0,-6,0,4,4,5,6,6,7];
+// let arr1 = [9,9,9,6,4,2];
+// let arr2 = [2,4,1,4,6];
 
 // const findOne = (arr1, arr2, arr3) => {
+//         arr.sort((a, b) => a - b);
+//     arr1.sort((a, b) => a - b);
+//     arr2.sort((a, b) => a - b);
 //   let i = 0;
 //   let j = 0;
 //   let k = 0;
