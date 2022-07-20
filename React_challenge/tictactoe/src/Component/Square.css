@@ -1,0 +1,10 @@
+.square {
+  border: 1px red solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:active {
+  background-color: darkgreen;
+}
