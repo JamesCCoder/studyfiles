@@ -14,11 +14,15 @@ let result = [{"text":"55 法务类","value":"55"},
 
 
               
-let num = (coin, target) => {
-   let string="123213\
-   2";
-   return string;
+Array.prototype.myFilter = function(myFunc){
+   let myArr = [];
+   for(let i = 0; i<arr.length; i++){
+      const result = myFunc(arr[i], i, arr);
+      myArr.push(result);
+   }
+   return myArr;
 }
-console.log(num(coin, 19));
+
+console.log(arr.myFilter(one => one % 2 ));
 
 
