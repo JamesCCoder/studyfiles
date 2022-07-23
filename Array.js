@@ -1285,4 +1285,48 @@
 
 // console.log(max(arr, target));
 
+// marge overlaping array
+
+// const overlap = (arr) => {
+//    let res = [];
+//    let previous = arr[0];
+//    for(let i = 1; i<arr.length; i++){
+//        let current = arr[i];
+//        if(previous[1] >= current[0]){
+//           previous[1] = Math.max(previous[1], current[1]);
+//        }else{
+//           res.push(previous);
+//           previous = current;
+//        }
+//    }
+//    res.push(previous);
+//    return res;
+// }
+
+// console.log(overlap(arr6));
+
+//interval intersection
+
+// const insert = (arr1, arr2) => {
+//   let i = 0;
+//   let j = 0;
+//   let res = [];
+
+//   while(i < arr1.length && j < arr2.length){
+//      let [s1, e1] = arr1[i];
+//      let [s2, e2] = arr2[j];
+//      if(s1 <= e2 && s2<=e1){
+//         res.push([Math.max(s1, s2), Math.min(e1, e2)]);
+//      }
+//      if(e1 > e2){
+//         j++;
+//      }else{
+//         i++;
+//      }
+//   }
+//   return res;
+// }
+
+// console.log(insert(arr1, arr2));
+
 //55. house robber

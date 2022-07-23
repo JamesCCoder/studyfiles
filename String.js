@@ -17,6 +17,9 @@
 //   let size = arr.length;
 //   let n = Math.min(arr[0].length, arr[size - 1].length);
 //   let i = 0;
+//   console.log(n);
+//   console.log(arr[0]);
+//   console.log(arr);
 //   while (i < n && arr[0][i] == arr[size - 1][i]) {
 //     i++;
 //   }
