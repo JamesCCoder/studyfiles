@@ -1329,4 +1329,69 @@
 
 // console.log(insert(arr1, arr2));
 
+
+//subsets
+
+// const arr1 = [1,2,3];
+
+// var canJump = function(nums) {
+//     let result = [];
+//     dfs([], 0);
+    
+//     function dfs(current, index){
+//         console.log(current);
+//         result.push(current);
+//         for(let i = index; i < nums.length; i++) {
+//             dfs(current.concat(nums[i]), i + 1);
+//         }
+//     }
+    
+//     return result;
+// };
+
+// console.log(canJump(arr1));
+
+// combination
+
+// const arr1 = 4;
+
+// let subsets = (arr1, target) =>{
+//     let res = [];
+//     dfs([], 1);
+
+//     function dfs(cur, index){
+//        if(cur.length === target){
+//            res.push(cur);
+//        }
+       
+//        for(let i = index; i<=arr1; i++){
+//           dfs(cur.concat(i), i + 1);
+//        }
+//     }
+//     
+//     return res;
+// }
+// console.log(subsets(arr1, 2));
+
+//longest common prefix
+
+// const arr1 = ["flower","flow","flight"];
+
+
+// var minPathSum = (arr) => {
+//    arr.sort((a,b) => a - b);
+//    let n = Math.min(arr[0].length, arr[arr.length-1].length);
+//    let i = 0;
+//    while(i < n && arr[0][i] == arr[arr.length - 1][i]){
+//          i++;
+//    }
+//    let res = arr[0].substring(0, i);
+//    return res;
+// }
+
+// console.log(minPathSum(arr1));
+
+
+
+
 //55. house robber

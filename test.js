@@ -28,11 +28,7 @@ const abc = (arr) => {
   });
   let sign = 0;
   for (let i = 0; i < index.length; i++) {
-    if (sign == 0) {
-      arr_1.splice(index[i], 1);
-    } else {
-      arr_1.splice(index[i] - sign, 1);
-    }
+    arr_1.splice(index[i] - sign, 1);
     sign++;
   }
   return arr_1;

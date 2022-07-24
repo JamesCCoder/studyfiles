@@ -131,6 +131,25 @@
 
 // console.log(subset(arr, 6));
 
+
+//8. coin change
+
+// let coins = [2, 3, 5];
+
+// const getCoin = (coins, target) =>{
+//    let dp = Array(target + 1).fill(Infinity);
+//    dp[0] = 0;
+//    for(let coin of coins){
+//       for(let i = coin; i<=target; i++){
+//          dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+//       }
+//    }
+//    return dp[target] === Infinity ? -1 : dp[target];
+// }
+           
+// console.log(getCoin(coins, 22));
+
+
 //8. largest sum of non-adjacent numbers
 //9. maximum product subarray
 //10. paint house
