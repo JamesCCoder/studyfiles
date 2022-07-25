@@ -1,5 +1,3 @@
-const arr = [2, 1, 4,6,-1];
-
 
 
 let result = [{"text":"55 法务类","value":"55"},
@@ -10,21 +8,25 @@ let result = [{"text":"55 法务类","value":"55"},
 
 
 
-const arr1 = ["flower","flow","flight"];
+const num1 = 123;
+const num2 = -123;
 
+const arr = [7,6,4,3,1];
 
-var minPathSum = (arr) => {
-   arr.sort((a,b) => a - b);
-   let n = Math.min(arr[0].length, arr[arr.length-1].length);
-   let i = 0;
-   while(i < n && arr[0][i] == arr[arr.length - 1][i]){
-         i++;
-   }
-   let res = arr[0].substring(0, i);
-   return res;
+var minPathSum = (prices) => {
+  let cur = 0;
+    let res = 0;
+    for(let i = 1; i<prices.length; i++){
+        cur += prices[i] - prices[i-1];
+        cur = Math.max(0, cur);
+        res = Math.max(cur, res);
+        console.log(cur);
+        console.log(res);
+    }
+    return res;
 }
 
-console.log(minPathSum(arr1));
+console.log(minPathSum(arr));
 
 
 
