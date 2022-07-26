@@ -11,22 +11,47 @@ let result = [{"text":"55 法务类","value":"55"},
 const num1 = 123;
 const num2 = -123;
 
-const arr = [7,6,4,3,1];
+const arr = [7,6,4,3,1,2,3,4];
+const str = "fdsfihsdhf";
+const obj = [
+  {name:"a", age:1},
+  {name:"b", age:2},
+  {name:"c", age:3},
+  {name:"a", age:4},
+  {name:"d", age:2},
+  {name:"e", age:5},
+];
 
-var minPathSum = (prices) => {
-  let cur = 0;
-    let res = 0;
-    for(let i = 1; i<prices.length; i++){
-        cur += prices[i] - prices[i-1];
-        cur = Math.max(0, cur);
-        res = Math.max(cur, res);
-        console.log(cur);
-        console.log(res);
-    }
-    return res;
+
+const arr1 = "hello";
+const arr2 = "ll";
+const arr3 = "llo";
+
+var minPathSum = (arr) => {
+   let i = 0;
+   let j = arr.length - 1;
+   while(i <= j){
+     if(arr[i] !== arr[j]){
+       return isValid(arr, i + 1, j) || isValid(arr, i, j - 1);
+     }
+     i++;
+     j--;
+   }
+   return true;
 }
 
-console.log(minPathSum(arr));
+const isValid = (arr, m, n) =>{
+   while(m <= n){
+     if(arr[m] !== arr[n]){
+       return false;
+     }
+     m++;
+     n--;
+   }
+   return true;
+}
+
+console.log(minPathSum(arr1));
 
 
 
