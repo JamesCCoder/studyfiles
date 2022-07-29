@@ -22,36 +22,21 @@ const obj = [
   {name:"e", age:5},
 ];
 
-
-const arr1 = "hello";
-const arr2 = "ll";
-const arr3 = "llo";
-
 var minPathSum = (arr) => {
-   let i = 0;
-   let j = arr.length - 1;
-   while(i <= j){
-     if(arr[i] !== arr[j]){
-       return isValid(arr, i + 1, j) || isValid(arr, i, j - 1);
+  let res = [];
+  let name = [];
+  let age = [];
+  for(let one of arr){
+     if(name.indexOf(one["name"]) == -1 && age.indexOf(one["age"]) == -1){
+       name.push(one["name"]);
+       age.push(one["age"]);
+       res.push(one);
      }
-     i++;
-     j--;
    }
-   return true;
+   return res;
 }
 
-const isValid = (arr, m, n) =>{
-   while(m <= n){
-     if(arr[m] !== arr[n]){
-       return false;
-     }
-     m++;
-     n--;
-   }
-   return true;
-}
-
-console.log(minPathSum(arr1));
+console.log(minPathSum(obj));
 
 
 

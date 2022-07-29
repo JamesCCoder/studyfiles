@@ -65,14 +65,18 @@ const App = () => {
 
   const equalsClickHandler = () => {
     if (calc.sign && calc.num) {
-      const math = (a, b, sign) =>
-        sign === "+"
+      const math = (a, b, sign) =>{
+        return (
+          sign === "+"
           ? a + b
           : sign === "-"
           ? a - b
           : sign === "X"
           ? a * b
-          : a / b;
+          : a / b
+        )
+        }
+
 
       setCalc({
         ...calc,
