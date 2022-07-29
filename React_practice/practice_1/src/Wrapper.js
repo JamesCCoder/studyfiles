@@ -1,8 +1,8 @@
 import React from "react";
 import "./Wrapper.css";
 
-const Wrapper = ({ children }) => {
+const App = ({ children }) => {
   return <div className="wrapper">{children}</div>;
 };
 
-export default Wrapper;
+export default App;
