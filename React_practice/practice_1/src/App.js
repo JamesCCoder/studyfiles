@@ -1,114 +1,96 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import "./App.css";
 
-import Wrapper from "./components/Wrapper";
-import Input from "./components/Input";
-import ButtonBox from "./components/ButtonBox";
-import Button from "./components/Button";
-
-const btnValue = [
-  ["C", "+/-", "%", "/"],
-  ["7", "8", "9", "*"],
-  ["4", "5", "6", "-"],
-  ["1", "2", "3", "+"],
-  ["0", ".", "="]
-]
+const HOUR = "01";
+const MINUTE = "05";
+const SECOND = "00";
+const DURATION = 100;
 
 const App = () => {
-  let [status, setStatus] = useState({
-    val: 0,
-    res: 0,
-    sign:""
-  })
+  const [currentHour, setCurrentHour] = useState(HOUR);
+  const [currentMinute, setCurrentMinute] = useState(MINUTE);
+  const [currentSecond, setCurrentSecond] = useState(SECOND);
+
+  const [isRunning, setIsRunning] = useState(false);
+  const [duration, setDuration] = useState(DURATION)
+
+  const startHandler = () =>{
+     setDuration(
+       parseInt(SECOND, 10) + 60 * parseInt(MINUTE, 10) + 3600 * parseInt(HOUR, 10),
+     )
+     setIsRunning(true);
+  }
+
+  const stopHandler = () =>{
+     setIsRunning(false);
+  }
+
+  const resumeHandler = () =>{
+    let newDuration =
+      parseInt(currentMinute, 10) * 60 +
+      parseInt(currentSecond, 10) +
+      3600 * parseInt(currentHour, 10);
+    setDuration(newDuration);
+
+    setCurrentMinute(MINUTE);
+    setCurrentSecond(SECOND);
+    setCurrentHour(HOUR);
+    setIsRunning(true);
+  }
 
   const resetHandler = () =>{
-    setStatus({
-      ...status,
-      val:0,
-      res:0,
-      sign:"",
-    })
-  }
-  const invertHandler = () =>{
-    setStatus({
-      ...status,
-      val: status.val ? status.val * (-1) : 0,
-      res: status.res ? status.res * (-1) : 0,
-      sign: "",
-    })
-  }
-  const percentHandler = () =>{
-    let val = status.val ? parseFloat(status.val) : 0;
-    let res = status.res ? parseFloat(status.res) : 0;
-    setStatus({
-      ...status,
-      val: (val /= Math.pow(100 ,1)),
-      res: (val /= Math.pow(100 ,1)),
-      sign: "",
-    })
-    
-  }
-  const calcHandler = (e) =>{
-    e.preventDefault();
-    let value = e.target.innerHTML;
-    setStatus({
-      ...status,
-      val:0,
-      res: status.val && !status.res ? status.val : status.res,
-      sign:value,
-    })
+    setCurrentMinute(MINUTE);
+    setCurrentSecond(SECOND);
+    setCurrentHour(HOUR);
+    setDuration(DURATION);
 
-  }
-  const numHandler = (e) =>{
-    e.preventDefault();
-    let value = e.target.innerHTML;
-
-    setStatus({
-      ...status,
-      val: status.val === 0 && value === "0" ?  "0" 
-         : status.val % 1 === 0 ? Number(status.val + value)
-         : status.val + value,
-      res: status.sign ? status.res : 0, 
-    })
-  }
-  const dotHandler = (e) =>{
-     e.preventDefault();
-     let value = e.target.innerHTML;
-
-     setStatus({
-       ...status,
-       val: status.val.toString().includes(".") ? status.val : status.val + value,
-     })
-  }
-  const equalHandler = () =>{
-    
+    setIsRunning(false);
   }
 
-  return ( 
-  <Wrapper>
-    <Input value = {status.val ? status.val : status.res}/>
-    <ButtonBox>
-        {
-          btnValue.flat().map((btn) =>{
-            return(
-              <Button value={btn}
-                      className={btn === "0" ? "zero" : ""}
-                      onClick={
-                        btn === "C" ? resetHandler
-                      : btn === "+/-" ? invertHandler
-                      : btn === "%" ? percentHandler
-                      : btn === "." ? dotHandler
-                      : btn === "=" ? equalHandler
-                      : btn === "+" || btn === "-" || btn === "*" || btn === "/" ? calcHandler
-                      : numHandler
-                      }
-              />
-            )
-          })
-        }
-    </ButtonBox>
-  </Wrapper> 
-  );
+  useEffect(() => {
+   
+     if(isRunning){
+       let timer = duration;
+       var minute, second, hour;
+       let interval = setInterval(() =>{
+         if(--timer <= 0){
+           resetHandler();
+         }else{
+          minute = parseInt((timer % 3600) / 60, 10);
+          second = parseInt((timer % 3600) % 60, 10);
+          hour = parseInt(timer / 3600, 10);
+
+          hour = hour < 10 ? "0" + hour : hour;
+          minute = minute < 10 ? "0" + minute : minute;
+          second = second < 10 ? "0" + second : second;
+
+          setCurrentHour(hour);
+          setCurrentMinute(minute);
+          setCurrentSecond(second);
+         }
+          
+       },1000);
+       return () => clearInterval(interval);
+     }
+  }, [isRunning])
+
+  return (
+    <>
+      <div>
+        {currentHour}
+        <span>:</span>
+        {currentMinute}
+        <span>:</span>
+        {currentSecond}
+      </div>
+      <button onClick={startHandler}>Start</button>
+      <button onClick={stopHandler}>Stop</button>
+      <button onClick={resumeHandler}>Resume</button>
+      <button onClick={resetHandler}>Reset</button>
+      <div>{duration}</div>
+    </>
+
+    );
 }
  
 export default App;
