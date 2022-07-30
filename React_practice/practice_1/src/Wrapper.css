@@ -1,0 +1,9 @@
+.wrapper {
+  height: 200px;
+  width: 500px;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+}
