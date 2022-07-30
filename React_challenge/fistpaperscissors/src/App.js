@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
 
-import Button from "./components/Button";
+import Button from "./Component/Button";
 
 const res = ["fist", "paper", "scissors"];
 
