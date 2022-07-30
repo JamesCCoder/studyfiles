@@ -1,64 +1,60 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
 
-const HOUR = "01";
-const MINUTE = "05";
-const SECOND = "00";
+const HOUR = "00";
+const MINUTE = "00";
+const SECOND = "05";
 const DURATION = 100;
 
 const App = () => {
-  const [currentHour, setCurrentHour] = useState(HOUR);
-  const [currentMinute, setCurrentMinute] = useState(MINUTE);
-  const [currentSecond, setCurrentSecond] = useState(SECOND);
 
-  const [isRunning, setIsRunning] = useState(false);
-  const [duration, setDuration] = useState(DURATION)
+  let [currentHour, setCurrentHour] = useState(HOUR);
+  let [currentMinute, setCurrentMinute] = useState(MINUTE);
+  let [currentSecond, setCurrentSecond] = useState(SECOND);
+
+  let [isRunning, setIsRunning] = useState(false);
+  let [isStop, setIsStop] = useState(false);
+
+  let [duration, setDuration] = useState(100);
 
   const startHandler = () =>{
-     setDuration(
-       parseInt(SECOND, 10) + 60 * parseInt(MINUTE, 10) + 3600 * parseInt(HOUR, 10),
-     )
      setIsRunning(true);
-  }
+     setIsStop(false);
 
+     setDuration(parseInt(HOUR, 10) * 3600 + parseInt(MINUTE, 10) * 60 + parseInt(SECOND, 10));
+  }
   const stopHandler = () =>{
      setIsRunning(false);
+     setIsStop(true);
   }
-
   const resumeHandler = () =>{
-    let newDuration =
-      parseInt(currentMinute, 10) * 60 +
-      parseInt(currentSecond, 10) +
-      3600 * parseInt(currentHour, 10);
-    setDuration(newDuration);
-
-    setCurrentMinute(MINUTE);
-    setCurrentSecond(SECOND);
-    setCurrentHour(HOUR);
-    setIsRunning(true);
+     setIsRunning(true);
+     setIsStop(false);
+     
+     setDuration(parseInt(currentHour, 10) * 3600 + parseInt(currentMinute, 10) * 60 + parseInt(currentSecond, 10));
   }
-
   const resetHandler = () =>{
+    setIsRunning(false);
+    setIsStop(false);
+
+    setCurrentHour(HOUR);
     setCurrentMinute(MINUTE);
     setCurrentSecond(SECOND);
-    setCurrentHour(HOUR);
     setDuration(DURATION);
-
-    setIsRunning(false);
   }
 
-  useEffect(() => {
-   
-     if(isRunning){
-       let timer = duration;
-       var minute, second, hour;
-       let interval = setInterval(() =>{
-         if(--timer <= 0){
-           resetHandler();
-         }else{
+  useEffect(() =>{
+    if(isRunning){
+      let timer = duration;
+      let hour, minute, second;
+     let interval = setInterval(() => {
+
+        if(timer-- <= 0){
+          resetHandler();
+        }else{
+          hour = parseInt(timer / 3600, 10);
           minute = parseInt((timer % 3600) / 60, 10);
           second = parseInt((timer % 3600) % 60, 10);
-          hour = parseInt(timer / 3600, 10);
 
           hour = hour < 10 ? "0" + hour : hour;
           minute = minute < 10 ? "0" + minute : minute;
@@ -67,30 +63,32 @@ const App = () => {
           setCurrentHour(hour);
           setCurrentMinute(minute);
           setCurrentSecond(second);
-         }
-          
-       },1000);
-       return () => clearInterval(interval);
-     }
+        }
+     }, [1000])
+     return () => clearInterval(interval);
+    }
+    
   }, [isRunning])
 
-  return (
-    <>
-      <div>
-        {currentHour}
-        <span>:</span>
-        {currentMinute}
-        <span>:</span>
-        {currentSecond}
-      </div>
-      <button onClick={startHandler}>Start</button>
-      <button onClick={stopHandler}>Stop</button>
-      <button onClick={resumeHandler}>Resume</button>
-      <button onClick={resetHandler}>Reset</button>
-      <div>{duration}</div>
-    </>
+  return ( 
+    <div>
+     <>
+       {currentHour}
+       <span>:</span>
+       {currentMinute}
+       <span>:</span>
+       {currentSecond}
+     </>
+     <div>
+        {!isRunning && !isStop && <button onClick={startHandler}>start</button>}
+        {isRunning && <button onClick={stopHandler}>stop</button>}
+        {isStop && <button onClick={resumeHandler}>resume</button>}
+        <button onClick={resetHandler} disabled={!isRunning && !isStop}>reset</button>
+     </div>
+     <div>{duration}</div>
+    </div>
 
-    );
+   );
 }
  
 export default App;
