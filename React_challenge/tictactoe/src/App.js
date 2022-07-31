@@ -1,86 +1,79 @@
-import React, { useState, useEffect } from "react";
+import React,{useState, useEffect, useCallback} from "react";
 import "./App.css";
 
-import Square from "./Component/Square";
-import { Patterns } from "./Patterns";
+import Wrapper from "./Component/Wrapper";
+import Block from "./Component/Block";
 
-function App() {
-  const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
-  const [player, setPlayer] = useState("X");
-  const [result, setResult] = useState({ winner: "none", state: "none" });
+const blockValue = ["","","","","","","","",""];
 
-  useEffect(() => {
-    checkIfTie();
-    checkWin();
-    if (player === "X") {
-      setPlayer("O");
-    } else {
-      setPlayer("X");
-    }
-  }, [board]);
 
-  useEffect(() => {
-    if (result.state !== "none") {
-      alert(`Game finished! Winning player: ${result.winner}`);
-      restartGame();
-    }
-  }, [result]);
+const App = () => {
+    const [player, setPlayer] = useState(1);
+    const [blockNum, setBlockNum] = useState(blockValue);
+    const [result, setResult] = useState("no result");
 
-  const chooseSquare = (num) => {
-    setBoard(
-      board.map((val, i) => {
-        if (val === "" && i === num) {
-          return player;
+    const clickHandler = (index) =>{
+        if(player === 1){
+            let newBlockNum1 = [...blockNum];
+            newBlockNum1[index] = "X";
+            setBlockNum(newBlockNum1);
+            setPlayer(2);
+        }else if(player === 2){
+            let newBlockNum2 = [...blockNum];
+            newBlockNum2[index] = "O";
+            setBlockNum(newBlockNum2);
+            setPlayer(1);
         }
-        return val;
-      }),
+    }
+
+    const resetHandler = () =>{
+        setPlayer(1);
+        setBlockNum(blockValue);
+    }
+
+    const checkWin = useCallback((a, b, c) =>{
+        if( blockNum[a] && blockNum[b] && blockNum[c] && blockNum[a] === blockNum[b] && blockNum[b] === blockNum[c]){
+            if(player === 1){
+                setResult("player2 win");
+                setBlockNum(blockValue);
+                setPlayer(1);
+            }else if(player === 2){
+                setResult("player1 win");
+                setPlayer(1);
+                setBlockNum(blockValue);
+            }
+        }else{
+            return;
+        }
+    },[blockNum, player])
+
+    useEffect(() => {
+       checkWin(0,1,2);
+       checkWin(3,4,5);
+       checkWin(6,7,8);
+       checkWin(0,4,8);
+       checkWin(2,4,6);
+       checkWin(0,3,6);
+       checkWin(1,4,7);
+       checkWin(2,5,8);
+    }, [checkWin])
+
+
+
+    return (
+    <Wrapper>
+       {
+           blockNum.map((block, i) => {
+               return (
+                   <Block key={i} value={block} onClick = {() => clickHandler(i)}/>
+               )
+           })
+       }
+       <button onClick={resetHandler}>reset</button>
+       <button>player:{player}</button>
+       <button>{result}</button>
+    </Wrapper>
     );
-  };
-
-  const checkWin = () => {
-    Patterns.forEach((currPattern) => {
-      const firstPlayer = board[currPattern[0]];
-      if (firstPlayer == "") return;
-      let foundWinningPattern = true;
-      currPattern.forEach((idx) => {
-        if (board[idx] !== firstPlayer) {
-          foundWinningPattern = false;
-        }
-      });
-      if (foundWinningPattern) {
-        setResult({ winner: player, state: "won" });
-      }
-    });
-  };
-
-  const checkIfTie = () => {
-    let filled = true;
-    board.forEach((square) => {
-      if (square == "") {
-        filled = false;
-      }
-    });
-    if (filled) {
-      setResult({ winner: "No One", state: "Tie" });
-    }
-  };
-
-  const restartGame = () => {
-    setBoard(["", "", "", "", "", "", "", "", ""]);
-    setPlayer("X");
-  };
-
-  return (
-    <div className="App">
-      <div className="board">
-        {board.map((one, i) => {
-          return (
-            <Square key={i} value={one} chooseSquare={() => chooseSquare(i)} />
-          );
-        })}
-      </div>
-    </div>
-  );
 }
-
+ 
 export default App;
