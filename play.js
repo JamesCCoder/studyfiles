@@ -4,17 +4,13 @@ const dispatch = (arr, n) =>{
   if(n <= 0){
     return arr;
   }
-    
-   let res  = [];
-   for(let i = 0; i<arr.length; i++){
-       let item = arr[i];
-       if(Array.isArray(item)){
-          res.push(...dispatch(item, n - 1));
-       }else{
-           res.push(item);
+
+    return arr.reduce((pre, cur) =>{
+       if(Array.isArray(cur)){
+         return pre.concat(dispatch(cur, n - 1));
        }
-   }
-   return res;
+       return pre.concat(cur);
+    },[])
 }
 
 console.log(dispatch(arr, 1));

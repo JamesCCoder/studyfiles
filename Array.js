@@ -1391,7 +1391,77 @@
 
 // console.log(minPathSum(arr1));
 
+// flat ---- 4 ways
 
+// const arr = [1,2,3,[4,5,[6,7]]];
+
+// const dispatch = (arr) =>{
+    
+//    let res  = [];
+//    for(let i = 0; i<arr.length; i++){
+//        let item = arr[i];
+//        if(Array.isArray(item)){
+//           res.push(...dispatch(item));
+//        }else{
+//            res.push(item);
+//        }
+//    }
+//    return res;
+// }
+
+// console.log(dispatch(arr, 1));
+
+// const arr = [1,2,3,[4,5,[6,7]]];
+
+// const dispatch = (arr, n) =>{
+//   if(n <= 0){
+//     return arr;
+//   }
+    
+//    let res  = [];
+//    for(let i = 0; i<arr.length; i++){
+//        let item = arr[i];
+//        if(Array.isArray(item)){
+//           res.push(...dispatch(item, n - 1));
+//        }else{
+//            res.push(item);
+//        }
+//    }
+//    return res;
+// }
+
+// console.log(dispatch(arr, 1));
+
+// const arr = [1,2,3,[4,5,[6,7]]];
+
+// const dispatch = (arr) =>{
+
+//     return arr.reduce((pre, cur) =>{
+//        if(Array.isArray(cur)){
+//          return pre.concat(dispatch(cur));
+//        }
+//        return pre.concat(cur);
+//     },[])
+// }
+
+// console.log(dispatch(arr));
+
+// const arr = [1,2,3,[4,5,[6,7]]];
+
+// const dispatch = (arr, n) =>{
+//   if(n <= 0){
+//     return arr;
+//   }
+
+//     return arr.reduce((pre, cur) =>{
+//        if(Array.isArray(cur)){
+//          return pre.concat(dispatch(cur, n - 1));
+//        }
+//        return pre.concat(cur);
+//     },[])
+// }
+
+// console.log(dispatch(arr, 1));
 
 
 //55. house robber

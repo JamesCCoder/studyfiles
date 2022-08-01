@@ -1,16 +1,29 @@
-const arr = [1,2,3,[4,5,[6,7]]];
+import React,{useState} from "react";
+import "./App.css";
 
-const dispatch = (arr, n) =>{
-    let res  = [];
-   for(let i = 0; i<arr.length; i++){
-       let item = arr[i];
-       if(Array.isArray(item)){
-          res.push(...dispatch(item, n - 1));
-       }else{
-           res.push(item);
-       }
-   }
-   return res;
+const App = () => {
+    const [sign, setSign] = useState("+");
+    const [visible, setVisible] = useState(true);
+    const changeHandler = () =>{
+        sign === "-" ? setSign("+") : setSign("-");
+        setVisible((pre) => !pre);
+    }
+    return ( 
+        <>
+        <div>
+         <div className="head">
+            <p>head</p>
+            <p onClick={() => changeHandler()}>{sign}</p>
+         </div>
+         <div className="content" style={{top: visible ? "50px": 0}}>
+             <p>fdhsfisdhfisdhfidusfhdisufhdsuifhdsiufhdsfiudsh</p>
+             <p>fdhsfisdhfisdhfidusfhdisufhdsuifhdsiufhdsfiudsh</p>
+         </div>
+        </div>
+
+        </>
+
+     );
 }
-
-console.log(dispatch(arr, 1));
+ 
+export default App;
