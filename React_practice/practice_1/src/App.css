@@ -1,23 +1,7 @@
-.head{
-    width:100%;
-    height:50px;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding:20px;
-    z-index:2;
-    position:relative;
-}
-
-.content{
-  background-color: darkgrey;
-  position:absolute;
-  width:100%;
-  height:50px;
-  top:50px;
-  transition: top 0.5s;
-  z-index:1;
+.button__addPoint{
+    height:100px;
+    width:100px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
 }
