@@ -3,11 +3,11 @@ const coins = [2,3,7];
 
 
 const coin = (target) =>{
- 
+
     
 }
 
-console.log(coin(23));
+console.log(coin(26));
 
 
 

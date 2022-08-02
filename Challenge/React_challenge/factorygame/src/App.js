@@ -26,7 +26,6 @@ const App = () => {
         setValue((pre) => pre - cost);
         setIncrementValue(pre => pre + (rate));
         setProperties((pre) => [...pre, color]);
-        console.log(typeof(rate));
     }
     
     useEffect(() =>{
