@@ -1,3 +1,0 @@
-1.  远程pull回来的branch只能看到origin/main 怎么办？
-
-    用switch跳去其他的branch
