@@ -40,7 +40,8 @@ const Tabs = () => {
             
             {  
                 cities.map((city,i) =>{
-                    return( index === i && 
+                    return( 
+                        index === i && 
                         <div key={i}>
                          <p>{city.key}</p>
                          <p>{city.content}</p>

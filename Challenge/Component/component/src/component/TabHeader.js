@@ -23,8 +23,9 @@ const TabHeader = () => {
     const [value, setValue] = useState(information);
     const [index, setIndex] = useState(1);
 
-    const clickHandler = (i) =>{
+    const clickHandler = (e,i) =>{
         setIndex(i);
+        e.target.style.background="red";
     }
     return ( 
       <>
@@ -45,10 +46,12 @@ const TabHeader = () => {
             {
                 value.map((city,i) =>{
                     return(
-                          <p style={{backgroundColor : index === 1 ? "blue" : index === 2 ? "green" : index === 3 ? "red" : "orange"}} 
+                          <p 
                           key={i} 
                           className="tab-header__city" 
-                          onClick={() => clickHandler(i)}>{city.key}</p>                        
+                          onClick={(e) => clickHandler(e,i)}>{city.key}
+                          
+                          </p>                        
                     )
                 })
             }

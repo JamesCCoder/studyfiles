@@ -5,6 +5,7 @@ import MenuIcon from "./component/MenuIcon";
 import Accordion from "./component/Accordion";
 import Tabs from "./component/Tabs";
 import TabHeader from "./component/TabHeader";
+import HoverTabs from "./component/HoverTabs";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
        <Accordion />
        <Tabs />
        <TabHeader />
+       <HoverTabs />
     </div>
   );
 }
