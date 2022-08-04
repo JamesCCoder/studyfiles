@@ -1,0 +1,31 @@
+.accordion{
+    width:100%;
+    border: 1px solid whitesmoke;
+}
+
+.accordion__header{
+    width:100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding:30px 20px;
+    font-size: 1.5rem;
+}
+
+.accordion__content{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-in;
+}
+
+.accordion__content[aria-expanded = true]{
+  
+   max-height: 100px;
+   transition: max-height 1s ease-in;
+}
+
+/* 如果不需要animation，则变化利用 display：block 和 display：none 之间切换即可，可添加padding，也可添加height */
+/* 如果需要 animation， 则利用 max-height 与 overflow 不能有其他的修饰手段 */

@@ -1,0 +1,17 @@
+.menuicon{
+   height:100px;
+   width:100px;
+   border: 1px solid red;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: center;
+   gap:10px;
+}
+
+.icon__bar{
+    width:80px;
+    height:10px;
+    background-color: black;
+}

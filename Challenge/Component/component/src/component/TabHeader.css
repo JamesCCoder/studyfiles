@@ -1,0 +1,21 @@
+.tab-header__header{
+    width:100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.tab-header__city{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+}
+
+.tab-header__city:hover{
+   background-color: darkgrey;
+}

@@ -1,0 +1,18 @@
+.header{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: whitesmoke;
+}
+
+
+.header__city{
+    padding:20px;
+}
+
+.header__city:hover{
+    background-color: gray;
+}
