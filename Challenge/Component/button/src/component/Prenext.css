@@ -1,0 +1,16 @@
+.prenext{
+    padding:10px;
+    margin:0 10px;
+}
+
+.prenext[data-color = "previous"]{
+    background-color: whitesmoke;
+    color:black;
+    border:none;
+}
+
+.prenext[data-color = "next"]{
+    background-color: green;
+    border:none;
+    color:white;
+}

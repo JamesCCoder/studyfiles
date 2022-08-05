@@ -1,0 +1,46 @@
+.fading__overall{
+  padding:10px;
+}
+
+.fading__button{
+  height:50px;
+  width:100px;
+  margin: 0 20px;
+}
+
+.fading__button[data-color="Success"]{
+    color:white;
+    background-color: green;
+    border:1px solid green;
+}
+
+.fading__button[data-color="Success"]:hover{
+    color:white;
+    background-color: lightgreen;
+    border:1px solid lightgreen;
+}
+
+.fading__button[data-color="Info"]{
+    color:white;
+    background-color: blue;
+    border:1px solid blue;
+}
+
+.fading__button[data-color="Info"]:hover{
+    color:white;
+    background-color: lightblue;
+    border:1px solid lightblue;
+}
+
+.fading__button[data-color="Danger"]{
+    color:white;
+    background-color: red;
+    border:1px solid red;
+}
+
+.fading__button[data-color="Danger"]:hover{
+    color:white;
+    background-color: pink;
+    border:1px solid pink;
+}
+

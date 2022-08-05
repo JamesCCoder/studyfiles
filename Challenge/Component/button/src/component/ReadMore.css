@@ -1,0 +1,17 @@
+.readmore{
+  width:300px;
+  border:1px solid red;
+
+}
+
+.readmore__content{
+  word-break:break-all;         
+
+  max-height:20px;
+  overflow:hidden;
+
+}
+
+.readmore__content[aria-expanded = "true"]{
+    max-height: 50px;
+}

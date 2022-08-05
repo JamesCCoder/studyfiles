@@ -1,0 +1,66 @@
+.outline__overall{
+   padding:10px;
+}
+
+.outline__button{
+  padding:5px;
+  margin:0 10px;
+  width:100px;
+  height:50px;
+  background-color: white;
+}
+
+.outline__button[data-color = "Success"]{
+    border: 1px solid green;
+    color:green;
+}
+
+.outline__button[data-color = "Success"]:hover{
+    border: 1px solid green;
+    color:white;
+    background-color: green;
+}
+
+.outline__button[data-color = "Info"]{
+    border: 1px solid blue;
+    color:blue;
+}
+
+.outline__button[data-color = "Info"]:hover{
+    border: 1px solid blue;
+    color:white;
+    background-color: blue;
+}
+
+
+.outline__button[data-color = "Warning"]{
+    border: 1px solid orange;
+    color:orange;
+}
+
+.outline__button[data-color = "Warning"]:hover{
+    border: 1px solid orange;
+    color:white;
+    background-color: orange;
+}
+.outline__button[data-color = "Danger"]{
+    border: 1px solid red;
+    color:red;
+}
+
+.outline__button[data-color = "Danger"]:hover{
+    border: 1px solid red;
+    color: white;
+    background-color: red;
+}
+
+.outline__button[data-color = "Default"]{
+    border: 1px solid grey;
+    color:black;
+}
+
+.outline__button[data-color = "Default"]:hover{
+    border: 1px solid grey;
+    color:white;
+    background-color: black;
+}

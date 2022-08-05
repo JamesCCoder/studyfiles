@@ -1,0 +1,32 @@
+.overall{
+    
+}
+.button{
+   padding:20px;
+   width:100px;
+   margin:20px 0;
+   font-size: 1rem;
+   background-color: grey;
+   border:none;
+   cursor: pointer;
+   color:white;
+   position:relative;
+}
+
+.button:hover{
+    background-color: red;
+}
+
+.badge{
+   height:20px;
+   width:20px;
+   background-color: red;
+   position:absolute;
+   top:-8px;
+   right:-8px;
+   border-radius: 50px;
+   font-size: 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
