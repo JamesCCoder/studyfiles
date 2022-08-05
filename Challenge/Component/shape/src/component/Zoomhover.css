@@ -1,0 +1,36 @@
+.square{
+    height:100px;
+    width:100px;
+    background-color: green;
+    transition: transform 1s ease;
+    margin:10px;
+}
+
+.square:hover{
+   transform: scale(1.2);
+}
+
+.square1{
+    height:100px;
+    width:100px;
+    background-color: green;
+    margin:10px;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+.square1:hover{
+   transform:rotateY(180deg)
+}
+
+.square2{
+    height:100px;
+    width:100px;
+    background-color: green;
+    margin:10px;
+    transition: transform 1s ease;
+}
+
+.square2:hover{
+   transform:rotateX(180deg)
+}
