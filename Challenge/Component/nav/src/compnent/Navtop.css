@@ -1,0 +1,24 @@
+.navtop__overall{
+   width:100%;
+   background-color: grey;
+}
+
+.navtop__button{
+   padding:15px 20px;
+   border:none;
+   background-color: grey;
+   color:white;
+}
+
+.navtop__button:hover{
+    background-color: whitesmoke;
+    color:black;
+}
+
+.navtop__button[data-color="Home"]{
+    background-color: green;
+}
+
+.navtop__button[data-color="Home"]:hover{
+    color:white;
+}

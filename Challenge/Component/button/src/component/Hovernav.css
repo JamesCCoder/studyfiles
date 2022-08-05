@@ -1,0 +1,71 @@
+.hover__overall{
+   border:1px solid red;
+   width:400px;
+   height:400px;
+   margin-top:50px;
+   margin-left:50px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+}
+.hover__left{
+  width:200px;
+  position:relative;
+  overflow: hidden;
+}
+
+.hover__right{
+
+}
+
+.left__button{
+   width:120px;
+   padding:20px;
+   font-size: 1.5rem;
+   border:none;
+   position:absolute;
+   color:white;
+   transition: all 1s ease;
+   border-radius: 20px;
+}
+
+.left__button[data-color="about"]{
+    top:10px;
+    left:-100px;
+    background-color: green;
+    
+}
+
+.left__button[data-color="about"]:hover{
+    left:0;
+}
+
+.left__button[data-color="blog"]{
+    top:100px;
+    left:-100px;
+    background-color: blue;
+}
+
+.left__button[data-color="blog"]:hover{
+    left:0;
+}
+
+.left__button[data-color="project"]{
+    top:190px;
+    left:-100px;
+    background-color: red;
+}
+
+.left__button[data-color="project"]:hover{
+    left:0;
+}
+
+.left__button[data-color="contact"]{
+    top:280px;
+    left:-100px;
+    background-color: black;
+}
+
+.left__button[data-color="contact"]:hover{
+    left:0;
+}

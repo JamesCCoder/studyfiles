@@ -1,0 +1,22 @@
+.navside__overall{
+  height:500px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-start;
+  background-color: grey;
+  width:100px;
+}
+
+.navside__button{
+  padding:20px 15px;
+  width:100px;
+  border:none;
+  background-color: grey;
+  color:white;
+}
+
+.navside__button:hover{
+    background-color: whitesmoke;
+    color:black;
+}

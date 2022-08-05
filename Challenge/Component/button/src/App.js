@@ -8,6 +8,7 @@ import ReadMore from "./component/ReadMore";
 import Notification from "./component/Notification";
 import Prenext from "./component/Prenext";
 import Top from "./component/Top";
+import Hovernav from "./component/Hovernav";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
        <Notification />
        <Prenext />
        <Top />
+       <Hovernav />
     </div>
   );
 }

@@ -1,0 +1,39 @@
+.split__ovarall{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:100%;
+    justify-content: space-between;align-items: center;
+    background-color: grey;
+    border:none;
+    height:45px;
+}
+
+.split__left{
+    height:100%;
+}
+
+.split__right{
+    height:100%;
+}
+
+.left{
+    padding:10px 20px;
+    border:0;
+    height:100%;
+    color:white;
+    background-color: gray;
+}
+
+.left:hover{
+    color:black;
+    background-color: whitesmoke;
+}
+
+.right{
+    padding:10px 20px;
+    height:100%;
+    border:none;
+    color:white;
+    background-color: green;
+}
