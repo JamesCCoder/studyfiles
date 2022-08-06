@@ -1,0 +1,30 @@
+.equal__overall{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width:100%;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.equal__button{
+   width:100%;
+   padding:20px;
+   border:none;
+   background-color: grey;
+   color:white;
+   font-size: 1.5rem;
+}
+
+.equal__button:hover{
+    background-color: black;
+}
+
+.equal__button[data-color = "Home"]{
+    background-color: green;
+}
+
+.equal__button[data-color = "Home"]:hover{
+    background-color: darkgreen;
+}

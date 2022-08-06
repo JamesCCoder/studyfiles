@@ -1,0 +1,18 @@
+.buttonborder__overall{
+    width:100%;
+    background-color: whitesmoke;
+}
+
+.buttonborder__first{
+   padding:10px 15px;
+   border:none;
+}
+
+/* .buttonborder__first:hover{
+   border-bottom: 1px solid red;
+} */
+
+.bottonborder__second{
+   padding:10px 15px;
+   border:none;
+}

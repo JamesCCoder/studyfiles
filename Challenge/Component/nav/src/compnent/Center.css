@@ -1,0 +1,14 @@
+.center__overall{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.center__button{
+    padding:10px 15px;
+    border:none;
+    background-color: whitesmoke;
+}
