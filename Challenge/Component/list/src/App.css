@@ -1,0 +1,40 @@
+.list__overall{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding:20px;
+  position:relative;
+  background-color: whitesmoke;
+  border:1px solid grey;
+}
+
+.list__left{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.list__badge{
+  width:30px;
+  height:30px;
+  background-color: red;
+  border-radius: 50px;
+  position:absolute;
+  left:80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size: 12px;
+}
+
+.list__right{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  font-size: 1.5rem;
+}

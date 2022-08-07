@@ -1,0 +1,11 @@
+.overall{
+  height:2000px;
+}
+
+.sticky{
+  padding:30px 40px;
+  background-color: green;
+  color:white;
+  position:sticky;
+  top:30px;;
+}

@@ -25,7 +25,8 @@ const TabHeader = () => {
 
     const clickHandler = (e,i) =>{
         setIndex(i);
-        e.target.style.background="red";
+        e.target.style.background = i === 0 ? "red" : i === 1 ? "blue" : i === 2 ? "green" : i === 3 ? "yellow" : "whitesmoke";
+       
     }
     return ( 
       <>
@@ -50,7 +51,7 @@ const TabHeader = () => {
                           key={i} 
                           className="tab-header__city" 
                           onClick={(e) => clickHandler(e,i)}>{city.key}
-                          
+                     
                           </p>                        
                     )
                 })

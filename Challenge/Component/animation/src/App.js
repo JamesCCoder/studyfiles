@@ -1,14 +1,12 @@
 import React from "react";
 import './App.css';
 
-import ToolTip from "./component/Tooltip";
-import Popup from "./component/Popup";
+import Loader from "./component/Loader";
 
 function App() {
   return (
     <div>
-       <ToolTip />
-       <Popup />
+       <Loader />
     </div>
   );
 }

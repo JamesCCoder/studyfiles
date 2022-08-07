@@ -1,0 +1,89 @@
+.header{
+   width:100%;
+   height:50px;
+   background-color:gray;
+   color:white;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content:flex-start;
+   position:relative;
+}
+
+.icon__menu{
+    position:absolute;
+    top:10px;
+    right:10px;
+    display: none;
+}
+
+.bar{
+    width:30px;
+    height:3px;
+    background-color: white;
+    margin:5px;
+}
+
+.menu{
+    padding:10px 25px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu[data-color="Home"]{
+    background-color: green;
+    color:white;
+}
+
+.menu:hover{
+    background-color: whitesmoke;
+    color:black;
+}
+
+@media screen and (max-width: 900px){
+    .header{
+        
+    }
+    .menu[data-color="News"]{
+        display: none;
+    }
+    .menu[data-color="Contact"]{
+         display: none;
+    }
+    .menu[data-color="About"]{
+         display: none;
+    }
+    .icon__menu{
+        display: block;
+    }
+}
+
+@media screen and (max-width:700px){
+    .header{
+        height:200px;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .menu{
+        width:100%;
+        text-align: center;
+    }
+
+    .menu[data-color="News"]{
+        display: block;
+    }
+    .menu[data-color="Contact"]{
+         display: block;
+    }
+    .menu[data-color="About"]{
+         display: block;
+    }
+
+    .icon__menu{
+        display: none;
+    }
+}
