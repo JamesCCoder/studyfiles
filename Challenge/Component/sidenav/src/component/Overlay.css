@@ -1,0 +1,36 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.overlay__overall{
+  background-color: grey;
+  color:white;
+  width:200px;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  position:relative;
+}
+
+.overlay__cancel{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+.overlay__menu{
+  width:100%;
+  text-align: center;
+  padding:30px 0;
+  font-size: 2rem;
+}
+
+.overlay__button{
+    width:100px;
+    height:40px;
+    margin:10px 30px;
+}

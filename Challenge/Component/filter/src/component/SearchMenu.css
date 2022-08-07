@@ -1,0 +1,43 @@
+.search__overall{
+   width:500px;
+   display: flex;
+   flex-direction: row;
+   border:1px solid grey;
+}
+
+.search__left{
+   display: flex;
+   flex-direction: column;
+   background-color: grey;
+   color:white;
+   height:600px;
+}
+
+.search__menu{
+  padding:25px 25px;
+  font-size: 1.5rem;
+}
+
+.search__key{
+   padding:25px 15px;
+   font-size: 1rem;
+}
+
+.search__key:hover{
+    background-color: whitesmoke;
+    color:black;
+}
+
+.search__search{
+  padding:5px 10px;
+}
+
+.search__right{
+    width:100%;
+
+}
+
+.search__content{
+    padding:20px;
+    font-size: 2rem;
+}

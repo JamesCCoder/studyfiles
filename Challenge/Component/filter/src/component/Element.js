@@ -49,7 +49,7 @@ function Element() {
               :button === 2 ? oneShow && oneShow.cate === "animal"
               :button === 3 ? oneShow && oneShow.cate === "fruit"
               :button === 4 ? oneShow && oneShow.cate === "color"
-              :""
+              :oneShow
              )
            })
            .map((oneShow, i) =>{
