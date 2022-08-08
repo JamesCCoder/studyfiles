@@ -1,0 +1,88 @@
+.Menu__overall{
+  position:sticky;
+  top:0;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: grey;
+  color:white;
+  height:40px;
+}
+
+
+
+.Menu__menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100px;
+  height:100%;
+  padding: 10px 15px;                              /* 在menu中设置padding，既可以将每一个menu撑起来 */
+}                                                  /* 又可以使得每一个menu的高度和heading一致 */
+
+
+.Menu__menu:hover{
+    background-color: green;
+}
+
+.Menu__dropdown1{
+    position:absolute;
+    top:40px;
+    background-color: green;
+    width:100%;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Dropdown__item{
+    padding:10px 15px;
+}
+
+.about:hover + .Menu__dropdown1{
+   display: flex;
+}
+
+.service:hover + .Menu__dropdown1{
+   display: flex;
+}
+
+.Menu__dropdown1:hover{
+    display: flex;
+}
+
+.Dropdown__item:hover{
+    background-color: lightgreen;
+}
+
+
+@media screen and (max-width :700px){
+    .Menu__overall{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height:400px;
+    }
+    .Menu__menu{
+        width:100%;
+    }
+    .Menu__dropdown1{
+        position:static;
+        display: none;
+        flex-direction: column;
+    }
+    .Dropdown__item{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about:hover + .Menu__dropdown1{
+   display: flex;
+}
+}

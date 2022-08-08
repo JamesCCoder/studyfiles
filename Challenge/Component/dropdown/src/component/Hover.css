@@ -1,0 +1,36 @@
+.hover__overall{
+  position:relative;
+  display: inline;
+}
+.hover__button{
+  margin:30px;
+  height:40px;
+  background-color: pink;
+  padding:10px;
+  border:none;
+  color:white;
+}
+
+.hover__button:hover{
+    background-color: red;
+}
+
+.hover__button:hover + .hover__links{
+    display: block;
+}
+
+.hover__links{
+  position:absolute;
+  top:30px;
+  left:30px;
+  border:none;
+  background-color: white;
+  box-shadow: 2px 2px 4px 2px grey;
+  display: none;
+}
+
+.hover__link{
+  
+  width:100px;
+  padding:5px;
+}

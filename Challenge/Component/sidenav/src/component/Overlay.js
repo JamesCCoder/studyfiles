@@ -7,9 +7,7 @@ const Overlay = () => {
     const [show, setShow] = useState(false);
     return ( 
     <div className="wrapper">
-        {
-            show && 
-            <div className="overlay__overall">
+            <div className="overlay__overall" data-show={show}>
             {
                 info.map((one) =>{
                     return(
@@ -19,7 +17,7 @@ const Overlay = () => {
             }
             <button className="overlay__cancel" onClick={() => setShow(false)}></button>
         </div>
-        }
+        
 
         <button className="overlay__button" onClick={() => setShow(true)}>click</button>
     </div>

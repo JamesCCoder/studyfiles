@@ -1,0 +1,43 @@
+.overall{
+   display: flex;
+   flex-direction: column;
+  
+}
+
+.up{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   height:300px;
+   background-color: whitesmoke;
+}
+
+.signal{
+   padding:40px 10px;
+}
+
+.content{
+
+}
+
+.down{
+  height:100px;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+
+.circle{
+  height:30px;
+  width:30px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.circle:hover{
+  background-color: darkgrey;
+}

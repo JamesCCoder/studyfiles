@@ -1,0 +1,29 @@
+.click__overall{
+   display: inline;
+   position: relative;
+}
+
+.click__button{
+  margin:30px;
+  padding:10px 20px;
+  background-color: green;
+  border:none;
+  color:white;
+}
+
+.click__button:hover{
+    background-color: lightgreen;
+}
+
+.click__menus{
+  position:absolute;
+  top:28px;
+  left:30px;
+  border:1px solid grey;
+  width:100px;
+  box-shadow: 1px 1px 2px 1px grey;
+}
+
+.click__menu{
+  padding:10px;
+}
