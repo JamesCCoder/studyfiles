@@ -9,13 +9,9 @@ const Pagination = () => {
             return {id:Math.floor(Math.random()*1000), content:onePage, show:false};
         })
     )
+    const [index, setIndex] = useState(-1);
     const clickHandler =(id) =>{
-        const newValue = [...value];
-        for(let i = 0; i<newValue.length; i++){
-           newValue[i].show = false;
-        }
-        newValue[id].show = true;
-        setValue(newValue);
+        setIndex(id);
     } 
     return ( 
         <div className="pagination">
@@ -24,7 +20,7 @@ const Pagination = () => {
                  return(
                     <div key={onePage.id} 
                          className="page" 
-                         style={{backgroundColor: onePage.show ? "green" : "", color: onePage.show ? "white": ""}}
+                         style={{backgroundColor: i === index ? "green" : "", color: i === index? "white": ""}}
                          onClick={() => clickHandler(i)}>{onePage.content}</div>
                  )
             })

@@ -45,10 +45,10 @@ function Element() {
            .filter((oneShow, i) => {
              return(
                button === 0 ? oneShow
-              :button === 1 ? oneShow && oneShow.cate === "car" 
-              :button === 2 ? oneShow && oneShow.cate === "animal"
-              :button === 3 ? oneShow && oneShow.cate === "fruit"
-              :button === 4 ? oneShow && oneShow.cate === "color"
+              :button === 1 ? oneShow.cate === "car" 
+              :button === 2 ? oneShow.cate === "animal"
+              :button === 3 ? oneShow.cate === "fruit"
+              :button === 4 ? oneShow.cate === "color"
               :oneShow
              )
            })

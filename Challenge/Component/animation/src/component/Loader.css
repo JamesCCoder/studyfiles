@@ -3,6 +3,8 @@
     height:200px;
     border:40px solid grey;
     border-top:40px solid blue;
+    border-left:40px solid blue;
+    border-bottom:40px solid blue;
     border-radius: 50%;
     animation: spin 2s linear infinite;
 }

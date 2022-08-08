@@ -10,7 +10,7 @@ const Navtop = () => {
         })
     );
     const addHandler = () =>{
-        setBtn((pre) => [...pre, {content: value, d:Math.floor(Math.random()*1000)}]);
+        setBtn((pre) => [...pre, {content: value, id:Math.floor(Math.random()*1000)}]);
         setValue("");
     }
 

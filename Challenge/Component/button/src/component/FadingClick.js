@@ -17,10 +17,15 @@ const btnValue = [
 ]
 
 const FadingClick = () => {
-    const [buttons, setButtons] = useState(btnValue);
+    const [buttons, setButtons] = useState(
+        btnValue.map((one)=>{
+            return {id: one.id, content: one.content, show:false}
+        })
+    )
     const [index, setIndex] = useState(-1);
     const clickHandler = (index) =>{
         setIndex(index);
+ 
     }
     return ( 
        <div className="fadingclick__overall">
@@ -29,6 +34,11 @@ const FadingClick = () => {
                return(
                    <button className="fadingclick__button" 
                    key={i}
+                   style={{backgroundColor: i === index && i === 0 ? "lightgreen"
+                                          : i === index && i === 1 ? "lightblue"
+                                          : i === index && i === 2 ? "pink"
+                                          : ""
+                                        }}
                    data-color={button.content}
                    onClick = {() => clickHandler(i)}
                    >{button.content}

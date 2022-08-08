@@ -31,7 +31,7 @@ const SearchMenu = () => {
                 {
                     value
                     .filter((oneValue) => filterValue ? 
-                    filterValue && oneValue.key.toString().includes(filterValue)
+                     oneValue.key.toString().includes(filterValue)
                    : oneValue.key)
                     .map((oneValue, i) =>{
                         return(
