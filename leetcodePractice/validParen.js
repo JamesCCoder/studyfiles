@@ -5,7 +5,9 @@ const arr4 = "({[})]";
 
 
 const valid = (arr) =>{
-  
+
+    
+
     
 }
 
@@ -13,8 +15,6 @@ console.log(valid(arr1));
 console.log(valid(arr2));
 console.log(valid(arr3));
 console.log(valid(arr4));
-
-
 
 
 

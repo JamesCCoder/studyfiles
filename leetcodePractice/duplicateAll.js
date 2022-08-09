@@ -12,7 +12,7 @@ const arr2 = [
 
 
 const duplicate = (arr) =>{
-
+   
 }
 
 

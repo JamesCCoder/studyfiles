@@ -1,6 +1,7 @@
 const climbing = (n) =>{
 
     
+    
 }
 
 console.log(climbing(5));

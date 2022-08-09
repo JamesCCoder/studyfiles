@@ -14,10 +14,10 @@ const Top = () => {
      }, []);
 
     const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // for smoothly scrolling
-    });
+       window.scrollTo({
+         top: 0,
+         behavior: 'smooth' // for smoothly scrolling
+       });
   };
        return ( 
            <>

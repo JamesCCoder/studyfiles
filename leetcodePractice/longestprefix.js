@@ -1,9 +1,12 @@
 let arr = ["abbbc", "abbcc", "abcdde", "abccce"];
+let arr1 = ["abbbb","abbb", "abb"];
 
 
 
-const long = (arr) =>{
+const long = (strs) =>{
 
+    
+    
 }
 
 console.log(long(arr));
@@ -25,22 +28,14 @@ console.log(long(arr));
 
 
 
-
-
-
-
-
-
-
-// const long = (arr) =>{
-//     arr.sort((a, b) => a - b);
-//     let n = Math.min(arr[0].length, arr[arr.length-1].length);
-//     for(let i = 0; i<n;i++){
-//         if(arr[0][i] !== arr[arr.length-1][i]){
-//             return arr[0].substring(0, i);
-//         }
+// const long = (strs) =>{
+//     strs.sort();
+//     let n = Math.min(strs[0].length, strs[strs.length - 1].length);
+//     let i = 0;
+//     while (i < n && strs[0][i] == strs[strs.length -1][i] ){
+//          i++;
 //     }
-//     return -1;
+//     return strs[0].substring(0, i);
 // }
 
 // console.log(long(arr));

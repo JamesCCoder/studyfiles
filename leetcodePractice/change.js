@@ -7,7 +7,7 @@ const coin = (target) =>{
     
 }
 
-console.log(coin(26));
+console.log(coin(8));
 
 
 

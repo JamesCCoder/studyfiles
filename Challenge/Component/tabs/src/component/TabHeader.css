@@ -20,18 +20,3 @@
    background-color: darkgrey;
 }
 
-.tab-header__city[data-color = "London"]{
-    background-color: blue;
-}
-
-.tab-header__city[data-color = "Paris"]{
-    background-color: red;
-}
-
-.tab-header__city[data-color = "Tokyo"]{
-    background-color: green;
-}
-
-.tab-header__city[data-color = "Oslo"]{
-    background-color: orange;
-}
