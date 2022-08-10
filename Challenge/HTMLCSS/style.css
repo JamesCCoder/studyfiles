@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.child{
+    height:100px;
+    width:calc(33% - 10px);
+    background-color: green;
+    margin:5px;
+}
+
+@media screen and (max-width: 940px){
+    .child{
+        width:calc(25% - 10px);
+    }
+}
+
+@media screen and (max-width: 640px){
+    .child{
+        width:calc(17% - 10px);
+    }
+}
