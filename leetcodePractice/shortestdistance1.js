@@ -1,3 +1,5 @@
+ // w1 !== w2
+ 
  arr1 = ["practice", "makes", "perfect", "coding", "makes"], 
  w1 = "coding", w2 = "practice"
 
@@ -36,7 +38,7 @@
 
 
 
- 
+
 //  const shortest = (arr1, w1, w2) =>{
 //      let res = Infinity;
 //      for(let i = 0; i<arr1.length; i++){

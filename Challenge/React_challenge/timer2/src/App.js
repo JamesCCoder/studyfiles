@@ -11,7 +11,7 @@ function App() {
       return;
     }
     key.current = setInterval(() => {
-          setValue(pre => pre - 1);
+       setValue(pre => pre - 1);
       }, 1000);
   }
   const stopHandler = () =>{
