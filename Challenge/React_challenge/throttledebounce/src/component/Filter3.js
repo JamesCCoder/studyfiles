@@ -8,7 +8,7 @@ const Finter3 = () => {
     const [filterList, setFilterList] = useState([]);
     useEffect(() =>{
         const interval = setInterval(() => {
-           const result = list.filter((one) => value ? one.toLowerCase().includes(value.toLowerCase()): one);
+           const result = list.filter((one) =>one.toLowerCase().includes(value.toLowerCase()));
            setFilterList(result);
         }, 1000);
         return () => clearInterval(interval);

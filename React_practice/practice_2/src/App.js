@@ -1,24 +1,35 @@
-import React,{useState} from "react";
+import React from "react";
 import "./App.css";
 
-import Add1 from "./Components/Add1";
-import Add2 from "./Components/Add2";
-
-import Timer1 from "./Components/Timer1";
-import Timer2 from "./Components/Timer2";
-import Timer3 from "./Components/Timer3";
-import Timer4 from "./Components/Timer4";
-
 const App = () => {
+  const changeHandler = () =>{
+    console.log("press");
+  }
+  const deBounce = (myfunc, delay) =>{
+    let timer;
+    return () => {
+       clearTimeout(timer);
+       timer = setTimeout(myfunc, delay);
+    }
+  }
+  const throttle = (myFunc, delay) =>{
+     let timer;
+     return () =>{
+       if(!timer){
+           myFunc();
+           timer = setTimeout(() => timer = false, delay);
+       }
+     }
+  }  
+
+       
+
+  
   return ( 
-      <div>
-        <Add1 />
-        <Add2 />
-        <Timer1 />
-        <Timer2 />
-        <Timer3 />
-        <Timer4 />
-      </div>
+    <div>
+       <input onChange = {deBounce(changeHandler, 500)}/>
+       <input onChange = {throttle(changeHandler, 2000)}/>
+    </div>
    );
 }
  

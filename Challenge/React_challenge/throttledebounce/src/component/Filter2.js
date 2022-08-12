@@ -3,7 +3,7 @@ import React,{useState} from "react";
 const LIST = ["a", "b","c", "d","e","f","g", "aa", "dd","fds"];
 
 const Filter2 = () => {
-    const [list, setList] = useState(LIST);
+    const [list] = useState(LIST);
     const [value, setValue] = useState("");
     return ( 
         <div>
@@ -11,7 +11,7 @@ const Filter2 = () => {
             <ul>
             {
                 list
-                .filter((one) => value ? one.toLowerCase().includes(value.toLowerCase()): one)
+                .filter((one) => one.toLowerCase().includes(value.toLowerCase()))
                 .map((one, i) => {
                     return(
                        <li key={i}>{one}</li>

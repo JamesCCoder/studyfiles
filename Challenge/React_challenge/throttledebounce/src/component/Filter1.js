@@ -10,7 +10,7 @@ const Filter1 = () => {
       setValue(e.target.value);
   }
   useEffect(() => {
-    let result = list.filter((one) => value ? one.toLowerCase().includes(value.toLowerCase()) : one);
+    let result = list.filter((one) => one.toLowerCase().includes(value.toLowerCase()));
     setFilterList(result);
   },[list,value])
   return (
