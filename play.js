@@ -1,17 +1,16 @@
-const str = "abcdefg";
+let arr = [1,2,3,2,3];
 
-const shift = (str, m, n) =>{
-   let arr = str.split("");
-   for(let i = 0; i<n; i++){
-       let char = arr.pop();
-       arr.unshift(char);
-   }
+const duplicate = (arr) =>{
 
-   for(let i = 0; i<m; i++){
-       let char = arr.shift();
-       arr.push(char);
-   }
-   return arr.join("");
+    let res = [];
+    let mySet = new Set();
+    for(let i = 0; i<arr.length; i++){
+        if(mySet.has(arr[i])){
+            res.push(arr[i]);
+        }
+        mySet.add(arr[i]);
+    }
+    return res;
 }
 
-console.log(shift(str, 4, 2));
+console.log(duplicate(arr));

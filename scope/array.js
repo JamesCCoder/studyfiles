@@ -1,14 +1,18 @@
 // 1.
 
-// const a = [0];
+const a = [0];
 
-// a[3] = 3;
+a[3] = 3;
 
 // console.log(a);                      // [0, empty, empty, 3]
 
 // let i of a                           // 0, undefined, undefined, 3
 
 // a.map                                 // 0, 3
+
+a.map((one) =>{
+  console.log(one);
+})
 
 // a.forEach                              // 0, 3
 

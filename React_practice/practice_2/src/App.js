@@ -1,34 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import "./App.css";
 
+
+
 const App = () => {
-  const changeHandler = () =>{
-    console.log("press");
-  }
-  const deBounce = (myfunc, delay) =>{
-    let timer;
-    return () => {
-       clearTimeout(timer);
-       timer = setTimeout(myfunc, delay);
-    }
-  }
-  const throttle = (myFunc, delay) =>{
-     let timer;
-     return () =>{
-       if(!timer){
-           myFunc();
-           timer = setTimeout(() => timer = false, delay);
-       }
-     }
-  }  
-
-       
-
-  
+  const [show, setShow] = useState(false);
   return ( 
     <div>
-       <input onChange = {deBounce(changeHandler, 500)}/>
-       <input onChange = {throttle(changeHandler, 2000)}/>
+       <div className="block" data-show = {show} onClick={() => setShow((pre) => !pre)}></div>
     </div>
    );
 }

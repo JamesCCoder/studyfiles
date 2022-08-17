@@ -1,0 +1,10 @@
+.block{
+    height:100px;
+    width:100px;
+    background-color: black;
+    transition: opacity 2s ease;
+}
+
+.block[data-show = "true"]{
+    opacity: 0.5;
+}
