@@ -1,5 +1,8 @@
 {
-    "scripts":{
-        "test":"jest"
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "nodemon": "^2.0.19"
     }
 }
