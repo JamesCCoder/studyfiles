@@ -1,10 +1,8 @@
-.block{
-    height:100px;
-    width:100px;
-    background-color: black;
-    transition: opacity 2s ease;
+body{
+    height:2000px;
 }
-
-.block[data-show = "true"]{
-    opacity: 0.5;
+.button{
+    position:fixed;
+    bottom:100px;
+    right:100px;
 }
