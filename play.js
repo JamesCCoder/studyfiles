@@ -1,26 +1,25 @@
-const express = require("express");
-const path = require("path");
+let express = require("express");
 
-const app = express();
-
+let app = express();
 
 app.get("/", (req, res) =>{
-    res.send("This is a get");
+    res.send("234");
 })
+
 app.post("/", (req, res) =>{
-    res.send("This is a post");
+    
 })
-app.put("/", (req, res) =>{
-    res.send("This is a put");
+
+app.delete("/", (req, res) =>{
+    
 })
 app.patch("/", (req, res) =>{
-    res.send("This is a patch");
+    
 })
-app.delete("/", (req, res) =>{
-    res.send("This is a delete");
+app.put("/", (req, res) =>{
+    
 })
 
-
-app.listen(2000, () =>{
-    console.log("server is running!");
+app.listen(200, () => {
+    console.log("the server is running!")
 })

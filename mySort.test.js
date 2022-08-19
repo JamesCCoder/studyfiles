@@ -1,6 +1,6 @@
 
-const mySort = require("./mySort");
+let mySort = require("./mySort");
 
-test("This is a test for mySort", () =>{
-    expect(mySort([1,2,5,3])).toEqual([5,3,2,1]);
+test("this is a simply test for mySort", () =>{
+    expect(mySort([3,2,1])).toEqual([1,2,3]);
 })

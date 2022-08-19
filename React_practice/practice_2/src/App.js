@@ -1,27 +1,47 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
 
+const arr = [{"a": "A"}, {"b": "B"}, {"c": "C"}, {"d": "D"}];
+
 const App = () => {
-   const [show, setShow] = useState(false);
+   const [list, setList] = useState([]);
+   const [status, setStatus] = useState({
+      val: undefined,
+      res: undefined,
+   })
+   const [index, setIndex] = useState(-1);
    useEffect(() => {
-      window.addEventListener("scroll", () => {
-         if(window.pageYOffset > 200){
-            setShow(true);
-         }else{
-            setShow(false);
-         }
-      })
+      const newList = [];
+      for(let i = 0; i<arr.length; i++){
+         newList.push(Object.keys(arr[i]));
+         newList.push(Object.values(arr[i]));
+      }
+      console.log(newList);
+      for(let i = 1; i<newList.length; i++){
+         let random = Math.floor(Math.random() * (i+1));
+         [newList[i], newList[random]] = [newList[random], newList[i]];
+      }
+
+      setList(newList);
    }, [])
-   const clickHandler = () =>{
-      window.scrollTo({
-         top:0,
-         behavior:"smooth"
+
+   const clickHandler = (index) =>{
+      setIndex(index);
+      setStatus({
+         ...status,
+         
       })
    }
+
    return ( 
       <div>
-         <header style={{height:"20px", width:"100%", backgroundColor:"green"}}></header>
-         {show && <button onClick={clickHandler} className="button">top</button>}
+         {
+            list.map((oneValue, i) => {
+               return (
+                  <button style={{border: i === index && "1px solid blue"}} className="button" onClick={() => clickHandler(i)}>{oneValue}</button>
+               )
+            })
+         }
       </div>
     );
 }
