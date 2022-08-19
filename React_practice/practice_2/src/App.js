@@ -13,15 +13,13 @@ const App = () => {
    useEffect(() => {
       const newList = [];
       for(let i = 0; i<arr.length; i++){
-         newList.push(Object.keys(arr[i]));
-         newList.push(Object.values(arr[i]));
+         newList.push(Object.keys(arr[i]).toString());
+         newList.push(Object.values(arr[i]).toString());
       }
-      console.log(newList);
       for(let i = 1; i<newList.length; i++){
          let random = Math.floor(Math.random() * (i+1));
          [newList[i], newList[random]] = [newList[random], newList[i]];
       }
-
       setList(newList);
    }, [])
 
@@ -29,8 +27,10 @@ const App = () => {
       setIndex(index);
       setStatus({
          ...status,
-         
+         val: list[index],
+         res: status.val && !status.res ? status.val : status.res,
       })
+      console.log(status);
    }
 
    return ( 

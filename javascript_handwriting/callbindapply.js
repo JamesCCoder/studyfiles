@@ -1,23 +1,22 @@
-const Me = {
+const me = {
     name:"James",
-    sex:"male",
-    intro: function(age){
-        console.log(`my name is ${this.name}, my sex is ${this.sex}, my age is ${age}`);
+    age:20,
+    intro: function(c, d){
+        console.log(`my name is ${this.name}, my age is ${this.age}, and ${c}, and ${d}`);
     }
 }
 
 const myWife = {
     name:"Weiwei",
-    sex:"female",
+    age: 18,
 }
 
-Me.intro(12);
+me.intro("1", "2");
 
-Me.intro.call(myWife,18);
-Me.intro.apply(myWife, [18]);
-Me.intro.bind(myWife, [18])();
+me.intro.call(myWife, "1", "2");
+me.intro.apply(myWife, ["1","2"]);
+me.intro.bind(myWife,"1","2")();
 
-Me.intro.call({name:"a", sex:"a"}, 12);
-Me.intro.apply({name:"a", sex:"a"}, [12]);
-Me.intro.bind({name:"a", sex:"a"}, [12])();
-
+me.intro.call({name:"abc", age:1}, "1", "2");
+me.intro.apply({name:"abc", age:1}, ["1", "2"]);
+me.intro.bind({name:"abc", age:1},"1","2")();

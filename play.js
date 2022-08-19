@@ -1,25 +1,22 @@
-let express = require("express");
+const me = {
+    name:"James",
+    age:20,
+    intro: function(c, d){
+        console.log(`my name is ${this.name}, my age is ${this.age}, and ${c}, and ${d}`);
+    }
+}
 
-let app = express();
+const myWife = {
+    name:"Weiwei",
+    age: 18,
+}
 
-app.get("/", (req, res) =>{
-    res.send("234");
-})
+me.intro("1", "2");
 
-app.post("/", (req, res) =>{
-    
-})
+me.intro.call(myWife, "1", "2");
+me.intro.apply(myWife, ["1","2"]);
+me.intro.bind(myWife,"1","2")();
 
-app.delete("/", (req, res) =>{
-    
-})
-app.patch("/", (req, res) =>{
-    
-})
-app.put("/", (req, res) =>{
-    
-})
-
-app.listen(200, () => {
-    console.log("the server is running!")
-})
+me.intro.call({name:"abc", age:1}, "1", "2");
+me.intro.apply({name:"abc", age:1}, ["1", "2"]);
+me.intro.bind({name:"abc", age:1},"1","2")();
