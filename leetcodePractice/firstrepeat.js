@@ -9,6 +9,9 @@ const repeatElement = (arr) =>{
 console.log(repeatElement(arr));
 
 
+
+
+
 const repeatFirst = (arr) =>{
 
     
