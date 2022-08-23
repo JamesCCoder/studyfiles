@@ -1,4 +1,12 @@
-a = [{"a": 1}, {"b":2}]
+class rainbow{
+    constructor({newcolor = 'green'} = []){
+	this.Newcolor = newcolor;
+}
+    static colorchange(newcolor){
+	this.Newcolor = newcolor;
+    return this.Newcolor
+}
+}
 
-console.log(a[0]["a"])
-console.log(a[0]
+const freddie = new rainbow ({newcolor: 'purple'})
+console.log(freddie.colorchange('orange'));
