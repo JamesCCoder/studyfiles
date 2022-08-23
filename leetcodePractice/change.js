@@ -4,7 +4,6 @@ const coins = [2,3,7];
 
 const coin = (target) =>{
    
-    
 }
 
 console.log(coin(8));

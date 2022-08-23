@@ -2,7 +2,6 @@ const str = "123456123";
 
 const add = (str) =>{
 
-    
 }
 
 console.log(add(str));
