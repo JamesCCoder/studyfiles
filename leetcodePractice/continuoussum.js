@@ -10,7 +10,7 @@ const target3 = 13;
 
 
 const sum = (arr, target) =>{
- 
+   
     
 }
 

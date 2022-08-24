@@ -1,39 +1,41 @@
-import React,{useCallback} from "react";
+import React,{useState} from "react";
 import "./App.css";
-import lodash from "lodash";
-
-
 
 const App = () => {
-   const clickHandler = () =>{
-       console.log("click");
-   }
-   const debounceFn = useCallback(lodash.debounce(clickHandler, 1000),[]);
-   const throttleFn = useCallback(lodash.throttle(clickHandler, 1000),[]);
-
-   const myDebounce = (myFunc, delay) =>{
-       let timer;
-       return () =>{
-          clearTimeout(timer);
-          timer  = setTimeout(myFunc, delay);
+   let [value, setValue] = useState("");
+   let [list, setList] = useState([]);
+   const addHandler = () =>{
+       let newValue = {
+          id:Math.floor(Math.random()*1000),
+          content:value,
        }
-   }
-   const myThrottle = (myFunc, delay) =>{
-       let timer =false;
-       return () =>{
-          if(timer === false){
-             myFunc();
-             timer = setTimeout(() => timer = false, delay);
-          }
-       }
+       setList((pre) => [...pre, newValue]);
+       setValue("");
    }
 
+   const deleteHandler = (id) =>{
+       const newList = list.filter((one) => one.id !== id);
+       setList(newList);
+   }
    return ( 
       <div>
-         <input onChange = {debounceFn}/>
-         <input onChange = {throttleFn}/>
-         <input onChange = {myDebounce(clickHandler, 1000)}/>
-         <input onChange = {myThrottle(clickHandler, 1000)}/>
+         <input type="text" value={value} 
+                onChange={(e) => setValue(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" ? addHandler() : ""}
+                />
+         <button onClick={addHandler}>add</button>
+         <ul>
+         {
+            list.map((oneValue, i) =>{
+               return(
+                   <li key={i}>{oneValue.content}
+                   <button onClick={() => deleteHandler(oneValue.id)}>delete</button>
+                   </li>
+               )
+            })
+         }
+         </ul>
+
       </div>
     );
 }
