@@ -1,6 +1,7 @@
+arr = [1,2,3];
 
 let mySort = require("./mySort");
 
-test("this is a simply test for mySort", () =>{
-    expect(mySort([3,2,1])).toEqual([1,2,3]);
+it("this is a common test for sorting an array", () =>{
+    expect(mySort(arr)).toEqual([3,2,1]);
 })

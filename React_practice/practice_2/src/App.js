@@ -1,41 +1,61 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import "./App.css";
 
 const App = () => {
-   let [value, setValue] = useState("");
-   let [list, setList] = useState([]);
-   const addHandler = () =>{
-       let newValue = {
-          id:Math.floor(Math.random()*1000),
-          content:value,
-       }
-       setList((pre) => [...pre, newValue]);
-       setValue("");
-   }
-
-   const deleteHandler = (id) =>{
-       const newList = list.filter((one) => one.id !== id);
-       setList(newList);
+   const [list, setList] = useState([]);
+   let [index, setIndex] = useState(1);
+   useEffect(() =>{
+      fetchData();
+   },[]);
+   const fetchData = async() =>{
+      let data = await fetch("http://stream-menu-svc-v3.herokuapp.com/category");
+      let dataJson = await data.json();
+      setList(dataJson);
    }
    return ( 
       <div>
-         <input type="text" value={value} 
-                onChange={(e) => setValue(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" ? addHandler() : ""}
-                />
-         <button onClick={addHandler}>add</button>
-         <ul>
-         {
-            list.map((oneValue, i) =>{
-               return(
-                   <li key={i}>{oneValue.content}
-                   <button onClick={() => deleteHandler(oneValue.id)}>delete</button>
-                   </li>
-               )
-            })
-         }
-         </ul>
+         <p>Welcome to andrew's chef restaurant</p>
+         <button onClick={() => setIndex(1)}>Home</button>
+         <button onClick={() => setIndex(2)}>Category</button>
+      <div>
+      {
+         index === 1 && (
+            <>
+             <h3>LOCATION & HOUR</h3>
+             <div>
+               <p>1067 N San Antonio Rd Los Altos, CA 94022</p>
+               <p>Phone: (650) 948-2696</p>
+               <p>Fax: (650) 948-0121</p>
+               <p>Sunday - Thursday: 11:30am - 9:30pm</p>
+               <p>Friday: 11:30am - 10pm</p>
+               <p>Saturday: 12pm (noon) - 10pm</p>
+             </div>
+            </>
+         )
+      }
+      {
+         index === 2 && (
+          <div>
+            <p>menu categories</p>
+            <ul>
+            {
+              list.map((one) =>{
+                 return(
+                    <li>
+                       <span>{one.name}</span>
+                       <span> - </span>
+                       <span>{one.short_name}</span>
+                    </li>
+                  )
+              })
+            }
+            </ul>
+          </div>
+         )
+      }
 
+
+    </div>
       </div>
     );
 }
