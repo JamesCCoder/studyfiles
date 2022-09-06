@@ -7,6 +7,7 @@ arr = [1,2,3,4,5];
 
 const add = (arr) =>{
 
+    
 }
 
 console.log(add(arr));
@@ -28,6 +29,7 @@ arr2 = ["a", "b", "a", "a"];
 
 const collection = (arr) =>{
 
+    
 }
 
 console.log(collection(arr2));
@@ -43,9 +45,16 @@ const remove = (arr) =>{
 
 console.log(remove(arr3));
 
+//5. 属性求和
 
+arr4 = [{name:"a",age:123},{name:"b", age:2},{name:"c",age:12}];
 
+const addage = (arr) =>{
 
+    
+}
+
+console.log(addage(arr4));
 
 
 
@@ -119,3 +128,16 @@ console.log(remove(arr3));
 // }
 
 // console.log(remove(arr3));
+
+
+//5. 属性求和
+
+// arr4 = [{name:"a",age:123},{name:"b", age:2},{name:"c",age:12}];
+
+// const addage = (arr) =>{
+//    return arr.reduce((res, one) => {
+//        return res + one.age;
+//    },0)
+// }
+
+// console.log(addage(arr4));
