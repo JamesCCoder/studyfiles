@@ -1,25 +1,42 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+// http://jsonplaceholder.typicode.com/posts
 
-const numSlice = createSlice({
-    name:"num",
-    initialState:{value:0},
+import {createSlice, configureStore, createAsyncThunk} from "@reduxjs/toolkit";
+
+export const getData = createAsyncThunk(
+    "data/getData",
+    async () =>{
+        const data = await fetch("http://jsonplaceholder.typicode.com/posts");
+        const formatData = await data.json();
+        return formatData;
+    }
+)
+
+const dataSlice = createSlice({
+    name:"data",
+    initialState:{val:0, data:[], isLoading:false},
     reducers:{
-        addValue(state,action){
-            state.value = state.value + 1;
+        addVal(state,action){
+            state.val = state.val + action.payload;
+        }
+    },
+    extraReducers:{
+        [getData.pending]:(state,action) =>{
+             state.isLoading = true;
         },
-        minusValue(state,action){
-            state.value = state.value - 1;
+        [getData.fulfilled]:(state,action) =>{
+             state.data = action.payload;
+             state.isLoading = false;
         },
-        resetValue(state,action){
-            state.value = 0;
+        [getData.rejected]:(state,action) =>{
+             state.isLoading = false;
         },
     },
 })
 
-export const actions = numSlice.actions;
+export const actions = dataSlice.actions;
 
 const store = configureStore({
-    reducer: numSlice.reducer,
+    reducer: dataSlice.reducer,
 })
 
 export default store;

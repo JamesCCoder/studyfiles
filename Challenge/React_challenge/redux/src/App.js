@@ -1,24 +1,37 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {actions} from "./store/index";
+import React,{useEffect} from "react";
+
+import {useSelector, useDispatch} from "react-redux";
+import { actions } from "./store";
+import { getData } from "./store";
 
 const App = () => {
-  const value = useSelector(state => state.value);
+  const val = useSelector((state) => state.val);
+  const data = useSelector((state) => state.data);
+  const isLoading = useSelector((state) => state.isLoading);
   const dispatch = useDispatch();
   const addHandler = () =>{
-    dispatch(actions.addValue());
+    dispatch(actions.addVal(1));
   }
-  const minusHandler = () =>{
-    dispatch(actions.minusValue());
-  }
-  const resetHandler = () =>{
-    dispatch(actions.resetValue());
-  }
+  useEffect(() =>{
+    dispatch(getData());
+  },[dispatch])
+
+
+
   return ( 
-    <div>{value}
+    <div>{val}
     <button onClick={addHandler}>add</button>
-    <button onClick={minusHandler}>minus</button>
-    <button onClick={resetHandler}>reset</button>
+    {
+       isLoading && <p>loading...</p>
+    }
+    
+    {
+      data.map((one,i) =>{
+        return(
+          <p key={i}>{one.title}</p>
+        )
+      })
+    }
     </div>
    );
 }
