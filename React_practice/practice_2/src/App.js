@@ -1,43 +1,46 @@
-import React,{useEffect} from "react";
-
-import { useSelector, useDispatch } from "react-redux";
-import { actions } from "./Store/index";
-import { dataFetch } from "./Store/index";
+import React,{useState} from "react";
 
 const App = () => {
-   const val = useSelector(state => state.val);
-   const data = useSelector(state => state.data);
-   const isLoading = useSelector(state => state.isLoading);
-   const index = useSelector(state => state.index);
-   const dispatch = useDispatch();
-
+   const [value, setValue] = useState("");
+   const [list, setList] = useState([]);
    const addHandler = () =>{
-      dispatch(actions.addVal(5));
+      const newValue = {
+         id:Math.random()*1000,
+         content:value,
+         style:false,
+      }
+      setList(pre => [...pre, newValue]);
+      setValue("");
+   }
+   const deleteHandler = (id) =>{
+       const newList1 = list.filter((one) => one.id !== id);
+       setList(newList1);
    }
 
-   const loadHandler = () =>{
-      dispatch(actions.addIndex(5));
-   }
-
-   useEffect(() => {
-      dispatch(dataFetch());
-   }, [dispatch])
-
-   
    return ( 
-      <div>{val}
-      <button onClick={addHandler}>add</button>
-      {isLoading && <p>loading...</p>}
       <div>
+         <input type="text" value={value} 
+                onChange={(e) => setValue(e.target.value)}
+                onKeyDown={(e) => e.key==="Enter" ? addHandler() : ""}
+                />
+         <button onClick={addHandler}>add</button>
+         <ul>
          {
-            data.slice(0, index).map((oneData,i) =>{
+            list.map((one,i) =>{
                return(
-                  <p key={i}>{oneData.title}</p>
+                  <>
+                    <li key={i}>
+                       {one.content}
+                       <button onClick={() => deleteHandler(one.id)}>delete</button>
+                    </li>
+                    
+                  </>
+
                )
             })
          }
-      </div>
-      <button onClick={loadHandler}>load more</button>
+         </ul>
+
       </div>
     );
 }
