@@ -1,15 +1,4 @@
-// input
 
-//   // output
-//   ({ name: "Brian", age: 45 }, { name: "Dan", age: 78 })
-// ];
-
-arr = [
-  { name: "Abbey", age: 25 },
-  { name: "Brian", age: 45 },
-  { name: "Colin", age: 25 },
-  { name: "Dan", age: 78 },
-];
 
 const abc = (arr) => {
   let arr_1 = arr;

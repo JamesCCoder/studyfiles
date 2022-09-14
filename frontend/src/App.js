@@ -1,32 +1,28 @@
-import React from "react";
-import "./App.css";
+import React,{useState, useEffect} from "react";
 
-import { useSelector, useDispatch } from "react-redux";
-import { actions } from "./store";
+const VALUE = ["a","b","c","d","e","f","g"];
 
 const App = () => {
-  const value = useSelector(state => state.value);
-  const dispatch = useDispatch();
-  const oddHandler = () =>{
-    if(value % 2 !== 0){
-      dispatch(actions.changeValue(1));
-    }
-  } 
- 
-  const asyncHandler = () =>{
-    let interval = setTimeout(() => {
-      dispatch(actions.changeValue(1));
-    }, 1000);
-    return () => clearTimeout(interval);
-  }
+  const [value, setValue] = useState(VALUE);
 
+  useEffect(() =>{
+    let newValue = [...value];
+    for(let i = 1; i<newValue.length; i++){
+     let random = Math.floor(Math.random() * (i+1));
+     [newValue[i],newValue[random]] = [newValue[random], newValue[i]];
+    }
+    setValue(newValue);
+  },[])
   return ( 
     <div>
-      Clicked: {value} times
-      <button className="aa" onClick={() => dispatch(actions.changeValue(1))}>+</button>
-      <button className="aa" onClick={() => dispatch(actions.changeValue(-1))}>-</button>
-      <button onClick={() => oddHandler()}>increment if odd</button>
-      <button onClick={() => asyncHandler()}>increment async</button>
+      {
+        value.map((one) =>{
+          return(
+            <p>{one}</p>
+          )
+  
+        })
+      }
     </div>
    );
 }
