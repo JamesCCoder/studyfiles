@@ -1,28 +1,19 @@
-import React,{useState, useEffect} from "react";
-
-const VALUE = ["a","b","c","d","e","f","g"];
+import React,{useState, useRef,useEffect } from "react";
+import "./App.css";
 
 const App = () => {
-  const [value, setValue] = useState(VALUE);
-
-  useEffect(() =>{
-    let newValue = [...value];
-    for(let i = 1; i<newValue.length; i++){
-     let random = Math.floor(Math.random() * (i+1));
-     [newValue[i],newValue[random]] = [newValue[random], newValue[i]];
+  const [show, setShow] = useState(false);
+  const myRef = useRef();
+  const editHandler = () =>{
+    if(myRef.current){
+      myRef.current.focus();
     }
-    setValue(newValue);
-  },[])
+  }
+
   return ( 
     <div>
-      {
-        value.map((one) =>{
-          return(
-            <p>{one}</p>
-          )
-  
-        })
-      }
+      {show && <input ref = {myRef}/>}
+      <button onClick={editHandler}>edit</button>
     </div>
    );
 }
