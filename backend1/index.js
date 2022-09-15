@@ -1,20 +1,18 @@
 import express from "express";
+
 import router from "./routes/users.js";
-
-
 
 const app = express();
 const PORT = 5000;
 
-
 app.use(express.json());
 
-app.get("/", (req, res) =>{
-    res.send("This is main page");
+app.get("/", (req, res, next) =>{
+    res.send("This is the main page");
 })
 
-app.use("/users",router);
+app.use("/users", router);
 
-app.listen(PORT, (res, req) =>{
+app.listen(PORT, ()=>{
     console.log(`The server is running on ${PORT}`);
 })
