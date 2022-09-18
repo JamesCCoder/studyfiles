@@ -1,28 +1,43 @@
-import Users from "../models/user.js";
+import express from "express";
 
-export const getUser = async (req,res,next) =>{
+import User from "../models/user.js";
+
+const router = express.Router();
+
+let users = [];
+
+router.get("/", (req, res, next) =>{
     try{
-         const users = await Users.find();
-         res.status(200).send(users);
-    }catch (err){
-         res.status(500).json({message:err.message})
-    }   
-}
+       res.status(200).send(users);
+    }catch(err){
+        console.error(err);
+        res.status(500).send({message:err.message});
+    } 
+})
 
-export const createUser = (req,res,next) =>{
-    const user = req.body;
-    users.push(user);
-    res.send(`${user.firstName} has been added`);
-}
+router.post("/", (req, res, next) =>{
+    try{
 
-export const getOneUser = (req,res,next) =>{
-    const { firstName } = req.params;
-    const myUser = users.find(user => user.firstName === firstName);
-    res.send(myUser);
-}
+    }catch(err){
+        console.error(err);
+        res.status(500).send({message:err.message});
+    }
+})
 
-export const deleteOneUser = (req,res,next) =>{
-    const { firstName } = req.params;
-    users = users.filter(user => user.firstName !== firstName);
-    res.send(`${firstName} has been removed`);
-}
+router.get("/:firstName", (req, res, next) =>{
+    try{
+
+    }catch(err){
+        console.error(err);
+        res.status(500).send({message:err.message});
+    }
+})
+
+router.delete("/:firstName", (req, res, next) =>{
+    try{
+
+    }catch(err){
+        console.error(err);
+        res.status(500).send({message:err.message});
+    }
+})
