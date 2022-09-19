@@ -1,32 +1,22 @@
-const express = require("express");
-const redis = require("redis");
-const fetch = require("node-fetch");
+import express from "express";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
 
-const PORT = process.env.PORT || 5000;
-const REDIS_PORT = process.nextTick.REDIS_PORT || 6379;
+dotenv.config({path:"config.env"});
 
-const client = redis.createClient(REDIS_PORT);
+mongoose.connect(process.env.MONGO);
+const db = mongoose.connection;
+db.on("error", (error) => console.log(error));
+db.once("open", () => console.log("connected"));
 
 const app = express();
 
-const sendResponse = (username, names) =>{
-    return `<h2>${username} has a name: ${names}</h2>`;
-}
+const PORT = process.env.PORT || 9000;
 
-const getRepos = async (req, res, next) =>{
-    const {username} = req.params;
-    const data = await fetch(`https://api.github.com/users/${username}`);
-    const dataFormat = await data.json();
+app.get("/", (req, res, next) =>{
+    res.status(200).send("This is the main page");
+})
 
-    const names = dataFormat.name;
-    client.setex(username, 3600, names);
-    res.send(sendResponse(username, names));
-} 
-
-app.get("/repos/:username", getRepos);
-
-
-
-app.listen(5000, () =>{
-    console.log(`The server is running on ${PORT}`);
+app.listen(PORT, ()=>{
+    console.log(`Server is running on ${PORT}`);
 })
