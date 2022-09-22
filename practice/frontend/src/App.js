@@ -1,6 +1,5 @@
-// http://jsonplaceholder.typicode.com/posts
-
 import React from "react";
+import "./App.css";
 
 const App = () => {
   return ( 

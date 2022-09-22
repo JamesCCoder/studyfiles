@@ -1,16 +1,24 @@
 import express from "express";
-import { getUsers, createUser } from "../controllers/user.js";
-
+import User from "../models/user.js"
+import bcrypt from "bcrypt";
 
 const router = express.Router();
 
-router.get("/", getUsers);
+router.get("/", async (req, res, next) =>{
+   const users = await User.find();
+   res.status(200).send(users);
+})
 
-router.post("/", createUser);
-
-router.post("/signin", (req, res) =>{
-    const {username, password} = req.body;
-    User.findOne()
+router.post("/", async (req, res, next) =>{
+   const saltPassWord = await bcrypt.genSalt(9);
+   const securePassWord = await bcrypt.hash(req.body.password, saltPassWord);
+   const newUser = new User({
+       username: req.body.username,
+       password: securePassWord,
+   })
+   const newUserRegister = await newUser.save();
+   res.status(200).send(newUserRegister);
 })
 
 export default router;
+

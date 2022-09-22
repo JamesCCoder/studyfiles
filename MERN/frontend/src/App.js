@@ -10,8 +10,7 @@ function App() {
         username: userName,
         password: passWord,
       }
-
-      axios.post("http://localhost:8001/user", register);
+      axios.post("http://localhost:8081/user", register);
       setUserName("");
       setPassWord("");
   }
