@@ -1,22 +1,34 @@
 import express from "express";
-import dotenv from "dotenv";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+import morgan from "morgan";
+import cors from "cors";
 
-dotenv.config({path:"config.env"});
+import router from "./routes/user.js";
 
-mongoose.connect(process.env.MONGO);
-const db = mongoose.connection;
-db.on("error", (error) => console.log(error));
-db.once("open", () => console.log("connected"));
+dotenv.config();
+
+mongoose.connect(process.env.MONGO)
+.then(() => console.log("connected"))
+.catch((error) => console.error(error));
+// const db = mongoose.connection;
+// db.once("open", () => console.log("mongo connected"));
+// db.on("error", error => console.error(error));
 
 const app = express();
+const PORT = process.env.PORT || 8090;
 
-const PORT = process.env.PORT || 9000;
+app.use(express.json());
+app.use(cors());
+app.use(morgan("dev"));
+
 
 app.get("/", (req, res, next) =>{
     res.status(200).send("This is the main page");
 })
 
-app.listen(PORT, ()=>{
+app.use("/user", router);
+
+app.listen(PORT, () =>{
     console.log(`Server is running on ${PORT}`);
 })

@@ -1,29 +1,29 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, TextInput, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TextInput,TouchableOpacity, TouchableOpacityBase } from 'react-native';
 import axios from "axios";
 
 export default function App() {
   const [userName, setUserName] = useState("");
   const [passWord, setPassWord] = useState("");
-  const pressHandler = () =>{
-    const register = {
-      username: userName,
-      password: passWord,
-    }
-    axios.post("http://localhost:9000/user", register);
-    setUserName("");
-    setPassWord("");
+  const addHandler = () =>{
+     const register = {
+       username: userName,
+       password: passWord,
+     }
+     axios.post("http://localhost:9012/user", register);
+     setUserName("");
+     setPassWord("");
   }
   return (
     <SafeAreaView style={styles.container}>
-      <TextInput style={styles.input} placeholder='username' onChangeText={text => setUserName(text)}/>
-      <TextInput style={styles.input} placeholder="password" onChangeText={text => setPassWord(text)}/>
-      <TouchableWithoutFeedback onPress={pressHandler}>
-          <View style={styles.button}>
-            <Text style={styles.text}>add</Text>
-          </View>
-      </TouchableWithoutFeedback>
+      <TextInput style={styles.input} placeholder="username" value={userName} onChangeText={text => setUserName(text)}/>
+      <TextInput style={styles.input} placeholder="password" value={passWord} onChangeText={text => setPassWord(text)}/>
+      <TouchableOpacity onPress={addHandler}>
+          <View style={styles.textcover}>
+             <Text style={styles.text}>add</Text>  
+          </View> 
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -37,23 +37,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   input:{
+    borderColor:"red",
     borderWidth:1,
-    borderColor:"grey",
-    width:140,
-    height:30,
-    margin:10,
+    width:200,
+    padding:7,
+    margin:5,
+    borderRadius:10,
   },
-  button:{
-     borderColor:"red",
-     borderWidth:1,
-     width:100,
-     margin:10,
-     height:30,
-     backgroundColor:"green",
-     justifyContent:"center",
-     alignItems:"center",
+  textcover:{
+    backgroundColor:"black",
+    padding:10,
+    marginTop:15,
+    borderRadius:10,
   },
   text:{
-     color:"white"
+    color:"white",
   },
 });
