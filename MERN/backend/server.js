@@ -1,9 +1,10 @@
 import express from "express";
-import mongoose from "mongoose";
+import dotenv from "dotenv";
 import cors from "cors";
 import morgan from "morgan";
-import dotenv from "dotenv";
-import router from "./routes/user.js";
+import mongoose from "mongoose";
+
+import router from "./route/user.js";
 
 dotenv.config();
 
@@ -13,18 +14,18 @@ db.on("error", error => console.error(error));
 db.once("open", () => console.log("mongo connected"));
 
 const app = express();
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 5500;
 
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
 app.get("/", (req, res, next) =>{
-    res.status(200).send("This is main page");
+    res.status(200).send("This is the main page");
 })
 
 app.use("/user", router);
 
 app.listen(PORT, () =>{
-    console.log(`Server is running on ${PORT}`);
+    console.log(`The server is running on ${PORT}`);
 })
