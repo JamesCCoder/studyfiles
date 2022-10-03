@@ -1,73 +1,36 @@
-import React,{useState} from "react";
+import React from "react";
 import "./App.css";
 
+import { useSelector, useDispatch } from "react-redux";
+import { actions } from "./store/index.js";
+
+
 const App = () => {
-  const [value, setValue] = useState("");
-  const [list, setList] = useState([]);
-  const [index, setIndex] = useState(-1);
-  const [changeValue, setChangeValue] = useState("");
-  const addHandler = () =>{
-    const newValue = {
-      id: Math.floor(Math.random()*1000),
-      content:value,
-      style:false,
+  const val = useSelector(state => state.val);
+  const list = useSelector(state => state.list);
+  const isPending = useSelector(state => state.isPending);
+  const dispatch = useDispatch();
+  const addOne = () =>{
+    dispatch(actions.addValue(1))
+  }
+  const minusOne = () =>{
+     dispatch(actions.addValue(-1))
+  }
+  const addOneCondition = () =>{
+    if(val % 2 !== 1){
+       dispatch(actions.addValue(1))
     }
-    setList(pre => [...pre, newValue]);
-    setValue("");
-  } 
-
-  const changeHandler = (changeValue, index) =>{
-      const newList1 = [...list];
-      newList1[index].content = changeValue;
-      setList(newList1);
-      setChangeValue("");
-      setIndex(-1);
   }
-
-  const cancelHandler = () =>{
-      setIndex(-1);
-  }
-
-  const editHandler = (index) =>{
-      setIndex(index);
-  }
-
-  const deleteHandler = (index) =>{
-     const newList = [...list];
-     newList.splice(index,1);
-     setList(newList);
-     setIndex(-1); 
+  const addOneAsync = () =>{
+    
   }
   return ( 
     <div>
-      <input type="text" value={value} 
-             onChange={e => setValue(e.target.value)}
-             onKeyDown={e => e.key==="Enter" ? addHandler() : ""}
-             />
-      <button onClick={addHandler}>add</button>
-      <ul>
-        {
-          list.map((one, i) =>{
-            return (
-              <li key={one.id}>
-                 {one.content}
-                 {i === index && 
-                    (
-                      <>
-                        <input type="text" value={changeValue} onChange={e => setChangeValue(e.target.value)}/>
-                        <button onClick={() => changeHandler(changeValue, i)}>change</button>
-                        <button onClick={() => cancelHandler()}>cancel</button>
-                      </>
-                    )
-                 }
-
-                 <button onClick={() => editHandler(i)}>edit</button>
-                 <button onClick={() => deleteHandler(i)}>delete</button>
-              </li>
-            )
-          })
-        }
-      </ul>
+      {val}
+      <button onClick={addOne}>add one</button>
+      <button onClick={minusOne}>minus one</button>
+      <button onClick={addOneCondition}>add one when odd</button>
+      <button onClick={addOneAsync}>add one after one sec</button>
     </div>
    );
 }
