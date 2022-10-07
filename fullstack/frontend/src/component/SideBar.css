@@ -1,0 +1,12 @@
+.sidebar{
+    background-color: darkseagreen;
+    height:800px;
+    width:300px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+    gap:20px;
+    padding-top: 20px;
+    font-size: 2rem;
+}

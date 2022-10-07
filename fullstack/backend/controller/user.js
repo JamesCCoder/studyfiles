@@ -36,4 +36,5 @@ export const signIn = async (req, res, next) =>{
    const passValid = await bcrypt.compare(req.body.password, user.password);
    if(!passValid) return res.status(400).send("this is a invalid password");
    res.status(200).send("pass!");
+   console.log("pass");
 }
