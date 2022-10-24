@@ -14,7 +14,7 @@ const API = "http://localhost:999/user";
 
 function App() {
   const [userName, setUserName] = useState("");
-  const [passWord, setPassWord] = useState("");
+  const [passWord, setPassWord] = useState();
   const [pass, setPass] = useState(false);
   const [show, setShow] = useState("");
   const [validUser, setValidUser] = useState("");
@@ -34,8 +34,9 @@ function App() {
       username: userName,
       password: passWord,
     }
-    axios.post("http://localhost:999/user/signin", user)
+    axios.post("https://localhost:999/user/signin", user)
     .then(() => {
+      console.log("pass!");
       setPass(true);
       setValidUser(userName);
       for(let i = 0; i<users.length; i++){
@@ -63,34 +64,34 @@ function App() {
 
   return (
     <div>
-      {
+      {/* {
         users.map((one, i) =>{
           return (
             <p key={i}>{one.username}<p>|||||</p>{one.restricted_access}</p>
             
           )
         })
-      }
+      } */}
       <div></div>
-      {
+      {/* {
         permission.map((one, i) =>{
           return(
             <p>{one}</p>
           )
         })
-      }
+      } */}
       {
         !pass && (
-          <>
+          <form>
              <input type="text" value={userName} onChange={e => setUserName(e.target.value)}/>
              <input type="text" value={passWord} onChange={e => setPassWord(e.target.value)}/>
              <button onClick={() => loginHandler()}>login</button>
-          </>
+          </form>
 
         ) 
       }
       {
-        pass && (
+        !pass && (
           <div className="wrapper">
              <SideBar>
                 {
