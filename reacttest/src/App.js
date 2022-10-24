@@ -8,6 +8,7 @@ function App(){
         <div>
            <input placeholder="name" type="text" value={value} onChange={e => setValue(e.target.value)}/>
            <p data-testid="result">{value === "James" ? "James" : "none"} is here</p>
+           <p></p>
         </div>
     );
 }

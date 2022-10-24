@@ -14,4 +14,5 @@ test('should return initial color of button', async () => {
   fireEvent.change(initialInput, {target:{value:"James"}});
   expect(initialInput.value).toBe("James");
   expect(initialResult).toHaveTextContent(/James/i);
+  //change
 });
